@@ -17,7 +17,9 @@ export const FloatingSocialBar = () => {
 
   return (
     <>
-      <div className="fixed right-5 top-1/2 -translate-y-1/2 flex flex-col gap-3 bg-black rounded-md p-2">
+      <div className="fixed right-5 top-1/2 -translate-y-1/2 flex flex-col gap-3  rounded-md p-2"
+      style={{backgroundColor:'#223555'}}
+      >
         <a
           href="https://api.whatsapp.com/send?phone=337776655"
           target="_blank"
