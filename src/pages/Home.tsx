@@ -5,7 +5,7 @@ export const Home = () => {
   return (
     <div>
       <p>Este es el Home</p>
-      <button onClick={()=> navigate("/footer")}>Ir a footer</button>
+      <button onClick={()=> navigate("/prueba")}>Ir a footer</button>
     </div>
   );
 };
