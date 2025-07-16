@@ -1,9 +1,9 @@
-import React from 'react';
 
-export const Home = () => {
+
+const Navegacion = () => {
   return (
     <div>
-      <nav className="fixed border-b border-solid border-prime-gray-200  w-full py-2 bg-blue-950 ">
+      <nav className="fixed border-b border-solid border-prime-gray-200  w-full py-2 bg-[#223555] ">
         <div className="container  ">
           <div className="w-full flex  flex-col lg:flex-row">
             <div className=" flex justify-between  lg:flex-row">
@@ -65,3 +65,5 @@ export const Home = () => {
     </div>
   );
 };
+
+export default Navegacion;
