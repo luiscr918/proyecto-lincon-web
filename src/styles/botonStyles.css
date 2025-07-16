@@ -1,53 +1,28 @@
-.contenedor{
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
+/* @keyframes wigle-x{
+    0%, 100%{
+        transform: translateX(0);
+    }
+
+    50%{
+        transform: translateX(10px);
+    }
 }
 
-#btn-mas{
-    display: none;
+.wigle-x {
+    animation: wigle-x 1s ease-in-out infinite;
+} animacion para qeu el boton se vaya de un lado a otro  */
+
+@keyframes animacion{
+    0%, 100%{
+        box-shadow: 0 0 0 0 rgb(0, 254, 255, 0.6);
+        transform: scale(1);
+    }
+    50%{
+        box-shadow: 0px 0px 20px 10px rgb(0, 255, 255, 0.3);
+        transform: scale(1.08);
+    }
 }
 
-.redes a, #btn{
-    display: flex;
-    text-decoration: none;
-    background: #cc2b2b;
-    color: #fff;
-    width: 55px;
-    height: 55px;
-    line-height: 55px;
-    text-align: center;
-    border-radius: 50%;
-    box-shadow: 0px 1px 10px rgb(0, 0, 0, 0.4);
-    transition: all 600ms ease;
+.animacion{
+    animation: animacion 2s ease-in-out infinite;
 }
-
-.redes a:hover{
-    background: #fff;
-    color: #cc2b2b;
-}
-
-.redes a {
-    margin-bottom: -15px;
-    opacity: 0;
-    visibility: hidden;
-}
-
-#btn-mas:checked~ .redes a{
-    margin-bottom: 10px;
-    opacity: 1;
-    visibility: visible;
-}
-
-#btn{
-    cursor: pointer;
-    background: #f44141;
-    font-size: 23px;
-}
-
-#btn-mas:checked ~ .btn-mas {
-    transform: rotate(137deg);
-    font-size: 25px;
-}
-
-
