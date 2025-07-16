@@ -5,11 +5,12 @@ import "../styles/botonStyles.css";
 const BotonFlotante = () => {
     return (
         <>
-            <div className="group fixed bottom-0 right-0 p-8    w-50 h-35 ">
-                <div className="text-white shadow-xl flex items-center justify-center p-4 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 z-50 absolute animacion  ">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-8 h-8 group-hover:rotate-90 transition  transition-all duration-[0.6s]">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            <div className="group fixed bottom-0 right-0 p-8 w-50 h-35">
+                <div className="text-white shadow-xl flex items-center justify-center p-4 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 z-50 absolute animacion">
+                    <div className="absolute top-0 right-0 w-4 h-4 bg-red-600 rounded-full border-2 border-white animate-ping z-50"></div>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" className="w-8 h-8 z-10">
+                        <path d="M256 32C114.6 32 0 125.1 0 240c0 49.6 21.4 95.3 57.21 131.3-12.25 50.38-54.06 95.63-54.5 96a8.017 8.017 0 0 0 5.875 13.75c66.38 0 116.1-31.12 141.2-51.88 32.19 11.38 68.13 17.88 106.2 17.88 141.4 0 256-93.13 256-208S397.4 32 256 32z" />
                     </svg>
                 </div>
                 <div className="absolute rounded-full transition-all duration-[0.2s] ease-out scale-y-0 group-hover:scale-y-100 group-hover:-translate-x-16   flex  p-2 hover:p-3 bg-green-300 scale-100 hover:bg-green-400 text-white">
@@ -23,14 +24,13 @@ const BotonFlotante = () => {
                         <path d="M279.14 288l14.22-92.66h-88.91V141.09c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S293.8 0 259.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H89.09V288h49.18v224h100.2V288z" />
                     </svg>
                 </div>
-                <div className="absolute rounded-full transition-all duration-[0.2s] ease-out scale-x-0 group-hover:scale-x-100 group-hover:-translate-y-14 group-hover:-translate-x-14   flex  p-2 hover:p-3 bg-[#3d3838] hover:bg-[#151211] text-white">
+                <div className="absolute rounded-full transition-all duration-[0.2s] ease-out scale-x-0 group-hover:scale-x-100 group-hover:-translate-y-14 group-hover:-translate-x-14 flex p-2 hover:p-3 bg-[#3d3838] hover:bg-[#151211] text-white">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" className="w-8 h-8">
-                        <path d="M448,209.9v95.5c-35.2-1.4-69.1-11.6-98.5-29.5v114.1c0,61.7-50,111.7-111.7,111.7S126,451.7,126,390S176,278.3,237.7,278.3
-  c5.7,0,11.3,0.4,16.7,1.3v80.2c-5.3-1.5-10.9-2.2-16.7-2.2c-31.6,0-57.2,25.7-57.2,57.2s25.7,57.2,57.2,57.2s57.2-25.7,57.2-57.2
-  V0h84.6c1.5,62.5,52.1,112.9,114.1,114.5v95.4c-34.9-0.9-69-10.2-98.5-27.4V209.9z"/>
+                        <path d="M448,209.9v95.5c-35.2-1.4-69.1-11.6-98.5-29.5v114.1c0,61.7-50,111.7-111.7,111.7S126,451.7,126,390S176,278.3,237.7,278.3c5.7,0,11.3,0.4,16.7,1.3v80.2c-5.3-1.5-10.9-2.2-16.7-2.2c-31.6,0-57.2,25.7-57.2,57.2s25.7,57.2,57.2,57.2s57.2-25.7,57.2-57.2V0h84.6c1.5,62.5,52.1,112.9,114.1,114.5v95.4c-34.9-0.9-69-10.2-98.5-27.4V209.9z" />
                     </svg>
-
                 </div>
+
+
             </div>
         </>
 
