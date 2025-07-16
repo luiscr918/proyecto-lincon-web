@@ -8,7 +8,7 @@ return(
     <footer className="bg-[#223555] text-white px-6 py-10 md:px-50 text-sm ">
         <div className="max-w-7x1 mx-auto grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
             <div >
-                <h3 className="text-lg font-semibold mb-7">Contáctanos</h3>
+                <h3 className="text-lg font-semibold mb-7 ">Contáctanos</h3>
                 <p className="text-[#d9b81f]">Guamaní, sector la <br />
                     Victoria calle 4A lote 189
                 </p>
@@ -17,7 +17,7 @@ return(
                     institucion@gmail.com
                 </p>
 
-                <p className="text-[#d9b81f] mt-7">
+                <p className="text-[#d9b81f] mt-7 ">
                     -099185101
                 </p>
 
@@ -25,7 +25,7 @@ return(
                     -0987147390
                 </p>
 
-                <p className="text-[#d9b81f] mt-7">
+                <p className="text-[#d9b81f] mt-7 ">
                     Quito-Ecuador
                 </p>
             </div>

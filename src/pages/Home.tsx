@@ -1,11 +1,87 @@
-import { useNavigate } from "react-router-dom";
+
+
+
+import BotonFlotante from "../components/BotonFlotanteComponent";
+import BotonPrueba from "../components/BotonPrueba";
+import FooterPruba from "../components/FooterPruba";
+
 
 export const Home = () => {
-  const navigate = useNavigate();
+  
   return (
+    
     <div>
-      <p>Este es el Home</p>
-      <button onClick={()=> navigate("/prueba")}>Ir a footer</button>
+
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error corporis quae laboriosam, natus, consectetur pariatur delectus dicta expedita repellendus perspiciatis ut? Tempora voluptatum reprehenderit amet reiciendis quis, fugiat ad.</p>
+      <BotonFlotante/>
+
+      <FooterPruba/>
+      
     </div>
   );
 };
