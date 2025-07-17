@@ -12,7 +12,7 @@ const  FooterPruba=() =>{
                         <li className="mb-6"><a href="#" className="text-yellow-400 ">Guamaní, sector la <br />
                     Victoria calle 4A lote 189</a></li>
                         <li className="mb-6"><a href="#" className=" text-yellow-400 ">institucion@gmail.com</a></li>
-                        <li><p   className=" text-yellow-400 ">-099185101</p></li>
+                        <li><p className=" text-yellow-400 ">-099185101</p></li>
                         <li><p   className=" text-yellow-400 ">-0987147390</p></li>
 
                         <li><p   className=" text-yellow-400 mt-7">Quito-Ecuador</p></li>

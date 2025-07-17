@@ -1,62 +1,52 @@
+import "../styles/imagenesanimacionStyle.css"
+
 const ImagenesAnimacionHome = () => {
   return (
     <>
       <ul className="contenedor">
         <li>
-          <img src="#" alt="Imagen 1" />
+          <img src="#" alt={"Imagen1"} />
           <div className="contenido">
             <span>
               <h2>jajajaja</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Delectus porro quaerat quas itaque odit exercitationem accusamus
-                necessitatibus cupiditate est, nisi expedita nesciunt dicta
-                minima possimus quis dolor, in corrupti adipisci?
+                <a href="#"><i className="material-icons">arrow_forward</i></a>
               </p>
             </span>
           </div>
         </li>
 
         <li>
-          <img src="#" alt="Imagen 2" />
+          <img src="#" alt={"Imagen1"} />
           <div className="contenido">
             <span>
               <h2>jajajaja</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Delectus porro quaerat quas itaque odit exercitationem accusamus
-                necessitatibus cupiditate est, nisi expedita nesciunt dicta
-                minima possimus quis dolor, in corrupti adipisci?
+                <a href="#"><i className="material-icons">arrow_forward</i></a>
               </p>
             </span>
           </div>
         </li>
 
-        <li>
-          <img src="#" alt="Imagen 3" />
+         <li>
+          <img src="#" alt={"Imagen1"} />
           <div className="contenido">
             <span>
               <h2>jajajaja</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Delectus porro quaerat quas itaque odit exercitationem accusamus
-                necessitatibus cupiditate est, nisi expedita nesciunt dicta
-                minima possimus quis dolor, in corrupti adipisci?
+                <a href="#"><i className="material-icons">arrow_forward</i></a>
               </p>
             </span>
           </div>
         </li>
 
-        <li>
-          <img src="#" alt="Imagen 4" />
+         <li>
+          <img src="#" alt={"Imagen1"} />
           <div className="contenido">
             <span>
               <h2>jajajaja</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Delectus porro quaerat quas itaque odit exercitationem accusamus
-                necessitatibus cupiditate est, nisi expedita nesciunt dicta
-                minima possimus quis dolor, in corrupti adipisci?
+                <a href="#"><i className="material-icons">arrow_forward</i></a>
               </p>
             </span>
           </div>
