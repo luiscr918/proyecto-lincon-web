@@ -1,5 +1,5 @@
 
-
+import '../../styles/EstilosDaniel/QuienesSomos.css'
 export const Header = () => {
     return (
         <div className="quienes-container">
