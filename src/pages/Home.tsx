@@ -1,12 +1,14 @@
-import { useNavigate } from "react-router-dom";
+import NavBar from "../../components/NavBar";
+import Barra from '../../components/Barra';
+
 
 export const Home = () => {
-  const navigate = useNavigate();
   return (
     
     <div>
       <p>Este es el Home</p>
-      <button onClick={() => navigate("/navegacion")}> Ir a </button>
+      <br/>
+      <Barra/>
     </div>
   );
 };
