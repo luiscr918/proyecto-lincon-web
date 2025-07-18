@@ -7,42 +7,21 @@ export const MisionVision = () => {
 
             <div className="mision-bloques">
                 {/* Bloque 1 */}
-                <div className="bloque">
-                    <div className="bloque-content">
-                        <div className="bloque-texto izquierda">
-                            <h3>Educación personalizada y desarrollo integral</h3>
-                            <p>Formamos estudiantes desde una perspectiva inclusiva y humanista...</p>
-                        </div>
-                        <div className="bloque-img">
-                            <img src="/src/img/portada2.png" alt="Ilustracion1" />
-                        </div>
-                    </div>
+                <div className="vision-item">
+                    <img src="/src/img/portada2.png" alt="Mision1" />
+                    <p>Formamos estudiantes desde una perspectiva inclusiva y humanista...</p>
                 </div>
 
                 {/* Bloque 2 */}
-                <div className="bloque">
-                    <div className="bloque-content">
-                        <div className="bloque-texto derecha">
-                            <h3>Pensamiento crítico y formación científica</h3>
-                            <p>Promovemos habilidades para el análisis y la solución de problemas...</p>
-                        </div>
-                        <div className="bloque-img">
-                            <img src="/src/img/portada2.png" alt="Ilustracion2" />
-                        </div>
-                    </div>
+                <div className="vision-item">
+                    <img src="/src/img/portada2.png" alt="Mision2" />
+                    <p>Promovemos habilidades para el análisis y la solución de problemas...</p>
                 </div>
 
                 {/* Bloque 3 */}
-                <div className="bloque">
-                    <div className="bloque-content">
-                        <div className="bloque-texto izquierda">
-                            <h3>Valores y ciudadanía</h3>
-                            <p>Educamos con responsabilidad, respeto y honestidad para una mejor sociedad...</p>
-                        </div>
-                        <div className="bloque-img">
-                            <img src="/src/img/portada2.png" alt="Ilustracion3" />
-                        </div>
-                    </div>
+                <div className="vision-item">
+                    <img src="/src/img/portada2.png" alt="Mision3" />
+                    <p>Educamos con responsabilidad, respeto y honestidad para una mejor sociedad...</p>
                 </div>
             </div>
 

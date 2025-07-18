@@ -1,5 +1,5 @@
 .mision-vision-container {
-    background-color: #f0f4f8;  /* Fondo tenue */
+    background-color: #f0f4f8;
     padding: 3rem 2rem;
     color: #2c3e50;
     text-align: center;
@@ -22,7 +22,7 @@
     margin-bottom: 3rem;
 }
 
-.bloque, .vision-item {
+.vision-item, .bloque {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -33,13 +33,13 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.bloque:hover, .vision-item:hover {
+.vision-item:hover, .bloque:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* Contenido de cada bloque */
-.bloque-content, .vision-item {
+.vision-item, .bloque-content {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -47,47 +47,37 @@
 }
 
 /* Bloques de misión y visión alternados */
-.bloque-texto, .vision-texto {
+.vision-texto, .bloque-texto {
     max-width: 50%;
     text-align: left;
 }
 
-.bloque-img, .vision-img {
+.vision-img, .bloque-img {
     max-width: 40%;
     display: flex;
     justify-content: center;
 }
 
-.bloque-img img, .vision-img img {
+.vision-img img, .bloque-img img {
     width: 100%;
     max-width: 200px;
 }
 
 /* Alternancia de los textos */
-.bloque-texto.izquierda, .vision-texto.izquierda {
+.vision-texto.izquierda, .bloque-texto.izquierda {
     text-align: left;
 }
 
-.bloque-texto.derecha, .vision-texto.derecha {
+.vision-texto.derecha, .bloque-texto.derecha {
     text-align: right;
 }
 
-.bloque-texto h3, .vision-texto p {
-    color: #1a2e49;
-}
-
-.bloque-texto p, .vision-texto p {
+.vision-texto p, .bloque-texto p {
     font-size: 1rem;
     margin-top: 0.5rem;
     text-align: justify;
 }
 
-/* Estilos de visión (diferentes estilos de alineación) */
-.vision-bloques {
-    margin-top: 3rem;
-}
-
-/* Fondo tenue */
 .mision-vision-container {
     background-color: #f0f4f8;
 }
@@ -96,4 +86,3 @@
 .mision-bloques, .vision-bloques {
     margin-top: 3rem;
 }
-
