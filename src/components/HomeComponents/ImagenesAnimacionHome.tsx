@@ -1,5 +1,5 @@
-import "../styles/imagenesanimacionStyle.css"
 
+import "../../styles/imagenesanimacionStyle.css"
 const ImagenesAnimacionHome = () => {
   return (
     <>

@@ -1,6 +1,6 @@
 
 
-const  FooterPruba=() =>{
+const  FooterHomeComponent=() =>{
   return (
         <footer className="w-full bg-[#223555]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 ">
@@ -73,4 +73,4 @@ const  FooterPruba=() =>{
   )
 }
 
-export default FooterPruba
+export default FooterHomeComponent

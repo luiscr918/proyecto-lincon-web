@@ -1,9 +1,9 @@
 
 
 
-import BotonFlotante from "../components/BotonFlotanteComponent";
-import FooterPruba from "../components/FooterPruba";
-import ImagenesAnimacionHome from "../components/ImagenesAnimacionHome";
+import BotonFlotante from "../components/HomeComponents/BotonFlotanteComponent";
+import FooterPruba from "../components/HomeComponents/FooterHomeComponent";
+import ImagenesAnimacionHome from "../components/HomeComponents/ImagenesAnimacionHome";
 
 
 export const Home = () => {
