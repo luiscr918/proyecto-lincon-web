@@ -1,5 +1,6 @@
-import NavBar from "../../components/NavBar";
-import Barra from '../../components/Barra';
+import Informacion from "../../components/Informacion";
+import Navegacion from '../../components/Navegacion';
+
 
 
 export const Home = () => {
@@ -7,8 +8,10 @@ export const Home = () => {
     
     <div>
       <p>Este es el Home</p>
+      <Navegacion/>
       <br/>
-      <Barra/>
+      <Informacion/>
+      
     </div>
   );
 };
