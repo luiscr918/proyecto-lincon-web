@@ -3,7 +3,10 @@ import { useEffect, useRef } from "react";
 import instagramIconAnimated from "../assets/icons/instagramIconAnimated.json";
 import facebookIconAnimated from "../assets/icons/facebookIconAnimated.json";
 import tiktokIconAnimated from "../assets/icons/tiktokIconAnimated.json";
-export const FloatingSocialBar = () => {
+interface Props{
+  modalHome?:boolean;
+}
+export const FloatingSocialBar = ({modalHome=false}:Props) => {
   //tendremos 3 redes sociales facebook,instagram  tik tok
   const instagramplayerRef = useRef<Player>(null);
   const tiktokPlayerRef = useRef<Player>(null);
@@ -13,7 +16,7 @@ export const FloatingSocialBar = () => {
     instagramplayerRef.current?.playFromBeginning();
     tiktokPlayerRef.current?.playFromBeginning();
     facebookPlayerRef.current?.playFromBeginning();
-  }, []);
+  }, [modalHome]);
 
   return (
     <>

@@ -13,6 +13,7 @@
     "@lordicon/react": "^1.11.0",
     "@tailwindcss/vite": "^4.1.11",
     "@types/react-router-dom": "^5.3.3",
+    "liquid-glass-react": "^1.1.1",
     "lottie-web": "^5.13.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
