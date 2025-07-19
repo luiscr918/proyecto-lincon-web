@@ -1,5 +1,6 @@
 import imagenPromocional from "../assets/imgs/promocionLincoln.png";
 import LiquidGlass from "liquid-glass-react";
+import "../styles/textoModalInformacion.css";
 interface Props {
   visible: boolean;
   setVisible: (valor: boolean) => void;
@@ -9,15 +10,21 @@ export const ModalInformacion = ({ visible, setVisible }: Props) => {
     <>
       {visible && (
         <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-md ">
+          <div className=" mr-96"></div>
           <LiquidGlass
-            displacementScale={100} //
-            blurAmount={30}
-            saturation={110}
+            displacementScale={64} //
+            blurAmount={0.1}
+            saturation={130}
             cornerRadius={10}
+            elasticity={0.1}
+            aberrationIntensity={2}
             padding="20px"
             style={{
-              width: "30%",
-              maxWidth: "90%",
+              minWidth: 380,
+              width: 1500,
+              maxWidth: "95%",
+              height: 250,
+              minHeight: 250,
               backgroundColor: "transparent",
             }}
           >
@@ -35,13 +42,13 @@ export const ModalInformacion = ({ visible, setVisible }: Props) => {
                   />
                 </a>
               </div>
-              <div className="mt-2 text-center">
-                <button
+              <div className=" mt-2 text-center cursor-pointer">
+                <span
                   onClick={() => setVisible(false)}
-                  className="text-white font-semibold hover:text-red-400"
+                  className="font-semibold hover:text-red-500 blink-outline"
                 >
                   Cerrar
-                </button>
+                </span>
               </div>
             </div>
           </LiquidGlass>
