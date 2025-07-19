@@ -1,7 +1,3 @@
-// No necesitamos importar las imágenes locales si usamos URLs de placeholders
-// import InicialImage from '../assets/inicial.jpg';
-// import BasicaImage from '../assets/basica.jpg';
-// import BachilleratoImage from '../assets/bachillerato.jpg';
 
 interface AcademicLevel {
   id: string;
@@ -25,7 +21,7 @@ export const ACADEMIC_OFFER_DATA: AcademicLevel[] = [
       'Introducción a conceptos básicos de lectura y escritura.',
       'Ambiente seguro y acogedor.'
     ],
-    imageUrl: 'https://via.placeholder.com/600x400?text=Educacion+Inicial', // Placeholder para Educación Inicial
+    imageUrl: 'https://via.placeholder.com/600x400?text=Educacion+Inicial', 
     altText: 'Niños jugando en educación inicial'
   },
   {
@@ -40,7 +36,7 @@ export const ACADEMIC_OFFER_DATA: AcademicLevel[] = [
       'Tutorías personalizadas.',
       'Fomento de valores y ciudadanía.'
     ],
-    imageUrl: 'https://via.placeholder.com/600x400?text=Educacion+Basica', // Placeholder para Educación Básica
+    imageUrl: 'https://via.placeholder.com/600x400?text=Educacion+Basica', 
     altText: 'Estudiantes en un aula de educación básica'
   },
   {
@@ -55,7 +51,7 @@ export const ACADEMIC_OFFER_DATA: AcademicLevel[] = [
       'Taller de desarrollo de habilidades blandas.',
       'Intercambios estudiantiles y culturales.'
     ],
-    imageUrl: 'https://via.placeholder.com/600x400?text=Bachillerato', // Placeholder para Bachillerato
+    imageUrl: 'https://via.placeholder.com/600x400?text=Bachillerato', 
     altText: 'Jóvenes estudiantes de bachillerato en una biblioteca'
   },
 ];

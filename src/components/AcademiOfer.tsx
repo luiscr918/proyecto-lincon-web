@@ -17,7 +17,7 @@ const AcademicLevelCard = ({
 }: AcademicLevelCardProps) => {
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col md:flex-row items-center p-6 space-y-4 md:space-y-0 md:space-x-6 mb-8">
-      {/* Columna de Contenido */}
+      // Columna de Texto
       <div className="md:w-2/3 flex flex-col justify-center text-center md:text-left">
         <h2 className="text-3xl font-bold text-gray-800 mb-3">{title}</h2>
         <p className="text-gray-600 mb-4 leading-relaxed">{description}</p>
@@ -30,7 +30,7 @@ const AcademicLevelCard = ({
           ))}
         </ul>
       </div>
-      {/* Columna de Imagen */}
+      // Columna de Imagen
       <div className="md:w-1/3 flex justify-center items-center">
         <img src={imageUrl} alt={altText} className="rounded-lg object-cover w-full h-48 md:h-full max-h-60" />
       </div>
