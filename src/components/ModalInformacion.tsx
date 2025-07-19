@@ -31,16 +31,17 @@ export const ModalInformacion = ({ visible, setVisible }: Props) => {
                   <img
                     src={imagenPromocional}
                     alt="imagen promocional de la ue lincoln larrea B."
+                    className="w-full h-auto rounded-lg"
                   />
                 </a>
               </div>
-              <div className="mt-0.5 cursor-pointer text-center">
-                <span
+              <div className="mt-2 text-center">
+                <button
                   onClick={() => setVisible(false)}
-                  className="text-white font-medium hover:text-red-400"
+                  className="text-white font-semibold hover:text-red-400"
                 >
                   Cerrar
-                </span>
+                </button>
               </div>
             </div>
           </LiquidGlass>
