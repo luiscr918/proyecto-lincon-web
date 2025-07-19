@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik:wght@400;500;600;700&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f6f6f6;
+}
+
+button {
+    font-family: "Rubik", sans-serif;
+    background-color: transparent;
+    border: 1px solid white;
+    color: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    height: 50px;
+    transition: 0.5s ease;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgb(255, 255, 255, 0.4);
+}
+
+.container {
+    position: relative;
+    width: 1280px;
+    height: 720px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #767676;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #ffffff;
+}
+
+.container .content {
+    width: 100%;
+    display: flex;
+}
+
+.container .intruducir {
+    position: relative;
+    width: 40%;
+    height: 100%;
+    z-index: 20;
+}
+
+.intruducir .wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+    padding: 0 25px 0 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    pointer-events: none;
+}
+
+.intruducir .wrapper span {
+    overflow: hidden;
+}
+
+.intruducir .wrapper span>* {
+    transition: 0.5s ease;
+    opacity: 0;
+    transform: translateY(300px);
+    transition-delay: calc((3 - var(--idx)) * 0.1s);
+}
+
+.intruducir .wrapper.active {
+    pointer-events: all;
+}
+
+.intruducir .wrapper.active span > *{
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: calc(var(--idx) * 0.1s) ;
+}
+
+.intruducir:not(.place){
+    font-family: "Rubik", sans-serif;
+}
+
+.intruducir .titulo{
+    font-size: 1.5rem;
+    font-size: 400px;
+}
+
+.intruducir .place {
+    font-family: "Bebas Neue" sans-serif;
+    font-size: 5.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+.intruducir .texto{
+    font-size: 1rem;
+    margin-top: 8px;
+    font-weight: 300;
+}

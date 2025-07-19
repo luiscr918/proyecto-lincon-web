@@ -2,16 +2,18 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    height: 250px;
-    gap: 16px;
+    height: 400px;
+    gap: 3px;
     transition: 0.3s;
-}
+    margin-top: 50px;
+    margin-bottom: 25px;
+}   
 
 .contenedor li {
     position: relative;
     overflow: hidden;
-    flex: 0 0 200px;
-    border-radius: 70px;
+    flex: 0 0 300px;
+    border-radius: 60px;
     cursor: pointer;
     border-radius: 10px;
     border: 1px solid #ddd;
@@ -105,7 +107,7 @@
 }
 
 .contenedor li:hover{
-    flex: 0 1 260px;
+    flex: 0 1 400px;
     scale: 1.1;
     z-index: 10;
     opacity: 1;
