@@ -16,7 +16,7 @@ export const ModalInformacion = ({ visible, setVisible }: Props) => {
             blurAmount={0.1}
             saturation={130}
             cornerRadius={10}
-            elasticity={0.1}
+            elasticity={0.05}
             aberrationIntensity={2}
             padding="20px"
             style={{
