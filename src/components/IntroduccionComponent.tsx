@@ -9,17 +9,17 @@ const IntroduccionComponenet = () => {
             <div className="content">
                 <div className="intruducir">
                     <div className="wrapper">
-                        <span>
-                            <h5 className="titulo" style={{'--idx': 0 }as React.CSSProperties}></h5>
+                        <span className="box">
+                            <h5 className="titulo" style={{ '--idx': 0 } as React.CSSProperties}></h5>
                         </span>
-                        <span>
-                            <h1 className="place" style={{'--idx': 1 }as React.CSSProperties}></h1>
+                        <span className="box">
+                            <h1 className="place" style={{ '--idx': 1 } as React.CSSProperties}></h1>
                         </span>
-                        <span>
-                            <p className="texto" style={{'--idx': 2 }as React.CSSProperties}></p>
+                        <span className="box">
+                            <p className="texto" style={{ '--idx': 2 } as React.CSSProperties}></p>
                         </span>
-                        <span>
-                            <button className="discover-button" style={{'--idx': 3 }as React.CSSProperties}>Discover Button</button>
+                        <span className="box">
+                            <button className="discover-button" style={{ '--idx': 3 } as React.CSSProperties}>Discover Button</button>
                         </span>
                     </div>
                 </div>
