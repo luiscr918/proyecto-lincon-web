@@ -15,7 +15,7 @@ interface AcademicLevel {
   buttonColorClass: string;
 }
 
-export const ACADEMIC_OFFER_DATA: AcademicLevel[] = [
+export const Academia_Oferta_DATA: AcademicLevel[] = [
   {
     id: 'inicial',
     title: 'Educación Inicial',
@@ -34,7 +34,7 @@ export const ACADEMIC_OFFER_DATA: AcademicLevel[] = [
   {
     id: 'basica',
     title: 'Educación Básica',
-    ageOrCourseInfo: 'Abarca 1ro a 7mo de EGB', // Texto exacto
+    ageOrCourseInfo: '1ro a 7mo de EGB', 
     description: 'Formamos estudiantes con bases sólidas en todas las materias, promoviendo el pensamiento crítico, la investigación y la resolución de problemas en un ambiente de aprendizaje activo.', // Texto exacto
     features: [
       'Currículo actualizado y multidisciplinario.',
@@ -49,7 +49,7 @@ export const ACADEMIC_OFFER_DATA: AcademicLevel[] = [
   {
     id: 'basica-superior',
     title: 'Educación Básica Superior',
-    ageOrCourseInfo: 'Abarca 8vo a 10mo de EGB', // Texto exacto
+    ageOrCourseInfo: '8vo a 10mo de EGB', 
     description: 'En este nivel, fortalecemos las habilidades académicas y personales, preparando a los estudiantes para los desafíos del bachillerato. Enfocamos en el razonamiento lógico, el análisis crítico y la toma de decisiones.', // Texto exacto
     features: [
       'Profundización en áreas de conocimiento.',
@@ -64,7 +64,7 @@ export const ACADEMIC_OFFER_DATA: AcademicLevel[] = [
   {
     id: 'bachillerato',
     title: 'Bachillerato Técnico',
-    ageOrCourseInfo: 'Abarca 1ro a 3ro de Bachillerato', // Texto exacto
+    ageOrCourseInfo: '1ro a 3ro de Bachillerato', 
     description: 'Nuestro Bachillerato Técnico ofrece una formación integral y especializada, preparando a los estudiantes para la educación superior y el mercado laboral. Enfocados en competencias técnicas y profesionales.', // Texto exacto
     features: [
       'Programas de estudio especializados.',
