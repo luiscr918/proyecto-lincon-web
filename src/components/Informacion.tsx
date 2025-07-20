@@ -10,7 +10,7 @@ const Informacion = () => {
       <div>
         <div className="card">
           <img src={img1} alt="Card image cap" />
-          <div className="layer"></div>
+          <div className="layer layer1"></div>
           <div className="info">
             <h2>Información</h2>
             <p>
@@ -25,7 +25,7 @@ const Informacion = () => {
       <div>
         <div className="card">
           <img src={img2} alt="Card image cap" />
-          <div className="layer"></div>
+          <div className="layer layer2"></div>
           <div className="info">
             <h2>Información</h2>
             <p>
@@ -40,7 +40,7 @@ const Informacion = () => {
       <div>
         <div className="card">
           <img src={img3} alt="Card image cap" />
-          <div className="layer"></div>
+          <div className="layer layer3"></div>
           <div className="info">
             <h2>Información</h2>
             <p>
@@ -55,7 +55,7 @@ const Informacion = () => {
       <div>
         <div className="card">
           <img src={img4} alt="Card image cap" />
-          <div className="layer"></div>
+          <div className="layer layer4"></div>
           <div className="info">
             <h2>Información</h2>
             <p>
@@ -67,6 +67,7 @@ const Informacion = () => {
           </div>
         </div>
       </div>
+      <script src="../introduccion.js"></script>
     </div>
   );
 };

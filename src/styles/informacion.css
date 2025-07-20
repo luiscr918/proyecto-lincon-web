@@ -1,12 +1,12 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing:  "border-box";
+    box-sizing: "border-box";
     font-family: "Inter", sans-serif;
     color: "white";
 }
 
-body{
+body {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -14,14 +14,14 @@ body{
     justify-content: center;
 }
 
-.card-group{
+.card-group {
     display: flex;
     gap: 52px;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.card{
+.card {
     width: 225px;
     height: 400px;
     border-radius: 16px;
@@ -31,7 +31,7 @@ body{
     cursor: pointer;
 }
 
-.card img{
+.card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -39,8 +39,8 @@ body{
     transition: 0.5s;
 }
 
-.card .layer{
-    background:  linear-gradient(to top, rgb(92, 214, 133), rgba(0, 0, 0, 0));
+.card .layer1 {
+    background: linear-gradient(to top, #ff7e5f, rgba(0, 0, 0, 0));
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -48,7 +48,38 @@ body{
     opacity: 0;
     transition: 0.3s;
 }
-.card .info{
+
+.card .layer2 {
+    background: linear-gradient(to top, #6a82fb, rgba(0, 0, 0, 0));
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 75%;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.card .layer3 {
+    background: linear-gradient(to top, #f7971e, rgba(0, 0, 0, 0));
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 75%;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.card .layer4 {
+    background: linear-gradient(to top, #43cea2, rgba(0, 0, 0, 0));
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 75%;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.card .info {
     position: absolute;
     bottom: -50%;
     padding: 15px;
@@ -56,27 +87,55 @@ body{
     transition: 0.5s bottom, 1.75s opacity;
 }
 
-.info p{
+.info p {
     font-size: 16px;
     margin-top: 3px;
 }
 
 .card:hover,
 .card:hover img,
-.card:hover .layer{
+.card:hover .layer {
     transform: scale(1.1);
 }
 
-.card:hover > .layer{
+.card:hover>.layer {
     opacity: 1;
 }
 
-.card:hover > .info{
+.card:hover>.info {
     bottom: 0;
     opacity: 1;
 }
 
-.card-group:hover > .card:not(:hover){
+.card-group:hover>.card:not(:hover) {
     filter: blur(5px);
 }
 
+@media (max-width: 900px) {
+    .card-group {
+        gap: 24px;
+    }
+
+    .card {
+        width: 180px;
+        height: 320px;
+    }
+}
+
+@media (max-width: 600px) {
+    .card-group {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .card {
+        width: 90vw;
+        max-width: 320px;
+        height: 220px;
+    }
+
+    .card .info p {
+        font-size: 14px;
+    }
+}

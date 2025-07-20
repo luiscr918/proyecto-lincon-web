@@ -1,27 +1,22 @@
+import "../styles/intrduccionHome.css"
 
 const IntroduccionHome = () => {
   return (
-    <>
-      <div className="contenedor">
-        <div className="contenido">
-          <div className="introducir">
-            <div className="thumbnail-list">
-              <div className="wreapper">
-
-              </div>
-            </div>
-            <div className="navegacion">
-              <button className="siguiente">
-                <span className="linea"></span>
-                <span className="numero-ordinal"></span>
-              </button>
-            </div>
+    <div>
+      <div className="container">
+        <div className="content">
+          <div className="introduce"></div>
+          <div className="thumbnail-List">
+            <div className="wrapper"></div>
           </div>
         </div>
+        <div className="navigation">
+          <button className="next-button">Siguiente</button>
+          <span className="line"></span>
+          <span className="ordinal-number"></span>
+        </div>
       </div>
-
-    </>
-
+    </div>
   )
 }
 
