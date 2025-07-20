@@ -1,14 +1,8 @@
-// src/constants/contactData.ts
+const CONTACT_BANNER_IMAGE = '../assets/contacto/img_contacto02.png'; 
 
-// Asegúrate de que esta ruta sea correcta para tu imagen de banner
-const CONTACT_BANNER_IMAGE = '/assets/imgsContacto/contact_banner.jpg'; 
-
-// URL para el botón de WhatsApp (reemplaza con tu número y mensaje)
 const WHATSAPP_URL = 'https://wa.me/593939545376?text=Hola!%20Me%20interesa%20obtener%20m%C3%A1s%20informaci%C3%B3n.';
 
-// URL del mapa de Google Maps (¡REEMPLAZA ESTA URL CON LA EMBED DE TU UBICACIÓN EXACTA!)
-// Ve a Google Maps, busca tu ubicación, haz clic en "Compartir", luego en "Insertar un mapa" y copia la URL del src del <iframe>
-const Maps_EMBED_URL = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.6672323869917!2d-78.5529965259775!3d-0.3477815996614457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d58d92a1a1f879%3A0x6a1f8d9f10a1b0c9!2sGuamani%2C%20Quito!5e0!3m2!1ses!2sec!4v1721272710323!5m2!1ses!2sec'; // URL de ejemplo para Guamani, Quito
+const Maps_EMBED_URL = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4732.627452654536!2d-78.55774232503536!3d-0.34686449964972693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d5a3065bf2dbe9%3A0x69ac28c78652f29b!2sLincoln%20Larrea%20Benalcazar!5e1!3m2!1ses!2sec!4v1752985040345!5m2!1ses!2sec" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade'; // URL de ejemplo para Guamani, Quito
 
 export const CONTACT_DATA = {
   banner: {
@@ -17,7 +11,7 @@ export const CONTACT_DATA = {
     subtitle: '¿Tienes preguntas? Estamos listos para ayudarte.',
     whatsappButtonText: 'Haz una pregunta',
     whatsappUrl: WHATSAPP_URL,
-    // Icono de WhatsApp para Lordicon (ejemplo, busca uno adecuado)
+
     whatsappIcon: { name: 'whatsapp', trigger: 'hover', colors: 'primary:#ffffff' } // Ejemplo de cómo Lordicon usa nombres/colores
   },
   infoSection: {

@@ -1,8 +1,8 @@
-// src/components/ContactBanner.tsx
 import React from 'react';
 import { CONTACT_DATA } from '../constants/contactConst';
-import { LordIcon }  from '@lordicon/react'; // ¡CORRECCIÓN AQUÍ!
-const ContactBanner = () => { // Usamos la sintaxis de función de flecha directamente
+import { Player } from '@lordicon/react'; 
+
+const ContactBanner = () => { 
   const { banner } = CONTACT_DATA;
 
   return (
@@ -31,12 +31,12 @@ const ContactBanner = () => { // Usamos la sintaxis de función de flecha direct
           rel="noopener noreferrer"
           className="inline-flex items-center px-8 py-3 bg-green-500 hover:bg-green-600 text-white text-lg font-semibold rounded-full shadow-lg transition-transform transform hover:scale-105"
         >
-          {/* Icono de WhatsApp con LordIcon */}
-          <LordIcon
+          {/* Icono de WhatsApp con Player */}
+          <Player
             src={`https://cdn.lordicon.com/pkmgqzbi.json`} // Reemplaza con el src exacto del icono de WhatsApp de Lordicon si es diferente
             trigger={banner.whatsappIcon.trigger}
             colors={banner.whatsappIcon.colors}
-            style={{ width: '28px', height: '28px', marginRight: '8px' }} // Ajusta tamaño y margen
+            style={{ width: '28px', height: '28px', marginRight: '8px' }} 
           />
           {banner.whatsappButtonText}
         </a>

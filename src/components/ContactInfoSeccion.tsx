@@ -1,8 +1,8 @@
 // src/components/ContactInfoSection.tsx
 import React from 'react';
 import { CONTACT_DATA } from '../constants/contactConst';
-import { LordIcon } from '@lordicon/react'; // ¡CORRECCIÓN AQUÍ!
-const ContactInfoSection = () => { // Usamos la sintaxis de función de flecha directamente
+import { LordIcon } from '@lordicon/react'; 
+const ContactInfoSection = () => { 
   const { infoSection } = CONTACT_DATA;
 
   return (

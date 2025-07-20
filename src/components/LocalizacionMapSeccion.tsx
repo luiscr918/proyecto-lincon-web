@@ -1,8 +1,7 @@
-// src/components/LocationMapSection.tsx
 import React from 'react';
 import { CONTACT_DATA } from '../constants/contactConst';
 
-const LocationMapSection = () => { // Usamos la sintaxis de función de flecha directamente
+const LocationMapSection = () => { 
   const { locationSection } = CONTACT_DATA;
 
   return (
