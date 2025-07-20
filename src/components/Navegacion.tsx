@@ -6,7 +6,7 @@ const Navegacion = () => {
     const [dropdownOpen, setDropdownOpen] = useState(false);
 
     return (
-        <div className="container">
+        <div >
             <header className="header">
                 <img src={logo} alt="Logo" className="logo-img" />
                 <div className="logo-block">
