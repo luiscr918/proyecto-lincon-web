@@ -1,0 +1,140 @@
+.contactos-container {
+    font-family: 'Segoe UI', sans-serif;
+    color: #1a2e49;
+}
+
+/* Hero */
+.contacto-hero {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Ajusta la altura según lo necesites */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Evita que la imagen sobresalga */
+}
+
+.contacto-hero-contenido {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.55);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+.titulo {
+    font-size: 3rem;
+    font-weight: bold;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.2s;
+}
+
+.titulo span {
+    color: #f36f9b;
+}
+
+.subtitulo {
+    text-transform: uppercase;
+    font-size: 20rem; /* Aumenté el tamaño para hacerlo más grande */
+    letter-spacing: 10px;
+    margin-bottom: 0.5rem;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.4s;
+}
+
+/* Información de contacto y mapa */
+.contacto-info-mapa {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+/* Información de contacto */
+.contacto-info {
+    flex: 1 1 45%;
+}
+
+.datos {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    max-width: 100%; /* Se asegura que no se distorsione */
+}
+
+.datos p {
+    margin: 0.5rem 0;
+}
+
+/* Mapa + ubicación */
+.contacto-mapa {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.mapa {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.ubicacion {
+    background-color: #112d4e;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.btn-ubicacion {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: #00bcd4;
+    color: white;
+    padding: 0.6rem 1rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-ubicacion:hover {
+    background-color: #008c99;
+}
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.faq button:hover {
+    background-color: #072c56;
+    color: #fff;
+}
