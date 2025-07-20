@@ -1,4 +1,4 @@
-import portada from '../../img/contactos.jpg';
+import portada from '../../assets/imgs/contactos.jpg';
 
 export default function Portada() {
     return (

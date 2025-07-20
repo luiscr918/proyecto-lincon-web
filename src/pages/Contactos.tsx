@@ -17,7 +17,7 @@ export const Contactos = () => {
 
   return (
     <div className="contactos-container">
-      <Navegacion/>
+      <Navegacion />
       <Portada />
       <section className="contacto-info-mapa">
         <div
@@ -65,7 +65,7 @@ export const Contactos = () => {
                   Preguntas Frecuentes
                 </h3>
                 <img
-                  src="/src/img/cientifico.png"
+                  src="/src/imgs/cientifico.png"
                   alt="Imagen Científica"
                   style={{
                     maxWidth: "100px",

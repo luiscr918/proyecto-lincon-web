@@ -3,7 +3,7 @@ import '../../styles/EstilosDaniel/QuienesSomos.css'
 export const Header = () => {
     return (
         <div className="quienes-container">
-            <img src="/src/img/portada2.png" alt="Portada" className="img-fondo" />
+            <img src="../../assets/imgs/portada2.png" alt="Portada" className="img-fondo" />
             <div className="overlay">
                 <h1 className="titulo">¿Quiénes somos?</h1>
                 <h3 className="subtitulo">
