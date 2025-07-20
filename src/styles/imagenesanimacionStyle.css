@@ -9,7 +9,7 @@
     margin-bottom: 25px;
 }   
 
-.contenedor li {
+.contenedor li {    
     position: relative;
     overflow: hidden;
     flex: 0 0 300px;
