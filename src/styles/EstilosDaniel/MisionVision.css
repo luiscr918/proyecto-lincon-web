@@ -1,88 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
 .mision-vision-container {
-    background-color: #f0f4f8;
+    background-color: #eaf6ff;
     padding: 3rem 2rem;
     color: #2c3e50;
     text-align: center;
     position: relative;
-    margin-top: 20px;
+    margin-top: 0px;
+    background-image: url("data:image/svg+xml;utf8,<svg width='100' height='100' xmlns='http://www.w3.org/2000/svg'><circle cx='10' cy='10' r='5' fill='%23fcefa1'/><circle cx='50' cy='20' r='12' fill='%23ffffff'/><circle cx='60' cy='20' r='10' fill='%23ffffff'/><circle cx='70' cy='20' r='8' fill='%23ffffff'/><polygon points='30,10 32,16 38,16 33,20 35,26 30,22 25,26 27,20 22,16 28,16' fill='%23ffd700'/><circle cx='80' cy='40' r='5' fill='%23fcefa1'/><polygon points='90,70 92,76 98,76 93,80 95,86 90,82 85,86 87,80 82,76 88,76' fill='%23ffd700'/></svg>");
+    background-repeat: repeat;
+    background-size: 160px 160px;
+    background-position: center;
+}
+
+
+.mision-vision-container::before {
+    content: "¡Nuestro compromiso con el futuro!"; 
+    font-family: 'Patrick Hand', cursive;
+    font-size: 2rem;
+    color: #d05c8f;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
 }
 
 .seccion-titulo {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: bold;
-    margin-bottom: 2rem;
+    margin: 2rem 0 1.5rem;
     color: #1a2e49;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Patrick Hand', cursive;
 }
 
-/* Misión y Visión contenedores */
-.mision-bloques, .vision-bloques {
+.mision-vision-container h3 {
+    font-family: 'Patrick Hand', cursive;
+}
+
+.mision-bloques,
+.vision-bloques {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 2rem;
     margin-bottom: 3rem;
 }
 
-.vision-item, .bloque {
+.bloque-vertical {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     background-color: #ffffff;
-    border-radius: 15px;
     padding: 2rem;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.vision-item:hover, .bloque:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-/* Contenido de cada bloque */
-.vision-item, .bloque-content {
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    max-width: 320px;
+    min-height: 400px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent;
 }
 
-/* Bloques de misión y visión alternados */
-.vision-texto, .bloque-texto {
-    max-width: 50%;
-    text-align: left;
+.bloque-vertical:hover {
+    transform: translateY(-30px);
+    box-shadow: 0 90px 30px rgba(0, 0, 0, 0.1);
+    border: 2px solid #1a2e49;
 }
 
-.vision-img, .bloque-img {
-    max-width: 40%;
-    display: flex;
-    justify-content: center;
+.mision-bloques .bloque-vertical:nth-child(1) { transform: translateY(0); }
+.mision-bloques .bloque-vertical:nth-child(2) { transform: translateY(30px); }
+.mision-bloques .bloque-vertical:nth-child(3) { transform: translateY(60px); }
+
+.vision-bloques .bloque-vertical:nth-child(1) { transform: translateY(60px); }
+.vision-bloques .bloque-vertical:nth-child(2) { transform: translateY(30px); }
+.vision-bloques .bloque-vertical:nth-child(3) { transform: translateY(0); }
+
+.bg-rosa       { background-color: #ffe0e9; }
+.bg-verde      { background-color: #d1f7e3; }
+.bg-celeste    { background-color: #d1e7ff; }
+.bg-rosado     { background-color: #ffe0f0; }
+.bg-verde-agua { background-color: #d1fff3; }
+.bg-naranja    { background-color: #ffe9d1; }
+
+.bloque-vertical h2 {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #1a2e49;
+    margin-bottom: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.vision-img img, .bloque-img img {
-    width: 100%;
-    max-width: 200px;
-}
-
-/* Alternancia de los textos */
-.vision-texto.izquierda, .bloque-texto.izquierda {
-    text-align: left;
-}
-
-.vision-texto.derecha, .bloque-texto.derecha {
-    text-align: right;
-}
-
-.vision-texto p, .bloque-texto p {
+.bloque-vertical p {
+    font-family: 'Patrick Hand', cursive;
     font-size: 1rem;
-    margin-top: 0.5rem;
-    text-align: justify;
+    margin-top: 1rem;
 }
 
-.mision-vision-container {
-    background-color: #f0f4f8;
-}
-
-/* Paddings y márgenes para el mejor ajuste */
-.mision-bloques, .vision-bloques {
-    margin-top: 3rem;
+.bloque-img {
+    width: 100%;
+    max-width: 180px;
+    border-radius: 15px;
+    margin: 10px 0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
