@@ -1,5 +1,5 @@
 
-import "../../styles/botonStyles.css";
+import "../styles/botonStyles.css"
 
 
 const BotonFlotante = () => {

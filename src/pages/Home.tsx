@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 import { ModalInformacion } from "../components/ModalInformacion";
 import { FloatingSocialBar } from "../components/FloatingSocialBar";
+import IntroduccionComponent from "../components/HomeComponents/IntroduccionComponent";
+import ImagenesAnimacionHome from "../components/HomeComponents/ImagenesAnimacionHome";
+import BotonFlotante from "../components/BotonFlotanteComponent";
+import FooterHomeComponent from "../components/FooterHomeComponent";
 
 export const Home = () => {
   const [visible, setvisible] = useState(false);
@@ -10,10 +14,13 @@ export const Home = () => {
   }, []);
 
   return (
-    <div className="w-screen min-h-screen bg-green-500 ">
-      <p className="text-center mt-10">Este es el Home</p>
+    <div>
       <ModalInformacion visible={visible} setVisible={setvisible} />
       <FloatingSocialBar modalHome={visible} />
+      <IntroduccionComponent />
+      <ImagenesAnimacionHome />
+      <BotonFlotante />
+      <FooterHomeComponent />
     </div>
   );
 };
