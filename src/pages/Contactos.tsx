@@ -6,6 +6,7 @@ import { useState } from "react";
 import { FloatingSocialBar } from "../components/FloatingSocialBar";
 import BotonFlotante from "../components/BotonFlotanteComponent";
 import FooterHomeComponent from "../components/FooterHomeComponent";
+import Navegacion from "../components/Navegacion";
 
 export const Contactos = () => {
   const [showFAQ, setShowFAQ] = useState(false);
@@ -16,6 +17,7 @@ export const Contactos = () => {
 
   return (
     <div className="contactos-container">
+      <Navegacion/>
       <Portada />
       <section className="contacto-info-mapa">
         <div

@@ -6,6 +6,7 @@ import BotonFlotante from "../components/BotonFlotanteComponent";
 import FooterHomeComponent from "../components/FooterHomeComponent";
 import { useNavigate } from "react-router-dom";
 import Navegacion from "../components/Navegacion";
+import { ModalInformacion } from "../components/ModalInformacion";
 export const Home = () => {
   const [visible, setvisible] = useState(false);
 
@@ -15,21 +16,10 @@ export const Home = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <Navegacion/>
-      {/* <ModalInformacion visible={visible} setVisible={setvisible} /> */}
+      <Navegacion />
+      {/*   <ModalInformacion visible={visible} setVisible={setvisible} /> */}
       <FloatingSocialBar modalHome={visible} />
       <IntroduccionComponent />
-      <button onClick={() => navigate("/oferta-academica")}>
-        IR A OFERTA ACADEMICA
-      </button>
-      <br />
-      <button onClick={() => navigate("/contactanos")}>
-        IR A Contactanos
-      </button>
-      <br />
-      <button onClick={() => navigate("/sobre-nosotros")}>
-        IR A Sobre nosotros
-      </button>
       <ImagenesAnimacionHome />
       <BotonFlotante />
       <FooterHomeComponent />

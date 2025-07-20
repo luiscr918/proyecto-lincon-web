@@ -2,11 +2,13 @@ import AcademicLevelCard from "../components/AcademiOfer";
 import BotonFlotante from "../components/BotonFlotanteComponent";
 import { FloatingSocialBar } from "../components/FloatingSocialBar";
 import FooterHomeComponent from "../components/FooterHomeComponent";
+import Navegacion from "../components/Navegacion";
 import { Academia_Oferta_DATA } from "../const/academicOffer";
 
 const OfertaAcademica = () => {
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div className="bg-gray-100 ">
+      <Navegacion />
       {/* Encabezado de la pagina */}
       <div className="relative overflow-hidden bg-gradient-to-r from-blue-800 to-blue-500 py-16 sm:py-20 lg:py-24 text-white">
         <div
