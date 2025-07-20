@@ -44,9 +44,10 @@ body {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 75%;
+    height:80%;
     opacity: 0;
     transition: 0.3s;
+    color: white;
 }
 
 .card .layer2 {
@@ -54,19 +55,21 @@ body {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 75%;
+    height:80%;
     opacity: 0;
     transition: 0.3s;
+    color: white;
 }
 
 .card .layer3 {
-    background: linear-gradient(to top, #f7971e, rgba(0, 0, 0, 0));
+    background: linear-gradient(to top, #ddf127, rgba(0, 0, 0, 0));
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 75%;
+    height:80%;
     opacity: 0;
     transition: 0.3s;
+    color: white;
 }
 
 .card .layer4 {
@@ -74,7 +77,7 @@ body {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 75%;
+    height:80%;
     opacity: 0;
     transition: 0.3s;
 }
@@ -85,11 +88,13 @@ body {
     padding: 15px;
     opacity: 0;
     transition: 0.5s bottom, 1.75s opacity;
+    text-align: center;
 }
 
 .info p {
     font-size: 16px;
     margin-top: 3px;
+    text-align: center;
 }
 
 .card:hover,
