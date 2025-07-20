@@ -1,12 +1,17 @@
-import "../styles/informacion.css";
-import img1 from "../assets/imgs/PECN.png";
-import img2 from "../assets/imgs/PECN2.png";
-import img3 from "../assets/imgs/PECN3.png";
-import img4 from "../assets/imgs/PECN4.png";
+import "../../styles/informacion.css";
+import img1 from "../../assets/imgs/PECN.png";
+import img2 from "../../assets/imgs/PECN2.png";
+import img3 from "../../assets/imgs/PECN3.png";
+import img4 from "../../assets/imgs/PECN4.png";
+
 
 export const Informacion = () => {
   return (
-    <div className="card-group">
+    <div>
+      <div className="m-1.5">
+        <h2 className="text-center mb-4 text-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl">¿Porque Estudiar Con Nosotros?</h2>
+      </div>
+      <div className="card-group mt-20">
       <div>
         <div className="card">
           <img src={img1} alt="Card image cap" />
@@ -77,6 +82,8 @@ export const Informacion = () => {
       </div>
       <script src="../introduccion.js"></script>
     </div>
+    </div>
+    
   );
 };
 
