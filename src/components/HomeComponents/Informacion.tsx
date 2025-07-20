@@ -4,7 +4,7 @@ import img2 from "../assets/imgs/PECN2.png";
 import img3 from "../assets/imgs/PECN3.png";
 import img4 from "../assets/imgs/PECN4.png";
 
-const Informacion = () => {
+export const Informacion = () => {
   return (
     <div className="card-group">
       <div>
@@ -80,4 +80,3 @@ const Informacion = () => {
   );
 };
 
-export default Informacion;

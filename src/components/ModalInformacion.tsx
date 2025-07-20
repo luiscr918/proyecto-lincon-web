@@ -9,7 +9,7 @@ export const ModalInformacion = ({ visible, setVisible }: Props) => {
   return (
     <>
       {visible && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-md ">
+        <div className="fixed inset-0 z-50 flex items-center  justify-center backdrop-blur-md ">
           <div className=" mr-96"></div>
           <LiquidGlass
             displacementScale={64} //
