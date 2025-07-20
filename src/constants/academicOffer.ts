@@ -1,7 +1,7 @@
-import InicialImage from '../assets/imgsOA/EducacionInicial.png';
-import BasicaImage from '../assets/imgsOA/EducacionBasica.png';
-import BachilleratoImage from '../assets/imgsOA/BachilleratoTecnicoInformatica.png';
-import BasicaSuperiorImage from '../assets/imgsOA/EducacionBasicaSuperior.png';
+import InicialImage from '../assets/imgs/EducacionInicial.png';
+import BasicaImage from '../assets/imgs/EducacionBasica.png';
+import BachilleratoImage from '../assets/imgs/BachilleratoTecnicoInformatica.png';
+import BasicaSuperiorImage from '../assets/imgs/EducacionBasicaSuperior.png';
 
 interface AcademicLevel {
   id: string;
