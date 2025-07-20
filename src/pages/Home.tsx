@@ -16,11 +16,19 @@ export const Home = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <ModalInformacion visible={visible} setVisible={setvisible} />
+      {/* <ModalInformacion visible={visible} setVisible={setvisible} /> */}
       <FloatingSocialBar modalHome={visible} />
       <IntroduccionComponent />
-      <button onClick={() => navigate("oferta-academica")}>
+      <button onClick={() => navigate("/oferta-academica")}>
         IR A OFERTA ACADEMICA
+      </button>
+      <br />
+      <button onClick={() => navigate("/contactanos")}>
+        IR A Contactanos
+      </button>
+      <br />
+      <button onClick={() => navigate("/sobre-nosotros")}>
+        IR A Sobre nosotros
       </button>
       <ImagenesAnimacionHome />
       <BotonFlotante />

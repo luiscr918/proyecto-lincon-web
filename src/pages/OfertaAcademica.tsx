@@ -2,7 +2,7 @@ import AcademicLevelCard from "../components/AcademiOfer";
 import BotonFlotante from "../components/BotonFlotanteComponent";
 import { FloatingSocialBar } from "../components/FloatingSocialBar";
 import FooterHomeComponent from "../components/FooterHomeComponent";
-import { Academia_Oferta_DATA } from "../constants/academicOffer";
+import { Academia_Oferta_DATA } from "../const/academicOffer";
 
 const OfertaAcademica = () => {
   return (
