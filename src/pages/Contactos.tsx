@@ -106,7 +106,6 @@ export const Contactos = () => {
         </div>
       </section>
       <FloatingSocialBar />
-      <BotonFlotante />
       <FooterHomeComponent />
     </div>
   );

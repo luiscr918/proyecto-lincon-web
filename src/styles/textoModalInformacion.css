@@ -1,19 +1,15 @@
 @keyframes blinkOutline {
-  0%, 100% {
-    text-shadow:
-      0 0 2px #fff,
-      0 0 3px #fff;
+  0%,
+  100% {
+    text-shadow: 0 0 2px #fff, 0 0 3px #fff;
   }
   50% {
-    text-shadow:
-      0 0 1px #fff,
-      0 0 2px #fff;
+    text-shadow: 0 0 1px #fff, 0 0 2px #fff;
   }
 }
 
 .blink-outline {
   animation: blinkOutline 1.5s infinite;
-  color: white;
   font-weight: bold;
   -webkit-animation: blinkOutline 1.5s infinite;
 }
