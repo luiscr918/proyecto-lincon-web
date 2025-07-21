@@ -16,10 +16,10 @@ export const Home = () => {
   return (
     <div>
       <Navegacion />
-      {/*   <ModalInformacion visible={visible} setVisible={setvisible} /> */}
+      <ModalInformacion visible={visible} setVisible={setvisible} />
       <FloatingSocialBar modalHome={visible} />
       <IntroduccionComponent />
-      <Informacion/>
+      <Informacion />
       <ImagenesAnimacionHome />
       <BotonFlotante />
       <FooterHomeComponent />

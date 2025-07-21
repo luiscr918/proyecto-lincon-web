@@ -12,8 +12,8 @@ export const ModalInformacion = ({ visible, setVisible }: Props) => {
         <div className="fixed inset-0 z-50 flex items-center  justify-center backdrop-blur-md ">
           <div className=" mr-96"></div>
           <LiquidGlass
-            displacementScale={64} //
-            blurAmount={0.1}
+            displacementScale={110} //
+            blurAmount={30}
             saturation={130}
             cornerRadius={10}
             elasticity={0.05}

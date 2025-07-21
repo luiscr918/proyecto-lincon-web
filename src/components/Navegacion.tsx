@@ -15,7 +15,7 @@ const Navegacion = () => {
             U.E.P
           </a>
           <strong>
-            <p style={{ color: "white" }}>Lincon Larrea Benalcazar</p>
+            <p style={{ color: "white" }}>Lincoln Larrea Benalcazar</p>
           </strong>
         </div>
         <input type="checkbox" id="check" />
