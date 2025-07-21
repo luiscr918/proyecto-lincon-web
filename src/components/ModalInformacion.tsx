@@ -6,12 +6,13 @@ interface Props {
   visible: boolean;
   setVisible: (valor: boolean) => void;
 }
+import '../styles/tailwind.css'
 export const ModalInformacion = ({ visible, setVisible }: Props) => {
   return (
     <>
       {visible && (
         <div className="fixed inset-0 z-50 flex items-center  justify-center backdrop-blur-md ">
-          <div className=" mr-96 ml-96"></div>
+          <div className=" mr-96 ml-96 custom-margin-lg-up"></div>
           <LiquidGlass
             displacementScale={110} //
             blurAmount={30}
