@@ -26,15 +26,15 @@ const IntroduccionComponent = () => {
     }, 500);
   };
 
-  // Agregar el efecto para cambiar la imagen automáticamente
+  
   useEffect(() => {
     const interval = setInterval(() => {
       siguiente();
-    }, 3000); // Cambia cada 3 segundos
+    }, 3000); 
 
-    // Limpiar el intervalo cuando el componente se desmonte o cuando cambie el índice
+    
     return () => clearInterval(interval);
-  }, [index]); // Dependencia en el index para que se ejecute cada vez que el índice cambie
+  }, [index]); 
 
   const info = Informacion[index];
 
@@ -53,12 +53,15 @@ const IntroduccionComponent = () => {
 
       <div className="content">
         <div className="carousel-right">
-          {Informacion.map((item, i) => (
-            <div key={i} className={`thumbnail ${i === index ? "active" : ""}`}>
-              <img src={item.Imagen} alt={`img-${i}`} />
-            </div>
-          ))}
-        </div>
+  {Informacion.map((item, i) => (
+    <div
+      key={i}
+      className={`thumbnail thumbnail-${i} ${i === index ? "active" : ""}`}
+    >
+      <img src={item.Imagen} alt={`img-${i}`} />
+    </div>
+  ))}
+</div>
 
         <div className={`info-box ${fade ? "fade-in" : ""}`}>
           <h5 className="titulo">{info.TituloDeIntroduccion}</h5>
