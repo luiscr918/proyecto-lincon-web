@@ -1,6 +1,7 @@
 import imagenPromocional from "../assets/imgs/promocionLincoln.png";
 import LiquidGlass from "liquid-glass-react";
 import "../styles/textoModalInformacion.css";
+import "../styles/ModalStyle.css";
 interface Props {
   visible: boolean;
   setVisible: (valor: boolean) => void;
@@ -16,7 +17,7 @@ export const ModalInformacion = ({ visible, setVisible }: Props) => {
             blurAmount={30}
             saturation={130}
             cornerRadius={10}
-            elasticity={0.05}
+            elasticity={0}
             aberrationIntensity={2}
             padding="20px"
             style={{
@@ -39,7 +40,7 @@ export const ModalInformacion = ({ visible, setVisible }: Props) => {
                   <img
                     src={imagenPromocional}
                     alt="imagen promocional de la ue lincoln larrea B."
-                    className="w-full h-auto rounded-lg"
+                    className="w-full h-auto rounded-lg img-atencion"
                   />
                 </a>
               </div>

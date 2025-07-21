@@ -1,0 +1,14 @@
+@keyframes pulseImagen {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.img-atencion {
+  animation: pulseImagen 2.5s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
