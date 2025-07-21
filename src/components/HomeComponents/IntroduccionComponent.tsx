@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Informacion } from "../../const/TxtdeIntroduccionHome";
 import "../../styles/introduccionHome.css";
 
@@ -25,6 +25,16 @@ const IntroduccionComponent = () => {
       setTimeout(() => setFade(false), 500);
     }, 500);
   };
+
+  // Agregar el efecto para cambiar la imagen automáticamente
+  useEffect(() => {
+    const interval = setInterval(() => {
+      siguiente();
+    }, 3000); // Cambia cada 3 segundos
+
+    // Limpiar el intervalo cuando el componente se desmonte o cuando cambie el índice
+    return () => clearInterval(interval);
+  }, [index]); // Dependencia en el index para que se ejecute cada vez que el índice cambie
 
   const info = Informacion[index];
 
@@ -57,9 +67,6 @@ const IntroduccionComponent = () => {
         </div>
 
         <div className="bottom-bar">
-          <button onClick={siguiente} className="next-button">
-            NEXT
-          </button>
           <div className="line" />
           <div className="counter">{String(index + 1).padStart(2, "0")}</div>
         </div>

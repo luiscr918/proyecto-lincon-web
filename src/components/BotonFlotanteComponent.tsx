@@ -3,7 +3,7 @@ import "../styles/botonStyles.css";
 const BotonFlotante = () => {
   return (
     <>
-      <div className="group fixed bottom-0 right-0 p-8 w-50 h-35">
+      <div className="group fixed bottom-0 right-0 p-20 w-10 h-38 ">
         <div className="text-white shadow-xl flex items-center justify-center p-4 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 z-50 absolute animacion">
           <div className="absolute top-0 right-0 w-4 h-4 bg-red-600 rounded-full border-2 border-white animate-ping z-50"></div>
 
@@ -11,8 +11,7 @@ const BotonFlotante = () => {
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512 512"
             fill="currentColor"
-            className="w-8 h-8 z-10"
-          >
+            className="w-8 h-8 z-10">
             <path d="M256 32C114.6 32 0 125.1 0 240c0 49.6 21.4 95.3 57.21 131.3-12.25 50.38-54.06 95.63-54.5 96a8.017 8.017 0 0 0 5.875 13.75c66.38 0 116.1-31.12 141.2-51.88 32.19 11.38 68.13 17.88 106.2 17.88 141.4 0 256-93.13 256-208S397.4 32 256 32z" />
           </svg>
         </div>

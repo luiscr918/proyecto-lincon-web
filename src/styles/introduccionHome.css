@@ -9,8 +9,12 @@ html, body {
 .body {
     position: relative;
     width: 100%;
-    
     overflow: hidden;
+
+    display: flex;
+    gap: 52px;
+    flex-wrap: wrap;
+    justify-content: center;
 
 
 }
@@ -120,13 +124,13 @@ html, body {
     overflow: hidden;
     opacity: 0.5;
     transform: scale(1);
-    transition: transform 0.8s ease, opacity 0.8s ease, box-shadow 0.8s ease;
+    transition: transform 0.5s ease, opacity 0.8s ease, box-shadow 0.8s ease;
     flex-shrink: 0;
 }
 
 .thumbnail.active {
     opacity: 1;
-    transform: scale(1.15);
+    transform: scale(1.20);
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
 }
 
