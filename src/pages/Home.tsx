@@ -17,7 +17,9 @@ export const Home = () => {
     <div>
       <Navegacion />
       <ModalInformacion visible={visible} setVisible={setvisible} />
-      <FloatingSocialBar modalHome={visible} />
+      <div className="hide-below-1416">
+        <FloatingSocialBar modalHome={visible} />
+      </div>
       <IntroduccionComponent />
       <Informacion />
       <ImagenesAnimacionHome />
