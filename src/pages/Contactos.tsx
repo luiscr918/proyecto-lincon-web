@@ -4,7 +4,6 @@ import PreguntasContactosComponents from "../components/ContactosComponents/Preg
 import Mapa from "../components/ContactosComponents/MapaComponents";
 import { useState } from "react";
 import { FloatingSocialBar } from "../components/FloatingSocialBar";
-import BotonFlotante from "../components/BotonFlotanteComponent";
 import FooterHomeComponent from "../components/FooterHomeComponent";
 import Navegacion from "../components/Navegacion";
 
