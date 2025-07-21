@@ -7,6 +7,10 @@ import { FloatingSocialBar } from "../components/FloatingSocialBar";
 import FooterHomeComponent from "../components/FooterHomeComponent";
 import Navegacion from "../components/Navegacion";
 
+//imagen
+import img1 from '../assets/imgs/cientifico.png'
+
+
 export const Contactos = () => {
   const [showFAQ, setShowFAQ] = useState(false);
 
@@ -64,7 +68,7 @@ export const Contactos = () => {
                   Preguntas Frecuentes
                 </h3>
                 <img
-                  src="/src/imgs/cientifico.png"
+                  src={img1}
                   alt="Imagen Científica"
                   style={{
                     maxWidth: "100px",

@@ -1,5 +1,7 @@
 import "../../styles/EstilosDaniel/MisionVision.css";
 
+//imagenes 
+import img1 from '../../assets/imgs/imagen1.jpg'
 export const MisionVision = () => {
   return (
     <div className="mision-vision-container">
@@ -10,7 +12,7 @@ export const MisionVision = () => {
           <h2>Educación personalizada y desarrollo integral</h2>
           <img
             className="bloque-img"
-            src="../../assets/imgs/imagen1.jpg"
+            src={img1}
             alt="Educación integral"
           />
           <p>
@@ -24,7 +26,7 @@ export const MisionVision = () => {
           <h2>Pensamiento crítico y formación científica</h2>
           <img
             className="bloque-img"
-            src="/src/imgs/imagen1.jpg"
+            src={img1}
             alt="Pensamiento científico"
           />
           <p>
@@ -37,7 +39,8 @@ export const MisionVision = () => {
           <h2>Valores y ciudadanía</h2>
           <img
             className="bloque-img"
-            src="/src/imgs/imagen1.jpg"
+                        src={img1}
+
             alt="Valores ciudadanos"
           />
           <p>
@@ -55,7 +58,8 @@ export const MisionVision = () => {
           <h2>Formación integral</h2>
           <img
             className="bloque-img"
-            src="/src/imgs/imagen1.jpg"
+                        src={img1}
+
             alt="Formación integral"
           />
           <p>
@@ -68,7 +72,8 @@ export const MisionVision = () => {
           <h2>Inclusión y cobertura</h2>
           <img
             className="bloque-img"
-            src="/src/imgs/imagen1.jpg"
+                        src={img1}
+
             alt="Inclusión y cobertura"
           />
           <p>
@@ -81,7 +86,8 @@ export const MisionVision = () => {
           <h2>Perfil del egresado</h2>
           <img
             className="bloque-img"
-            src="/src/imgs/imagen1.jpg"
+                        src={img1}
+
             alt="Perfil del egresado"
           />
           <p>

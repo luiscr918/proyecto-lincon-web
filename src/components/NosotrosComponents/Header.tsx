@@ -1,9 +1,11 @@
 
 import '../../styles/EstilosDaniel/QuienesSomos.css'
+//Imagenes
+import imagen1 from '../../assets/imgs/Portada2.png'
 export const Header = () => {
     return (
         <div className="quienes-container">
-            <img src="../../assets/imgs/portada2.png" alt="Portada" className="img-fondo" />
+            <img src={imagen1} alt="Portada" className="img-fondo" />
             <div className="overlay">
                 <h1 className="titulo">¿Quiénes somos?</h1>
                 <h3 className="subtitulo">

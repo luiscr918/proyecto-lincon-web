@@ -1,5 +1,7 @@
 import portada from '../../assets/imgs/contactos.jpg';
 
+//imagen
+import img1 from '../../assets/imgs/whatsapp.png'
 export default function Portada() {
     return (
         <section className="contacto-hero">
@@ -44,7 +46,7 @@ export default function Portada() {
                                 animation: 'pulse 2s infinite'
                             }}
                         >
-                            <img src="/src/img/whatsapp.png" alt="WhatsApp" width={32} height={32} />
+                            <img src={img1} alt="WhatsApp" width={32} height={32} />
                             Haz una pregunta
                         </a>
                     </div>

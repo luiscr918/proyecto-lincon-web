@@ -5,22 +5,35 @@ import "../../styles/introduccionHome.css";
 const IntroduccionComponent = () => {
   const [index, setIndex] = useState(0);
   const [nextIndex, setNextIndex] = useState<number | null>(null);
+  const [fade, setFade] = useState(false);
 
   const siguiente = () => {
     const newIndex = (index + 1) % Informacion.length;
     setNextIndex(newIndex);
+
     setTimeout(() => {
       setIndex(newIndex);
       setNextIndex(null);
-    }, 700);
+
+      setTimeout(() => {
+        setIndex(newIndex);
+        setNextIndex(null);
+        setFade(false);
+      }, 500);
+
+      setFade(true);
+      setTimeout(() => setFade(false), 500);
+    }, 500);
   };
-  
+
   const info = Informacion[index];
 
   return (
-    <>
     <div className="body">
-      <div className="bg-layer layer-1" style={{ backgroundImage: `url(${info.Imagen})` }} />
+      <div
+        className="bg-layer layer-1"
+        style={{ backgroundImage: `url(${info.Imagen})` }}
+      />
       {nextIndex !== null && (
         <div
           className="bg-layer layer-2"
@@ -37,20 +50,21 @@ const IntroduccionComponent = () => {
           ))}
         </div>
 
-        <div className="info-box">
+        <div className={`info-box ${fade ? "fade-in" : ""}`}>
           <h5 className="titulo">{info.TituloDeIntroduccion}</h5>
           <h1 className="place">{info.PlacaDeIntroduccion}</h1>
           <p className="texto">{info.TextoDeIntroduccion}</p>
         </div>
 
         <div className="bottom-bar">
-          <button onClick={siguiente} className="next-button">NEXT</button>
+          <button onClick={siguiente} className="next-button">
+            NEXT
+          </button>
           <div className="line" />
           <div className="counter">{String(index + 1).padStart(2, "0")}</div>
         </div>
       </div>
     </div>
-    </>
   );
 };
 
