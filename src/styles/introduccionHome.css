@@ -195,3 +195,23 @@ html, body {
 .info-box.fade-in {
   animation: fadeInUp 0.5s ease;
 }
+@media (max-width: 1115px) {
+  .thumbnail-0 {
+    display: none;
+  }
+}
+@media (max-width: 1050px) {
+  .thumbnail-1 {
+    display: none;
+  }
+}
+@media (max-width: 860px) {
+  .thumbnail-2 {
+    display: none;
+  }
+}
+@media (max-width: 670px) {
+  .carousel-right {
+    display: none;
+  } 
+}
