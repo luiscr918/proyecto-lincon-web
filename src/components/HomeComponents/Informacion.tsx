@@ -8,8 +8,8 @@ import img4 from "../../assets/imgs/PECN4.png";
 export const Informacion = () => {
   return (
     <div>
-      <div className="m-1.5">
-        <h2 className="text-center mb-4 text-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl">¿Porque Estudiar Con Nosotros?</h2>
+      <div className="m-15">
+        <h2 className="text-center mb-4 text-2xl font-extrabold leading-none tracking-tight text-blue-950 md:text-5xl lg:text-6xl">¿Por qué Estudiar Con Nosotros?</h2>
       </div>
       <div className="card-group mt-20">
       <div>
