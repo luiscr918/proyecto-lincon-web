@@ -11,7 +11,12 @@ export const Home = () => {
   const [visible, setvisible] = useState(false);
 
   useEffect(() => {
-    setvisible(true);
+    const yaMostrado = sessionStorage.getItem("modalMostrado");
+
+    if (!yaMostrado) {
+      setvisible(true);
+      sessionStorage.setItem("modalMostrado", "true");
+    }
   }, []);
   return (
     <div>
