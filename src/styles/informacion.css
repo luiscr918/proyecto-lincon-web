@@ -1,4 +1,10 @@
-
+.card-back1 p, .card-back2 p,.card-back3 p, .card-back4 p{
+  text-align: center;
+  justify-content: center;
+  margin-top: 10px;
+  color: white;
+  margin-bottom: 10px;
+}
 .card img{
     width: 100%;
     height: 100%;
@@ -10,7 +16,7 @@
 }
 .contene-card{
 display: flex;
-gap: 52px;
+gap: 50px;
 flex-wrap: wrap;
 justify-content: center;
 margin-top: 50px;
@@ -19,7 +25,7 @@ margin-top: 50px;
 
 .card {
   width: 250px;
-  height: 400px;
+  height: 450px;
   perspective: 1000px;
 }
 
@@ -37,31 +43,48 @@ margin-top: 50px;
 }
 
 .card-front,
-.card-back {
+.card-back1, .card-back2 ,.card-back3, .card-back4{
   position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
 }
 
-.card-front {
 
-  color: #fff;
+.card-back1 {
+  background-color: #223555;
   display: flex;
   align-items: center;
-  
-  border-radius: 10px;
+  border-radius: 25px;
   justify-content: center;
   font-size: 24px;
-  transform: rotateY(0deg);
+  transform: rotateY(180deg);
 }
 
-.card-back {
-  background-color: #F08A5D;
-  color: #fff;
+.card-back2 {
+  background-color: #FACC15;
   display: flex;
   align-items: center;
-  border: 10px solid #F08A5D;
+  border-radius: 25px;
+  justify-content: center;
+  font-size: 24px;
+  transform: rotateY(180deg);
+}
+
+.card-back3 {
+  background-color: #40622e;
+  display: flex;
+  align-items: center;
+  border-radius: 25px;
+  justify-content: center;
+  font-size: 24px;
+  transform: rotateY(180deg);
+}
+
+.card-back4 {
+  background-color: #a03336;
+  display: flex;
+  align-items: center;
   border-radius: 25px;
   justify-content: center;
   font-size: 24px;

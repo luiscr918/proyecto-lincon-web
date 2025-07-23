@@ -18,7 +18,7 @@ export const Informacion = () => {
             <div className="card-front">
               <img src={img1} alt="" />
             </div>
-            <div className="card-back">
+            <div className="card-back1">
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet corrupti voluptas ex labore neque architecto dolores consequatur 
                 maiores culpa aut. Natus delectus doloribus, 
                 et animi sed corrupti minus neque iste.</p>
@@ -30,10 +30,10 @@ export const Informacion = () => {
             <div className="card-front">
               <img src={img2} alt="" />
             </div>
-            <div className="card-back">
-              <p>Lorem ipsum dolor sit amet consectetur 
-                adipisicing elit. Placeat consectetur perspiciatis quidem mollitia 
-                reiciendis officia ullam veniam sapiente, aliquam dolor cumque quibusdam ipsam aliquid laborum, qui adipisci? Nostrum, voluptas officiis.</p>
+            <div className="card-back2">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet corrupti voluptas ex labore neque architecto dolores consequatur 
+                maiores culpa aut. Natus delectus doloribus, 
+                et animi sed corrupti minus neque iste.</p>
             </div>
           </div>
         </div>
@@ -43,9 +43,10 @@ export const Informacion = () => {
               <img src={img3} alt="" />
             </div>
 
-            <div className="card-back">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam architecto, eligendi placeat incidunt dolore, consectetur iste veritatis neque iusto illo iure quibusdam eos facere,
-                 similique maiores molestias doloremque nam sed?</p>
+            <div className="card-back3">
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet corrupti voluptas ex labore neque architecto dolores consequatur 
+                maiores culpa aut. Natus delectus doloribus, 
+                et animi sed corrupti minus neque iste.</p>
             </div>
           </div>
         </div>
@@ -54,11 +55,10 @@ export const Informacion = () => {
             <div className="card-front">
               <img src={img4} alt="" />
             </div>
-            <div className="card-back">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Inventore sit blanditiis aperiam labore voluptas veritatis provident sapiente
-                 eligendi quis. Excepturi ipsum libero doloremque voluptas, 
-                animi nulla reprehenderit. Reiciendis, corrupti odit?</p>
+            <div className="card-back4">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet corrupti voluptas ex labore neque architecto dolores consequatur 
+                maiores culpa aut. Natus delectus doloribus, 
+                et animi sed corrupti minus neque iste.</p>
             </div>
           </div>
         </div>
