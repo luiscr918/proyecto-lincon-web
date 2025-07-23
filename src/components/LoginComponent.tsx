@@ -2,23 +2,35 @@ import { useState } from "react";
 import Swal from "sweetalert2";
 import { auth } from "../firebase/Config";
 import { signInWithEmailAndPassword } from "firebase/auth";
-
+import ojoCerrado from "../assets/icons/ojo-cerrado.png";
+import ojoAbierto from "../assets/icons/ojo-abierto.png";
 export const LoginComponent = () => {
   const [email, setEmail] = useState<string>("");
   const [constrasenia, setConstrasenia] = useState<string>("");
-
+  const [visible, setVisible] = useState<boolean>(false);
   const logearse = () => {
     signInWithEmailAndPassword(auth, email, constrasenia)
       .then((userCredential) => {
         const user = userCredential.user;
         if (user) {
-          Swal.fire("Éxito", "Se logueó correctamente");
+          Swal.fire({
+            title: "Éxito",
+            text: "Se logueó correctamente",
+            icon: "success",
+          });
         }
+        setEmail("");
+        setConstrasenia("");
+        setVisible(false);
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        Swal.fire(`${errorCode}`, `${errorMessage}`);
+        Swal.fire({
+          icon: "error",
+          title: `Opps ${errorCode}`,
+          text: `${errorMessage}`,
+        });
       });
   };
 
@@ -27,7 +39,6 @@ export const LoginComponent = () => {
       className="flex flex-col lg:flex-row justify-center items-center min-h-screen"
       style={{ backgroundColor: "#223555" }}
     >
-      {/* Imagen: visible en todas las pantallas */}
       <div className="w-full lg:w-1/2">
         <img
           src="https://miro.medium.com/v2/resize:fit:1080/1*vBi4Ycgdn5t3lu2SvQXuog.gif"
@@ -57,19 +68,27 @@ export const LoginComponent = () => {
           />
         </div>
 
-        <div className="mb-4">
+        <div className="mb-4 relative">
           <label htmlFor="password" className="block text-emerald-400">
             Contraseña:
           </label>
           <input
             value={constrasenia}
             onChange={(e) => setConstrasenia(e.target.value)}
-            type="password"
+            type={visible ? "text" : "password"}
             id="password"
             name="password"
             className="w-full border text-white border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500"
             autoComplete="off"
           />
+          <div className="h-6 w-6 cursor-pointer absolute top-8 right-3">
+            <img
+              className="h-auto max-w-full"
+              src={visible ? ojoAbierto : ojoCerrado}
+              alt="visible/unvisible icon"
+              onClick={() => setVisible(!visible)}
+            />
+          </div>
         </div>
 
         <button
