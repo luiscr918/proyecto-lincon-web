@@ -6,18 +6,25 @@ import { Nosotros } from "./pages/Nosotros";
 import { Login } from "./pages/Login";
 import AdminDashboard from "./pages/PanelAdministracion";
 import { NotFound } from "./pages/NotFound";
+import ScrollToHashElement from "./components/ScrollToHashElement";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/oferta-academica" element={<OfertaAcademica />} />
-      <Route path="/contactanos" element={<Contactos />} />
-      <Route path="/sobre-nosotros" element={<Nosotros />} />
-      <Route path="/actualizar-fechas" element={<Login />} />
-      <Route path="/form-actualizar/:verificado" element={<AdminDashboard />} />
-      <Route path="*" element={<NotFound />} />
-    </Routes>
+    <>
+      <ScrollToHashElement />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/oferta-academica" element={<OfertaAcademica />} />
+        <Route path="/contactanos" element={<Contactos />} />
+        <Route path="/sobre-nosotros" element={<Nosotros />} />
+        <Route path="/actualizar-fechas" element={<Login />} />
+        <Route
+          path="/form-actualizar/:verificado"
+          element={<AdminDashboard />}
+        />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </>
   );
 }
 

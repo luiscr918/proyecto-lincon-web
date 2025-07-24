@@ -17,7 +17,7 @@ const ImagenesAnimacionHome = () => {
             <span>
               <h2>Educación Inicial</h2>
               <p>
-                <Link to="/oferta-academica">
+                <Link to="/oferta-academica#inicial">
                   <i className="material-icons">arrow_forward</i>
                 </Link>
               </p>
@@ -31,7 +31,7 @@ const ImagenesAnimacionHome = () => {
             <span>
               <h2>Educación Básica</h2>
               <p>
-                <Link to="/oferta-academica">
+                <Link to="/oferta-academica#basica">
                   <i className="material-icons">arrow_forward</i>
                 </Link>
               </p>
@@ -45,7 +45,7 @@ const ImagenesAnimacionHome = () => {
             <span>
               <h2>Educación Básica Superior</h2>
               <p>
-                <Link to="/oferta-academica">
+                <Link to="/oferta-academica#superior">
                   <i className="material-icons">arrow_forward</i>
                 </Link>
               </p>
@@ -59,7 +59,7 @@ const ImagenesAnimacionHome = () => {
             <span>
               <h2>Bachillerato Técnico en Informática</h2>
               <p>
-                <Link to="/oferta-academica">
+                <Link to="/oferta-academica#bachillerato">
                   <i className="material-icons">arrow_forward</i>
                 </Link>
               </p>

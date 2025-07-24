@@ -85,6 +85,7 @@ const OfertaAcademica = () => {
           {Academia_Oferta_DATA.map((level) => (
             <AcademicLevelCard
               key={level.id}
+              id={level.id} 
               title={level.title}
               ageOrCourseInfo={level.ageOrCourseInfo}
               description={level.description}
