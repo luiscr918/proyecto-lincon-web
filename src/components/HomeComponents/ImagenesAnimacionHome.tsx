@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import * as Imagenes from "../../const/TxtdeIntroduccionHome";
 
 import "../../styles/imagenesanimacionStyle.css";
@@ -16,9 +17,9 @@ const ImagenesAnimacionHome = () => {
             <span>
               <h2>Educación Inicial</h2>
               <p>
-                <a href="#">
+                <Link to="/oferta-academica">
                   <i className="material-icons">arrow_forward</i>
-                </a>
+                </Link>
               </p>
             </span>
           </div>
@@ -30,9 +31,9 @@ const ImagenesAnimacionHome = () => {
             <span>
               <h2>Educación Básica</h2>
               <p>
-                <a href="#">
+                <Link to="/oferta-academica">
                   <i className="material-icons">arrow_forward</i>
-                </a>
+                </Link>
               </p>
             </span>
           </div>
@@ -44,9 +45,9 @@ const ImagenesAnimacionHome = () => {
             <span>
               <h2>Educación Básica Superior</h2>
               <p>
-                <a href="#">
+                <Link to="/oferta-academica">
                   <i className="material-icons">arrow_forward</i>
-                </a>
+                </Link>
               </p>
             </span>
           </div>
@@ -58,9 +59,9 @@ const ImagenesAnimacionHome = () => {
             <span>
               <h2>Bachillerato Técnico en Informática</h2>
               <p>
-                <a href="#">
+                <Link to="/oferta-academica">
                   <i className="material-icons">arrow_forward</i>
-                </a>
+                </Link>
               </p>
             </span>
           </div>

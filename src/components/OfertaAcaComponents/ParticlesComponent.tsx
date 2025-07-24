@@ -1,6 +1,10 @@
 import { useMemo } from "react";
 import Particles from "react-tsparticles";
-import { type ISourceOptions, type Engine } from "tsparticles-engine";
+import {
+  type ISourceOptions,
+  type Engine,
+  type Container,
+} from "tsparticles-engine";
 import { loadSlim } from "tsparticles-slim";
 
 const ParticlesComponent = () => {
@@ -8,7 +12,7 @@ const ParticlesComponent = () => {
     await loadSlim(engine);
   };
 
-  const particlesLoaded = async (container: any): Promise<void> => {
+  const particlesLoaded = async (container?: Container): Promise<void> => {
     console.log("Particles loaded", container);
   };
 
@@ -74,7 +78,7 @@ const ParticlesComponent = () => {
       },
       detectRetina: true,
     }),
-    [],
+    []
   );
 
   return (

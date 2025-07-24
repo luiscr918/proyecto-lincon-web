@@ -35,9 +35,6 @@ const AcademicLevelCard = ({
   buttonColorClass,
 }: AcademicLevelCardProps) => {
 
-  const handleMoreInfoClick = () => {
-    alert(`Has solicitado más información sobre: ${title}`);
-  };
 
   const handleDownloadPDF = () => {
     alert(`Descargando el PDF de Oferta Académica para ${title}...`);

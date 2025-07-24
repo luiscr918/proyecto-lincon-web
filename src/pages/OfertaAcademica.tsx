@@ -1,11 +1,11 @@
-import { motion, type Variants } from 'framer-motion';
-import AcademicLevelCard from '../components/OfertaAcaComponents/AcademiOfer';
-import BotonFlotante from '../components/BotonFlotanteComponent';
-import { FloatingSocialBar } from '../components/FloatingSocialBar';
-import FooterHomeComponent from '../components/FooterHomeComponent';
-import { Academia_Oferta_DATA } from '../const/academicOffer';
-import ParticlesComponent from '../components/OfertaAcaComponents/ParticlesComponent';
-import Navegacion from '../components/Navegacion';
+import { motion, type Variants } from "framer-motion";
+import AcademicLevelCard from "../components/OfertaAcaComponents/AcademiOfer";
+import BotonFlotante from "../components/BotonFlotanteComponent";
+import { FloatingSocialBar } from "../components/FloatingSocialBar";
+import FooterHomeComponent from "../components/FooterHomeComponent";
+import { Academia_Oferta_DATA } from "../const/academicOffer";
+import ParticlesComponent from "../components/OfertaAcaComponents/ParticlesComponent";
+import Navegacion from "../components/Navegacion";
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -22,8 +22,8 @@ const titleAnimation: Variants = {
   visible: {
     transition: {
       staggerChildren: 0.1,
-    }
-  }
+    },
+  },
 };
 
 const wordAnimation: Variants = {
@@ -32,18 +32,18 @@ const wordAnimation: Variants = {
     opacity: 1,
     y: 0,
     transition: {
-      type: 'spring',
+      type: "spring",
       damping: 12,
-      stiffness: 100
-    }
-  }
+      stiffness: 100,
+    },
+  },
 };
 
 const OfertaAcademica = () => {
   const titleText = "Oferta Académica".split(" ");
 
   return (
-    <div className="bg-slate-900 min-h-screen overflow-x-hidden">
+    <div className="bg-slate-900">
       <div className="relative overflow-hidden bg-gradient-to-br from-blue-950 to-blue-700 py-24 lg:py-32 text-white">
         <ParticlesComponent />
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center relative z-10">
@@ -54,7 +54,11 @@ const OfertaAcademica = () => {
             className="text-5xl sm:text-6xl lg:text-7xl font-extrabold mb-4 leading-tight"
           >
             {titleText.map((word, index) => (
-              <motion.span key={index} variants={wordAnimation} className="inline-block mr-4">
+              <motion.span
+                key={index}
+                variants={wordAnimation}
+                className="inline-block mr-4"
+              >
                 {word}
               </motion.span>
             ))}
@@ -62,10 +66,11 @@ const OfertaAcademica = () => {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.5, ease: 'easeOut' }}
+            transition={{ duration: 0.7, delay: 0.5, ease: "easeOut" }}
             className="text-xl sm:text-2xl font-light max-w-2xl mx-auto"
           >
-            Descubre los niveles educativos que ofrecemos para impulsar el futuro de nuestros estudiantes.
+            Descubre los niveles educativos que ofrecemos para impulsar el
+            futuro de nuestros estudiantes.
           </motion.p>
         </div>
       </div>
