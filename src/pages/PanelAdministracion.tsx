@@ -1,6 +1,4 @@
-// src/pages/AdminDashboard.tsx
-
-import { useState, useEffect, useCallback, useRef } from 'react'; // Asegúrate de importar useRef
+import { useState, useEffect, useCallback, useRef } from 'react'; 
 import AdminLayout from '../components/ComponenteAdministracion';
 import { motion } from 'framer-motion';
 import Particles from 'react-tsparticles';
@@ -32,12 +30,10 @@ const AdminDashboard = () => {
   const [showTooltipFinIns, setShowTooltipFinIns] = useState<boolean>(false);
   const [showTooltipInicioClases, setShowTooltipInicioClases] = useState<boolean>(false);
 
-  // Referencias para cada tooltip
   const tooltipInicioInsRef = useRef<HTMLDivElement>(null);
   const tooltipFinInsRef = useRef<HTMLDivElement>(null);
   const tooltipInicioClasesRef = useRef<HTMLDivElement>(null);
 
-  // Referencias para cada botón de información (para evitar que el global handler los cierre)
   const btnInicioInsRef = useRef<HTMLButtonElement>(null);
   const btnFinInsRef = useRef<HTMLButtonElement>(null);
   const btnInicioClasesRef = useRef<HTMLButtonElement>(null);
@@ -64,21 +60,16 @@ const AdminDashboard = () => {
     fetchDates();
   }, []);
 
-  // useEffect para manejar clics fuera de los tooltips
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      // Determinar si el clic fue en alguno de los botones de información
       const clickedOnBtnInicioIns = btnInicioInsRef.current && btnInicioInsRef.current.contains(event.target as Node);
       const clickedOnBtnFinIns = btnFinInsRef.current && btnFinInsRef.current.contains(event.target as Node);
       const clickedOnBtnInicioClases = btnInicioClasesRef.current && btnInicioClasesRef.current.contains(event.target as Node);
 
-      // Si el clic fue en uno de los botones de información, no hacemos nada aquí.
-      // La lógica de toggle y cierre de otros tooltips se maneja en el onClick de cada botón.
       if (clickedOnBtnInicioIns || clickedOnBtnFinIns || clickedOnBtnInicioClases) {
         return;
       }
 
-      // Si el clic no fue en un botón de información, verificar si fue fuera de cualquier tooltip abierto
       let clickedInsideAnyTooltip = false;
       if (showTooltipInicioIns && tooltipInicioInsRef.current && tooltipInicioInsRef.current.contains(event.target as Node)) {
         clickedInsideAnyTooltip = true;
@@ -90,7 +81,6 @@ const AdminDashboard = () => {
         clickedInsideAnyTooltip = true;
       }
 
-      // Si el clic no fue dentro de ningún tooltip abierto, cerrar todos los tooltips
       if (!clickedInsideAnyTooltip) {
         setShowTooltipInicioIns(false);
         setShowTooltipFinIns(false);
@@ -102,7 +92,7 @@ const AdminDashboard = () => {
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [showTooltipInicioIns, showTooltipFinIns, showTooltipInicioClases]); // Dependencias para re-ejecutar si un tooltip cambia de estado
+  }, [showTooltipInicioIns, showTooltipFinIns, showTooltipInicioClases]); 
 
   const handleSaveDates = async () => {
     setSaving(true);
@@ -291,13 +281,13 @@ const AdminDashboard = () => {
                 <label htmlFor="fechaInicioInscripciones" className="block text-sm font-medium text-gray-700 mb-2 flex items-center">
                   <span>Fecha de Inicio de Inscripciones:</span>
                   <button
-                    ref={btnInicioInsRef} // Añadir referencia al botón
+                    ref={btnInicioInsRef} 
                     type="button"
                     className="ml-2 p-1 rounded-full bg-white text-red-600 border border-red-600 hover:bg-red-50 hover:border-red-700 hover:text-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 transition-all duration-200 flex-shrink-0"
                     onClick={() => {
-                      setShowTooltipFinIns(false); // Cerrar otros tooltips
-                      setShowTooltipInicioClases(false); // Cerrar otros tooltips
-                      setShowTooltipInicioIns(!showTooltipInicioIns); // Alternar este tooltip
+                      setShowTooltipFinIns(false); 
+                      setShowTooltipInicioClases(false); 
+                      setShowTooltipInicioIns(!showTooltipInicioIns); 
                     }}
                     aria-expanded={showTooltipInicioIns}
                     aria-controls="tooltip-inicio-ins"
@@ -319,7 +309,7 @@ const AdminDashboard = () => {
                 />
                 {showTooltipInicioIns && (
                   <motion.div
-                    ref={tooltipInicioInsRef} // Referencia para el tooltip
+                    ref={tooltipInicioInsRef} 
                     id="tooltip-inicio-ins"
                     className="absolute z-20 mt-2 p-3 bg-blue-50 border border-blue-200 rounded-md shadow-lg text-sm text-blue-800 left-0 right-0"
                     initial={{ opacity: 0, y: -10 }}
@@ -336,13 +326,13 @@ const AdminDashboard = () => {
                 <label htmlFor="fechaFinInscripciones" className="block text-sm font-medium text-gray-700 mb-2 flex items-center">
                   <span>Fecha de Fin de Inscripciones:</span>
                   <button
-                    ref={btnFinInsRef} // Añadir referencia al botón
+                    ref={btnFinInsRef} 
                     type="button"
                     className="ml-2 p-1 rounded-full bg-white text-red-600 border border-red-600 hover:bg-red-50 hover:border-red-700 hover:text-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 transition-all duration-200 flex-shrink-0"
                     onClick={() => {
-                      setShowTooltipInicioIns(false); // Cerrar otros tooltips
-                      setShowTooltipInicioClases(false); // Cerrar otros tooltips
-                      setShowTooltipFinIns(!showTooltipFinIns); // Alternar este tooltip
+                      setShowTooltipInicioIns(false); 
+                      setShowTooltipInicioClases(false); 
+                      setShowTooltipFinIns(!showTooltipFinIns); 
                     }}
                     aria-expanded={showTooltipFinIns}
                     aria-controls="tooltip-fin-ins"
@@ -364,7 +354,7 @@ const AdminDashboard = () => {
                 />
                 {showTooltipFinIns && (
                   <motion.div
-                    ref={tooltipFinInsRef} // Referencia para el tooltip
+                    ref={tooltipFinInsRef} 
                     id="tooltip-fin-ins"
                     className="absolute z-20 mt-2 p-3 bg-blue-50 border border-blue-200 rounded-md shadow-lg text-sm text-blue-800 left-0 right-0"
                     initial={{ opacity: 0, y: -10 }}
@@ -381,13 +371,13 @@ const AdminDashboard = () => {
                 <label htmlFor="fechaInicioClases" className="block text-sm font-medium text-gray-700 mb-2 flex items-center">
                   <span>Fecha de Inicio de Clases:</span>
                   <button
-                    ref={btnInicioClasesRef} // Añadir referencia al botón
+                    ref={btnInicioClasesRef} 
                     type="button"
                     className="ml-2 p-1 rounded-full bg-white text-red-600 border border-red-600 hover:bg-red-50 hover:border-red-700 hover:text-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 transition-all duration-200 flex-shrink-0"
                     onClick={() => {
-                      setShowTooltipInicioIns(false); // Cerrar otros tooltips
-                      setShowTooltipFinIns(false); // Cerrar otros tooltips
-                      setShowTooltipInicioClases(!showTooltipInicioClases); // Alternar este tooltip
+                      setShowTooltipInicioIns(false); 
+                      setShowTooltipFinIns(false); 
+                      setShowTooltipInicioClases(!showTooltipInicioClases);
                     }}
                     aria-expanded={showTooltipInicioClases}
                     aria-controls="tooltip-inicio-clases"
@@ -409,7 +399,7 @@ const AdminDashboard = () => {
                 />
                 {showTooltipInicioClases && (
                   <motion.div
-                    ref={tooltipInicioClasesRef} // Referencia para el tooltip
+                    ref={tooltipInicioClasesRef} 
                     id="tooltip-inicio-clases"
                     className="absolute z-20 mt-2 p-3 bg-blue-50 border border-blue-200 rounded-md shadow-lg text-sm text-blue-800 left-0 right-0"
                     initial={{ opacity: 0, y: -10 }}
