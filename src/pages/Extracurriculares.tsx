@@ -1,5 +1,6 @@
 import CardComponent from "../components/ExtracurricularesComponent/CardComponent"
-import ImgTransicionExtracurri from "../components/ExtracurricularesComponent/ImgTransicionExtracurri"
+import FondoComponent from "../components/ExtracurricularesComponent/FondoComponent"
+import ImagenPruebasExtracu from "../components/ExtracurricularesComponent/ImagesPrueba"
 import InicioExtraComponent from "../components/ExtracurricularesComponent/InicioComponent"
 import FooterHomeComponent from "../components/FooterHomeComponent"
 import Navegacion from "../components/Navegacion"
@@ -12,10 +13,11 @@ export const Extracurriculares = () => {
             <ScrollTransition>
             <InicioExtraComponent/>
             </ScrollTransition>
-
+            <FondoComponent/>
             <ScrollTransition>
             <CardComponent/>
             </ScrollTransition>
+            <ImagenPruebasExtracu/>
             <FooterHomeComponent/>
         </div>
     )
