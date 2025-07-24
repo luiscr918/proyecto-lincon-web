@@ -9,7 +9,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<PanelAdministracion />} />
-      <Route path="/oferta-academica" element={<OfertaAcademica />} />
+      <Route path="/oferta-academica" element={<OfertaAcademica />} /> 
       <Route path="/contactanos" element={<Contactos />} />
       <Route path="/sobre-nosotros" element={<Nosotros />} />
     </Routes>

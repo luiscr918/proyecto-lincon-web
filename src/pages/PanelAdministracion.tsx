@@ -1,10 +1,8 @@
-import { useState, useEffect } from 'react'; // Eliminar 'React' ya que no se usa directamente
-import AdminLayout from '../components/ComponenteAdministracion'; // Asegúrate de la ruta correcta
-import { motion } from 'framer-motion'; // Para animaciones suaves
+// src/pages/AdminDashboard.tsx
 
-// Importa Firebase aquí si lo usaras directamente, pero por ahora lo dejamos como comentario.
-// import { db } from '../firebaseConfig'; // Asume que tienes un firebaseConfig.ts
-// import { doc, getDoc, updateDoc } from 'firebase/firestore';
+import { useState, useEffect } from 'react';
+import AdminLayout from '../components/ComponenteAdministracion'; // Asegúrate de la ruta correcta
+import { motion } from 'framer-motion';
 
 // Función auxiliar para formatear fechas a YYYY-MM-DD para el input type="date"
 const formatDateToInput = (date: Date | null): string => {
@@ -21,9 +19,7 @@ const parseDateFromInput = (dateString: string): Date | null => {
   return new Date(dateString + 'T00:00:00'); // Añade T00:00:00 para evitar problemas de zona horaria
 };
 
-// Componente AdminDashboard sin React.FC
 const AdminDashboard = () => {
-  // Estado local para las fechas. Inicialmente vacías o con valores de ejemplo
   const [fechaInicioInscripciones, setFechaInicioInscripciones] = useState<string>('');
   const [fechaFinInscripciones, setFechaFinInscripciones] = useState<string>('');
   const [fechaInicioClases, setFechaInicioClases] = useState<string>('');
@@ -31,25 +27,11 @@ const AdminDashboard = () => {
   const [saving, setSaving] = useState<boolean>(false);
   const [message, setMessage] = useState<{ text: string, type: 'success' | 'error' | '' }>({ text: '', type: '' });
 
-  // Simulamos la carga de datos desde Firebase (tu compañero lo conectará realmente)
   useEffect(() => {
     const fetchDates = async () => {
       setLoading(true);
       setMessage({ text: '', type: '' });
       try {
-        // *** ESTO ES SIMULADO ***
-        // Aquí iría la lógica real para obtener las fechas de Firebase.
-        // const docRef = doc(db, "fechasInstitucion", "fechas");
-        // const docSnap = await getDoc(docRef);
-        // if (docSnap.exists()) {
-        //   const data = docSnap.data();
-        //   setFechaInicioInscripciones(formatDateToInput(data.fechaInicioInscripciones?.toDate()));
-        //   setFechaFinInscripciones(formatDateToInput(data.fechaFinInscripciones?.toDate()));
-        //   setFechaInicioClases(formatDateToInput(data.fechaInicioClases?.toDate()));
-        // } else {
-        //   console.log("No such document!");
-        // }
-
         // Datos de ejemplo para que la UI funcione sin Firebase conectado
         setTimeout(() => {
           setFechaInicioInscripciones(formatDateToInput(new Date('2025-03-01')));
@@ -57,8 +39,6 @@ const AdminDashboard = () => {
           setFechaInicioClases(formatDateToInput(new Date('2025-04-15')));
           setLoading(false);
         }, 1000); // Simula un retraso de red
-        // *** FIN SIMULACIÓN ***
-
       } catch (error) {
         console.error("Error fetching dates:", error);
         setMessage({ text: 'Error al cargar las fechas.', type: 'error' });
@@ -73,7 +53,6 @@ const AdminDashboard = () => {
     setSaving(true);
     setMessage({ text: '', type: '' });
     try {
-      // Validaciones básicas
       if (!fechaInicioInscripciones || !fechaFinInscripciones || !fechaInicioClases) {
         setMessage({ text: 'Por favor, complete todas las fechas.', type: 'error' });
         setSaving(false);
@@ -102,19 +81,10 @@ const AdminDashboard = () => {
         return;
       }
 
-
-      // *** ESTO ES SIMULADO ***
-      // Aquí iría la lógica real para guardar las fechas en Firebase.
-      // await updateDoc(doc(db, "fechasInstitucion", "fechas"), {
-      //   fechaInicioInscripciones: inicioIns,
-      //   fechaFinInscripciones: finIns,
-      //   fechaInicioClases: inicioClases,
-      // });
       setTimeout(() => {
         setMessage({ text: 'Fechas actualizadas exitosamente!', type: 'success' });
         setSaving(false);
       }, 1500); // Simula un retraso de guardado
-      // *** FIN SIMULACIÓN ***
 
     } catch (error) {
       console.error("Error saving dates:", error);
@@ -123,7 +93,6 @@ const AdminDashboard = () => {
     }
   };
 
-  // Variantes para las animaciones de Framer Motion
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -136,7 +105,7 @@ const AdminDashboard = () => {
         staggerChildren: 0.1,
       },
     },
-  } as const; // 'as const' ayuda a TypeScript a inferir el tipo exacto y evitar errores con framer-motion
+  } as const;
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -145,19 +114,31 @@ const AdminDashboard = () => {
 
   return (
     <AdminLayout>
-      <div className="flex flex-col items-center justify-center py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-700 to-indigo-900 text-white min-h-[calc(100vh-80px)]"> {/* Altura ajustada */}
+      {/* CAMBIO AQUI: Aumentamos el padding-top a 'pt-32' */}
+      <div className="relative flex flex-col items-center justify-center pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-900 via-indigo-950 to-blue-800 text-white min-h-[calc(100vh-80px)] overflow-hidden">
+        <div className="absolute inset-0 z-0 opacity-10 bg-repeat" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'6\' height=\'6\' viewBox=\'0 0 6 6\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.1\' fill-rule=\'evenodd\'%3E%3Cpath d=\'M5 0h1L0 6V5zM6 5v1H5z\'/%3E%3C/g%3E%3C/svg%3E")' }}></div>
+
         <motion.div
-          className="bg-white p-8 rounded-lg shadow-2xl w-full max-w-md border border-blue-300"
+          className="bg-white p-8 rounded-lg shadow-2xl w-full max-w-md border border-blue-300 relative z-10"
           initial="hidden"
           animate="visible"
           variants={containerVariants}
         >
           <motion.h1
-            className="text-3xl font-extrabold text-gray-800 mb-8 text-center"
+            className="text-3xl font-extrabold text-gray-800 mb-2 text-center"
             variants={itemVariants}
           >
             Administrar Fechas Clave
           </motion.h1>
+
+          <motion.p
+            className="text-sm text-gray-600 mb-8 text-center leading-relaxed"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+          >
+            Estimada Rectora, este panel le permite gestionar de forma sencilla las fechas importantes de la institución. Aquí podrá **modificar la fecha de inicio de inscripciones, la fecha de cierre de inscripciones y la fecha de inicio de clases**. Una vez que realice los cambios, haga clic en "Guardar Fechas" para que se actualicen en el sitio web principal.
+          </motion.p>
 
           {loading ? (
             <div className="flex justify-center items-center h-48">
