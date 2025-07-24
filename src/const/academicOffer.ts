@@ -1,3 +1,5 @@
+// src/const/academicOffer.ts
+
 import InicialImage from '../assets/imgs/EducacionInicial.png';
 import BasicaImage from '../assets/imgs/EducacionBasica.png';
 import BachilleratoImage from '../assets/imgs/BachilleratoTecnicoInformatica.png';
@@ -6,7 +8,7 @@ import BasicaSuperiorImage from '../assets/imgs/EducacionBasicaSuperior.png';
 interface AcademicLevel {
   id: string;
   title: string;
-  ageOrCourseInfo: string; 
+  ageOrCourseInfo: string;
   description: string;
   features: string[];
   imageUrl: string;
@@ -19,8 +21,8 @@ export const Academia_Oferta_DATA: AcademicLevel[] = [
   {
     id: 'inicial',
     title: 'Educación Inicial',
-    ageOrCourseInfo: 'Desde 3 años', 
-    description: 'En el centro educativo Lincold Larrea Benalcazar, brindamos una educación inicial sólida y divertida para los más pequeños, sentando las bases de su futuro académico.', // Texto exacto
+    ageOrCourseInfo: 'Desde 3 años',
+    description: 'En el centro educativo Lincold Larrea Benalcazar, brindamos una educación inicial sólida y divertida para los más pequeños, sentando las bases de su futuro académico.',
     features: [
       'Desarrollo de habilidades motoras y cognitivas.',
       'Estimulación del lenguaje y la creatividad.',
@@ -28,14 +30,14 @@ export const Academia_Oferta_DATA: AcademicLevel[] = [
     ],
     imageUrl: InicialImage,
     altText: 'Niños jugando en educación inicial',
-    cardBgClass: 'bg-cyan-600',
-    buttonColorClass: 'bg-white text-cyan-600 hover:bg-cyan-50'
+    cardBgClass: 'bg-white',
+    buttonColorClass: 'text-blue-900 hover:bg-blue-50'
   },
   {
     id: 'basica',
     title: 'Educación Básica',
-    ageOrCourseInfo: '1ro a 7mo de EGB', 
-    description: 'Formamos estudiantes con bases sólidas en todas las materias, promoviendo el pensamiento crítico, la investigación y la resolución de problemas en un ambiente de aprendizaje activo.', // Texto exacto
+    ageOrCourseInfo: '1ro a 7mo de EGB',
+    description: 'Formamos estudiantes con bases sólidas en todas las materias, promoviendo el pensamiento crítico, la investigación y la resolución de problemas en un ambiente de aprendizaje activo.',
     features: [
       'Currículo actualizado y multidisciplinario.',
       'Desarrollo de competencias académicas clave.',
@@ -43,14 +45,14 @@ export const Academia_Oferta_DATA: AcademicLevel[] = [
     ],
     imageUrl: BasicaImage,
     altText: 'Estudiantes en un aula de educación básica',
-    cardBgClass: 'bg-orange-500',
-    buttonColorClass: 'bg-white text-orange-500 hover:bg-orange-50'
+    cardBgClass: 'bg-white',
+    buttonColorClass: 'text-blue-900 hover:bg-blue-50'
   },
   {
     id: 'basica-superior',
     title: 'Educación Básica Superior',
-    ageOrCourseInfo: '8vo a 10mo de EGB', 
-    description: 'En este nivel, fortalecemos las habilidades académicas y personales, preparando a los estudiantes para los desafíos del bachillerato. Enfocamos en el razonamiento lógico, el análisis crítico y la toma de decisiones.', // Texto exacto
+    ageOrCourseInfo: '8vo a 10mo de EGB',
+    description: 'En este nivel, fortalecemos las habilidades académicas y personales, preparando a los estudiantes para los desafíos del bachillerato. Enfocamos en el razonamiento lógico, el análisis crítico y la toma de decisiones.',
     features: [
       'Profundización en áreas de conocimiento.',
       'Desarrollo de pensamiento lógico y analítico.',
@@ -58,14 +60,14 @@ export const Academia_Oferta_DATA: AcademicLevel[] = [
     ],
     imageUrl: BasicaSuperiorImage,
     altText: 'Jóvenes estudiantes en educación básica superior',
-    cardBgClass: 'bg-purple-600',
-    buttonColorClass: 'bg-white text-purple-600 hover:bg-purple-50'
+    cardBgClass: 'bg-white',
+    buttonColorClass: 'text-blue-900 hover:bg-blue-50'
   },
   {
     id: 'bachillerato',
     title: 'Bachillerato Técnico',
-    ageOrCourseInfo: '1ro a 3ro de Bachillerato', 
-    description: 'Nuestro Bachillerato Técnico ofrece una formación integral y especializada, preparando a los estudiantes para la educación superior y el mercado laboral. Enfocados en competencias técnicas y profesionales.', // Texto exacto
+    ageOrCourseInfo: '1ro a 3ro de Bachillerato',
+    description: 'Nuestro Bachillerato Técnico ofrece una formación integral y especializada, preparando a los estudiantes para la educación superior y el mercado laboral. Enfocados en competencias técnicas y profesionales.',
     features: [
       'Programas de estudio especializados.',
       'Preparación para la universidad y el mundo laboral.',
@@ -73,7 +75,7 @@ export const Academia_Oferta_DATA: AcademicLevel[] = [
     ],
     imageUrl: BachilleratoImage,
     altText: 'Jóvenes estudiantes de bachillerato técnico',
-    cardBgClass: 'bg-blue-600',
-    buttonColorClass: 'bg-white text-blue-600 hover:bg-blue-50'
+    cardBgClass: 'bg-white',
+    buttonColorClass: 'text-blue-900 hover:bg-blue-50'
   },
 ];
