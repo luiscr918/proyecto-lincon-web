@@ -5,6 +5,7 @@ import { Contactos } from "./pages/Contactos";
 import { Nosotros } from "./pages/Nosotros";
 import { Login } from "./pages/Login";
 import AdminDashboard from "./pages/PanelAdministracion";
+import { NotFound } from "./pages/NotFound";
 
 function App() {
   return (
@@ -13,8 +14,9 @@ function App() {
       <Route path="/oferta-academica" element={<OfertaAcademica />} />
       <Route path="/contactanos" element={<Contactos />} />
       <Route path="/sobre-nosotros" element={<Nosotros />} />
-      <Route path="/login-encargado" element={<Login />} />
-      <Route path="/form-actualizar" element={<AdminDashboard />} />
+      <Route path="/actualizar-fechas" element={<Login />} />
+      <Route path="/form-actualizar/:verificado" element={<AdminDashboard />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }

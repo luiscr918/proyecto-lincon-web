@@ -4,10 +4,12 @@ import { auth } from "../firebase/Config";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import ojoCerrado from "../assets/icons/ojo-cerrado.png";
 import ojoAbierto from "../assets/icons/ojo-abierto.png";
+import { useNavigate } from "react-router-dom";
 export const LoginComponent = () => {
   const [email, setEmail] = useState<string>("");
   const [constrasenia, setConstrasenia] = useState<string>("");
   const [visible, setVisible] = useState<boolean>(false);
+  const navigate = useNavigate();
   const logearse = () => {
     signInWithEmailAndPassword(auth, email, constrasenia)
       .then((userCredential) => {
@@ -18,6 +20,7 @@ export const LoginComponent = () => {
             text: "Se logueó correctamente",
             icon: "success",
           });
+          navigate("/form-actualizar/true"); 
         }
         setEmail("");
         setConstrasenia("");
