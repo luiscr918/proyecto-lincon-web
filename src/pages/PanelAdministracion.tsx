@@ -1,10 +1,7 @@
-// src/pages/AdminDashboard.tsx
-
 import { useState, useEffect } from 'react';
-import AdminLayout from '../components/ComponenteAdministracion'; // Asegúrate de la ruta correcta
+import AdminLayout from '../components/ComponenteAdministracion'; 
 import { motion } from 'framer-motion';
 
-// Función auxiliar para formatear fechas a YYYY-MM-DD para el input type="date"
 const formatDateToInput = (date: Date | null): string => {
   if (!date) return '';
   const year = date.getFullYear();
@@ -13,10 +10,9 @@ const formatDateToInput = (date: Date | null): string => {
   return `${year}-${month}-${day}`;
 };
 
-// Función auxiliar para parsear fechas de string a Date
 const parseDateFromInput = (dateString: string): Date | null => {
   if (!dateString) return null;
-  return new Date(dateString + 'T00:00:00'); // Añade T00:00:00 para evitar problemas de zona horaria
+  return new Date(dateString + 'T00:00:00'); 
 };
 
 const AdminDashboard = () => {
@@ -32,13 +28,12 @@ const AdminDashboard = () => {
       setLoading(true);
       setMessage({ text: '', type: '' });
       try {
-        // Datos de ejemplo para que la UI funcione sin Firebase conectado
         setTimeout(() => {
           setFechaInicioInscripciones(formatDateToInput(new Date('2025-03-01')));
           setFechaFinInscripciones(formatDateToInput(new Date('2025-03-31')));
           setFechaInicioClases(formatDateToInput(new Date('2025-04-15')));
           setLoading(false);
-        }, 1000); // Simula un retraso de red
+        }, 1000); 
       } catch (error) {
         console.error("Error fetching dates:", error);
         setMessage({ text: 'Error al cargar las fechas.', type: 'error' });
@@ -84,7 +79,7 @@ const AdminDashboard = () => {
       setTimeout(() => {
         setMessage({ text: 'Fechas actualizadas exitosamente!', type: 'success' });
         setSaving(false);
-      }, 1500); // Simula un retraso de guardado
+      }, 1500); 
 
     } catch (error) {
       console.error("Error saving dates:", error);
@@ -114,7 +109,6 @@ const AdminDashboard = () => {
 
   return (
     <AdminLayout>
-      {/* CAMBIO AQUI: Aumentamos el padding-top a 'pt-32' */}
       <div className="relative flex flex-col items-center justify-center pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-900 via-indigo-950 to-blue-800 text-white min-h-[calc(100vh-80px)] overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-10 bg-repeat" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'6\' height=\'6\' viewBox=\'0 0 6 6\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.1\' fill-rule=\'evenodd\'%3E%3Cpath d=\'M5 0h1L0 6V5zM6 5v1H5z\'/%3E%3C/g%3E%3C/svg%3E")' }}></div>
 
