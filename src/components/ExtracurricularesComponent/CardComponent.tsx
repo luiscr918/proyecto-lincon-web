@@ -52,7 +52,7 @@ const cards: CardInfo[] = [
                     <div className="contentbox">
                         <div className="content-tar">
                             <h3>¿Qué es?</h3>
-                            <p>El evento de saberes es un espacio donde personas comparten conocimientos, experiencias y aprendizajes. Se realiza para dialogar, aprender juntos y valorar distintas formas de pensar, ya sea en la escuela, la comunidad o la cultura.</p>
+                            <p>El evento de saberes es un espacio donde personas comparten conocimientos, experiencias y aprendizajes. Se realiza para dialogar, aprender juntos y valorar distintas formas de pensar, ya sea en la comunidad o la cultura.</p>
                         </div>
                     </div>
                 </div>

@@ -9,13 +9,19 @@ export const Extracurriculares = () => {
     return(
         <div>
             <Navegacion/>
+            
+            <ScrollTransition>
             <InfoScrollExtracurri/>
+            </ScrollTransition>
+
             <ScrollTransition>
             <InicioExtraComponent/>
             </ScrollTransition>
+
             <ScrollTransition>
             <CardComponent/>
             </ScrollTransition>
+
             <FooterHomeComponent/>
         </div>
     )
