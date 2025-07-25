@@ -29,7 +29,7 @@ export const Header = () => {
       </ul>
 
       <div className="overlay">
-        <h1 className="titulo">¿Quiénes somos?</h1>
+        <h1 className="titulo2">¿Quiénes somos?</h1>
         <h3 className="subtitulo">
           UNIDAD EDUCATIVA PARTICULAR
           <br />

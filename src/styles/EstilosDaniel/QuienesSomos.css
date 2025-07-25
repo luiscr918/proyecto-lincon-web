@@ -77,14 +77,14 @@
   text-align: center;
   backdrop-filter: blur(5px);
 }
-.titulo,
+.titulo2,
 .subtitulo,
 .descripcion {
   font-family: "Patrick Hand", cursive;
   animation: dropFade 1s ease-out forwards;
   opacity: 0;
 }
-.titulo {
+.titulo2 {
   font-size: 2.7rem;
   animation-delay: 0.3s;
 }
@@ -112,7 +112,7 @@
   .quienes-container {
     height: 400px;
   }
-  .titulo {
+  .titulo2 {
     font-size: 2rem;
   }
 }
@@ -121,4 +121,3 @@
 .quienes-container:hover .img-fondo {
   transform: scale(1.05) translateY(-10px);
 }
-

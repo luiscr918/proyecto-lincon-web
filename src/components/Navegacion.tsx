@@ -54,7 +54,7 @@ const Navegacion = () => {
               >
                 <a href="#">Extracurriculares</a>
                 <a href="#">Nuestros Uniformes</a>
-                <a href="#">Inicio de Clases</a>
+                <Link to={"/inscripciones"}>Inicio de Clases</Link>
                 <a href="#">Costos</a>
               </div>
             )}
