@@ -52,7 +52,7 @@ const Navegacion = () => {
                   zIndex: 10,
                 }}
               >
-                <a href="#">Extracurriculares</a>
+               <Link to={"/extracurriculares"}>Extracurriculares</Link>
                 <a href="#">Nuestros Uniformes</a>
                 <Link to={"/inscripciones"}>Inicio de Clases</Link>
                 <a href="#">Costos</a>
