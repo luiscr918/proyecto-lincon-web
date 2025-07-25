@@ -1,100 +1,3 @@
-.contactos-container {
-    font-family: 'Segoe UI', sans-serif;
-    color: #1a2e49;
-}
-
-/* Hero */
-.contacto-hero {
-    position: relative;
-    width: 100%;
-    height: 500px; /* Ajusta la altura según lo necesites */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; /* Evita que la imagen sobresalga */
-}
-
-.contacto-hero-contenido {
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.55);
-    padding: 2rem;
-    border-radius: 10px;
-    text-align: center;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    animation: fadeIn 1s forwards;
-}
-
-.titulo {
-    font-size: 3rem;
-    font-weight: bold;
-    opacity: 0;
-    animation: fadeIn 1s forwards;
-    animation-delay: 0.2s;
-}
-
-.titulo span {
-    color: #f36f9b;
-}
-
-.subtitulo {
-    text-transform: uppercase;
-    font-size: 20rem; /* Aumenté el tamaño para hacerlo más grande */
-    letter-spacing: 10px;
-    margin-bottom: 0.5rem;
-    opacity: 0;
-    animation: fadeIn 1s forwards;
-    animation-delay: 0.4s;
-}
-
-/* Información de contacto y mapa */
-.contacto-info-mapa {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 2rem;
-    gap: 2rem;
-}
-
-/* Información de contacto */
-.contacto-info {
-    flex: 1 1 45%;
-}
-
-.datos {
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    max-width: 100%; /* Se asegura que no se distorsione */
-}
-
-.datos p {
-    margin: 0.5rem 0;
-}
-
-/* Mapa + ubicación */
-.contacto-mapa {
-    flex: 1 1 45%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-}
-
 .mapa {
     width: 100%;
     height: 300px;
@@ -107,34 +10,47 @@
     padding: 1.5rem;
     border-radius: 10px;
     text-align: center;
+    color: white;
 }
 
 .btn-ubicacion {
-    display: inline-block;
-    margin-top: 1rem;
-    background-color: #00bcd4;
-    color: white;
-    padding: 0.6rem 1rem;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+  background: linear-gradient(90deg, #2196f3 0%, #21cbf3 100%);
+  color: #fff;
+  padding: 0.7rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  border: none;
+  box-shadow: 0 4px 20px rgba(33,150,243,0.2);
+  transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-ubicacion::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+    transform: skewX(-25deg);
+    transition: left 0.5s ease;
+    pointer-events: none;
+}
+
+.btn-ubicacion:hover::before {
+    left: 150%;
 }
 
 .btn-ubicacion:hover {
     background-color: #008c99;
-}
-@keyframes slideUp {
-    from { transform: translateY(20px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 140, 153, 0.8);
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-.faq button:hover {
-    background-color: #072c56;
-    color: #fff;
-}
