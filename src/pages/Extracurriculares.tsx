@@ -1,9 +1,10 @@
 import CardComponent from "../components/ExtracurricularesComponent/CardComponent"
 import FondoComponent from "../components/ExtracurricularesComponent/FondoComponent"
 import ImagenPruebasExtracu from "../components/ExtracurricularesComponent/ImagesPrueba"
+import InfoScrollExtracurri from "../components/ExtracurricularesComponent/InfoScrollExtracurri"
 import InicioExtraComponent from "../components/ExtracurricularesComponent/InicioComponent"
 import FooterHomeComponent from "../components/FooterHomeComponent"
-import Navegacion from "../components/Navegacion"
+import Navegacion from '../components/Navegacion';
 import { ScrollTransition } from "../components/ScrollAnimacionComponent"
 
 export const Extracurriculares = () => {
@@ -17,7 +18,7 @@ export const Extracurriculares = () => {
             <ScrollTransition>
             <CardComponent/>
             </ScrollTransition>
-            <ImagenPruebasExtracu/>
+            <InfoScrollExtracurri/>
             <FooterHomeComponent/>
         </div>
     )
