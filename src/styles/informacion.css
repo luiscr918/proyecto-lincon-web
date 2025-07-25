@@ -62,7 +62,7 @@ margin-top: 50px;
 }
 
 .card-back2 {
-  background-color: #FACC15;
+  background-color: #223555;
   display: flex;
   align-items: center;
   border-radius: 25px;
@@ -72,7 +72,7 @@ margin-top: 50px;
 }
 
 .card-back3 {
-  background-color: #40622e;
+  background-color: #223555;
   display: flex;
   align-items: center;
   border-radius: 25px;
@@ -82,7 +82,7 @@ margin-top: 50px;
 }
 
 .card-back4 {
-  background-color: #a03336;
+  background-color: #223555;
   display: flex;
   align-items: center;
   border-radius: 25px;

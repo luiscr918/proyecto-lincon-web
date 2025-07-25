@@ -19,12 +19,12 @@ const cards: CardInfo[] = [
         title: "Convivencia",
         emoji: "👥",
         description: "Promueve la armonía entre los miembros de la comunidad educativa.",
-        image: "https://www.advantour.com/img/japan/images/index.jpg",
+        image: "https://www.tipos.co/wp-content/uploads/2015/01/Hay-distintas-formas-de-convivencia-e1422544757288.jpg",
         modalContent: (
             <div className="contenedor-tar">
                 <div className="tar">
                     <div className="tar-img">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbcflDSMHBKSLMU4s6Q3VZgD8nuP3ZDM2VsA&s" />
+                        <img src="https://fundaciontorresyprada.org/wp-content/uploads/2021/10/como-mejorar-la-convivencia-social.jpg" />
                     </div>
                     <div className="contentbox">
                         <div className="content-tar">
@@ -41,13 +41,13 @@ const cards: CardInfo[] = [
         title: "Eventos de saberes",
         emoji: "🧠",
         description: "Participación en ferias y concursos que desarrollan habilidades.",
-        image: "https://www.advantour.com/img/japan/images/index.jpg",
+        image: "https://img.freepik.com/vector-gratis/concepto-propiedad-intelectual-cerebro-engranajes_23-2148695134.jpg?semt=ais_hybrid&w=740",
         modalContent: (
             <div className="contenedor-tar">
 
                 <div className="tar">
                     <div className="tar-img">
-                        <img src="https://img.freepik.com/vector-gratis/ilustracion-paisaje-japon_1284-32852.jpg?semt=ais_hybrid&w=740" />
+                        <img src="https://img.freepik.com/vector-gratis/entusiasta-ciencia-aprendizaje_1308-172639.jpg" />
                     </div>
                     <div className="contentbox">
                         <div className="content-tar">
@@ -64,12 +64,12 @@ const cards: CardInfo[] = [
         title: "Programa de Participación Estudiantil",
         emoji: "🏫",
         description: "Fomenta innovación y liderazgo entre estudiantes.",
-        image: "https://www.advantour.com/img/japan/images/index.jpg",
+        image: "https://img.freepik.com/vector-gratis/dibujado-mano-gente-diseno-plano-agitando-ilustracion_23-2149217484.jpg",
         modalContent: (
             <div className="contenedor-tar">
                 <div className="tar">
                     <div className="tar-img">
-                        <img src="https://img.freepik.com/vector-gratis/ilustracion-paisaje-japon_1284-32852.jpg?semt=ais_hybrid&w=740" />
+                        <img src="https://i.pinimg.com/236x/b0/2f/51/b02f518b4d624628b940c1c2b28c64c7.jpg" />
                     </div>
                     <div className="contentbox">
                         <div className="content-tar">

@@ -1,6 +1,4 @@
 import CardComponent from "../components/ExtracurricularesComponent/CardComponent"
-import FondoComponent from "../components/ExtracurricularesComponent/FondoComponent"
-import ImagenPruebasExtracu from "../components/ExtracurricularesComponent/ImagesPrueba"
 import InfoScrollExtracurri from "../components/ExtracurricularesComponent/InfoScrollExtracurri"
 import InicioExtraComponent from "../components/ExtracurricularesComponent/InicioComponent"
 import FooterHomeComponent from "../components/FooterHomeComponent"
@@ -11,14 +9,13 @@ export const Extracurriculares = () => {
     return(
         <div>
             <Navegacion/>
+            <InfoScrollExtracurri/>
             <ScrollTransition>
             <InicioExtraComponent/>
             </ScrollTransition>
-            <FondoComponent/>
             <ScrollTransition>
             <CardComponent/>
             </ScrollTransition>
-            <InfoScrollExtracurri/>
             <FooterHomeComponent/>
         </div>
     )

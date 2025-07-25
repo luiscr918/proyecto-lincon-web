@@ -1,15 +1,10 @@
-import"../../styles/infoScrollExtracurri.css"
-const InfoScrollExtracurri =()=>{
-    return(
-        <>
-        
-       <div className="banner">
-        <div className="title">
-        </div>
+import Extracurricular from "./SvgExtracurricular";
+import "../../styles/infoScrollExtracurri.css"
+const InfoScrollExtracurri = () => (
+  <div className="banner">
+    <div className="title">
+      <Extracurricular/>
     </div>
-
-        </>
-    )
-}
-
+  </div>
+);
 export default InfoScrollExtracurri;
