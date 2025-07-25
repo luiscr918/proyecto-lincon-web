@@ -1,101 +1,80 @@
+// src/pages/MisionVision.js
 import "../../styles/EstilosDaniel/MisionVision.css";
+import Navegacion from "../../components/Navegacion";
+import FooterHomeComponent from "../../components/FooterHomeComponent";
+import { FloatingSocialBar } from "../../components/FloatingSocialBar";
 
-//imagenes 
-import img1 from '../../assets/imgs/imagen1.jpg'
-export const MisionVision = () => {
-  return (
-    <div className="mision-vision-container">
+import img2 from "../../assets/imgs/imagen2.jpg";
+import img3 from "../../assets/imgs/imagen3.jpg";
+import img4 from "../../assets/imgs/imagen4.jpg";
+import img5 from "../../assets/imgs/imagen5.jpg";
+import img6 from "../../assets/imgs/imagen6.jpg";
+import img7 from "../../assets/imgs/imagen7.jpg";
+
+export const MisionVision = () => (
+  <div className="contactos-container">
+    <Navegacion />
+
+    <section className="mision-vision-container">
+      {/* Fondo con figuras animadas */}
+      <ul className="floating-shapes">
+        {Array.from({ length: 12 }).map((_, i) => (
+          <li key={i}></li>
+        ))}
+      </ul>
+
       <h2 className="seccion-titulo">MISIÓN</h2>
-
       <div className="mision-bloques">
-        <div className="bloque-vertical bg-rosa">
-          <h2>Educación personalizada y desarrollo integral</h2>
-          <img
-            className="bloque-img"
-            src={img1}
-            alt="Educación integral"
-          />
-          <p>
-            La escuela promueve el desarrollo integral de todos los estudiantes,
-            potenciando sus capacidades en un ambiente de respeto, inclusión y
-            colaboración.
-          </p>
-        </div>
-
-        <div className="bloque-vertical bg-verde">
-          <h2>Pensamiento crítico y formación científica</h2>
-          <img
-            className="bloque-img"
-            src={img1}
-            alt="Pensamiento científico"
-          />
-          <p>
-            Fomentamos el pensamiento crítico y la curiosidad científica como
-            herramientas para enfrentar los desafíos del mundo actual.
-          </p>
-        </div>
-
-        <div className="bloque-vertical bg-celeste">
-          <h2>Valores y ciudadanía</h2>
-          <img
-            className="bloque-img"
-                        src={img1}
-
-            alt="Valores ciudadanos"
-          />
-          <p>
-            Promovemos la práctica de valores como el respeto, la honestidad y
-            la solidaridad para formar ciudadanos responsables y comprometidos
-            con su comunidad.
-          </p>
-        </div>
+        <Card
+          delay="0.2s"
+          img={img6}
+          titulo="Educación personalizada y desarrollo integral"
+          texto="Promovemos el desarrollo integral de cada estudiante en un ambiente de respeto, inclusión y colaboración."
+        />
+        <Card
+          delay="0.4s"
+          img={img5}
+          titulo="Pensamiento crítico y formación científica"
+          texto="Fomentamos el pensamiento crítico y la curiosidad científica como herramientas para transformar el mundo."
+        />
+        <Card
+          delay="0.6s"
+          img={img4}
+          titulo="Valores y ciudadanía"
+          texto="Formamos personas responsables, solidarias y comprometidas con su entorno social a través de valores sólidos."
+        />
       </div>
 
       <h2 className="seccion-titulo">VISIÓN</h2>
-
       <div className="vision-bloques">
-        <div className="bloque-vertical bg-rosado">
-          <h2>Formación integral</h2>
-          <img
-            className="bloque-img"
-                        src={img1}
-
-            alt="Formación integral"
-          />
-          <p>
-            Buscamos formar estudiantes íntegros, autónomos y con liderazgo para
-            enfrentar con éxito los retos del futuro.
-          </p>
-        </div>
-
-        <div className="bloque-vertical bg-verde-agua">
-          <h2>Inclusión y cobertura</h2>
-          <img
-            className="bloque-img"
-                        src={img1}
-
-            alt="Inclusión y cobertura"
-          />
-          <p>
-            Nuestra visión es brindar educación de calidad, inclusiva y
-            equitativa para todos los niños, niñas y adolescentes.
-          </p>
-        </div>
-
-        <div className="bloque-vertical bg-naranja">
-          <h2>Perfil del egresado</h2>
-          <img
-            className="bloque-img"
-                        src={img1}
-
-            alt="Perfil del egresado"
-          />
-          <p>
-            Formamos egresados con pensamiento crítico, valores sólidos y
-            compromiso con su entorno social.
-          </p>
-        </div>
+        <Card
+          delay="0.2s"
+          img={img3}
+          titulo="Formación integral"
+          texto="Buscamos formar estudiantes íntegros, autónomos y líderes capaces de enfrentar los retos del futuro."
+        />
+        <Card
+          delay="0.4s"
+          img={img2}
+          titulo="Inclusión y cobertura"
+          texto="Garantizamos una educación inclusiva, equitativa y de calidad para todos los niños, niñas y adolescentes."
+        />
+        <Card
+          delay="0.6s"
+          img={img7}
+          titulo="Perfil del egresado"
+          texto="Nuestros egresados destacan por su pensamiento crítico, valores y compromiso social."
+        />
       </div>
-    </div>
-  );
-};
+    </section>
+  </div>
+);
+
+// ───────── Componentes auxiliares ─────────
+const Card = ({ delay, img, titulo, texto }) => (
+  <div className="bloque-vertical" style={{ animationDelay: delay }}>
+    <h2>{titulo}</h2>
+    <img className="bloque-img" src={img} alt={titulo} />
+    <p>{texto}</p>
+  </div>
+);
