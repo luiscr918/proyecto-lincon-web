@@ -1,28 +1,53 @@
+import { useState, useEffect } from "react";
 import "../styles/botonStyles.css";
 
 const BotonFlotante = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <>
-      <div className="group fixed bottom-0 right-0 p-20 w-10 h-38 ">
-        <div className="text-white shadow-xl flex items-center justify-center p-4 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 z-50 absolute animacion">
+      <div className={`fixed bottom-0 right-0 p-20 w-10 h-38  ${isMobile ? "" : "group"}`}>
+        
+        <div
+          onClick={() => isMobile && setShowMenu(!showMenu)}
+          className="text-white shadow-xl flex items-center justify-center p-4 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 z-50 absolute animacion"
+        >
           <div className="absolute top-0 right-0 w-4 h-4 bg-red-600 rounded-full border-2 border-white animate-ping z-50"></div>
-
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512 512"
             fill="currentColor"
-            className="w-8 h-8 z-10">
+            className="w-8 h-8 z-10"
+          >
             <path d="M256 32C114.6 32 0 125.1 0 240c0 49.6 21.4 95.3 57.21 131.3-12.25 50.38-54.06 95.63-54.5 96a8.017 8.017 0 0 0 5.875 13.75c66.38 0 116.1-31.12 141.2-51.88 32.19 11.38 68.13 17.88 106.2 17.88 141.4 0 256-93.13 256-208S397.4 32 256 32z" />
           </svg>
         </div>
 
-        <div className="absolute rounded-full transition-all duration-[0.2s] ease-out scale-y-0 group-hover:scale-y-100 group-hover:-translate-x-16   flex  p-2 hover:p-3 bg-green-300 scale-100 hover:bg-green-400 text-white">
+        <div
+          className={`absolute rounded-full transition-all duration-[0.2s] ease-out ${
+            isMobile
+              ? showMenu
+                ? "scale-100 -translate-x-16"
+                : "scale-0"
+              : "scale-y-0 group-hover:scale-y-100 group-hover:-translate-x-16"
+          } flex p-2 hover:p-3 bg-green-300 hover:bg-green-400 text-white`}
+        >
           <a
             href="https://wa.me/593983924043?text=Hola%2C%20quiero%20más%20información%20acerca%20de%20las%20matrículas"
             target="_blank"
             rel="noopener noreferrer"
           >
-            {" "}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -34,7 +59,16 @@ const BotonFlotante = () => {
           </a>
         </div>
 
-        <div className="absolute rounded-full transition-all duration-[0.2s] ease-out scale-x-0 group-hover:scale-x-100 group-hover:-translate-y-16 flex p-2 hover:p-3 bg-blue-300 scale-100 hover:bg-blue-400 text-white">
+
+        <div
+          className={`absolute rounded-full transition-all duration-[0.2s] ease-out ${
+            isMobile
+              ? showMenu
+                ? "scale-100 -translate-y-16"
+                : "scale-0"
+              : "scale-x-0 group-hover:scale-x-100 group-hover:-translate-y-16"
+          } flex p-2 hover:p-3 bg-blue-300 hover:bg-blue-400 text-white`}
+        >
           <a href="mailto:uelinconlarrea@gmail.com">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -49,7 +83,16 @@ const BotonFlotante = () => {
           </a>
         </div>
 
-        <div className="absolute rounded-full transition-all duration-[0.2s] ease-out scale-x-0 group-hover:scale-x-100 group-hover:-translate-y-14 group-hover:-translate-x-14 flex p-2 hover:p-3 bg-[#eee34c] hover:bg-[#FFF000] text-white">
+
+        <div
+          className={`absolute rounded-full transition-all duration-[0.2s] ease-out ${
+            isMobile
+              ? showMenu
+                ? "scale-100 -translate-y-14 -translate-x-14"
+                : "scale-0"
+              : "scale-x-0 group-hover:scale-x-100 group-hover:-translate-y-14 group-hover:-translate-x-14"
+          } flex p-2 hover:p-3 bg-[#eee34c] hover:bg-[#FFF000] text-white`}
+        >
           <a
             href="https://maps.app.goo.gl/tMu2xzJPR6797zRa9"
             target="_blank"
@@ -62,7 +105,6 @@ const BotonFlotante = () => {
               className="w-7 h-7"
             >
               <path d="M12 2C8.13 2 5 5.13 5 9c0 2.61 1.1 5.26 3.07 7.45L12 21l3.93-4.55C17.9 14.26 19 11.61 19 9c0-3.87-3.13-7-7-7zm0 10.3c-1.6 0-2.9-1.29-2.9-2.9s1.29-2.9 2.9-2.9 2.9 1.29 2.9 2.9-1.29 2.9-2.9 2.9z" />
-              FFDE63
             </svg>
           </a>
         </div>

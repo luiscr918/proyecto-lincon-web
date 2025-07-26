@@ -1,5 +1,5 @@
 const Extracurricular = () => (
-  <svg
+  <svg className="svg-tra"
     width="343.75"
     height="37.601"
     viewBox="0 0 343.75 37.601"

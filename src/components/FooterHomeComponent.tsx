@@ -86,7 +86,7 @@ const FooterHomeComponent = () => {
 
             <div className="flex mt-4 space-x-4  lg:mt-0 ">
               <a
-                href="javascript:;"
+                href="#"
                 className="relative w-8 h-8 rounded-full transition-all duration-500 flex justify-center items-center bg-[linear-gradient(45deg,#FEE411_6.9%,#FEDB16_10.98%,#FEC125_17.77%,#FE983D_26.42%,#FE5F5E_36.5%,#FE2181_46.24%,#9000DC_85.57%)]  hover:bg-gradient-to-b from-gray-900 to-gray-900  "
               >
                 <svg
@@ -103,7 +103,7 @@ const FooterHomeComponent = () => {
               </a>
 
               <a
-                href="javascript:;"
+                href="#"
                 className="relative w-8 h-8 rounded-full transition-all duration-500 flex justify-center items-center bg-black hover:bg-gray-900"
               >
                 <svg
@@ -117,7 +117,7 @@ const FooterHomeComponent = () => {
               </a>
 
               <a
-                href="javascript:;"
+                href="#"
                 className="relative w-8 h-8 rounded-full transition-all duration-500 flex justify-center items-center bg-[#337FFF]  hover:bg-gray-900 "
               >
                 <svg

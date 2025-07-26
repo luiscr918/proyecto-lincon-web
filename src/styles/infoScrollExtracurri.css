@@ -6,6 +6,7 @@
   align-items: center;
   position: relative;
   overflow: hidden;
+  margin-bottom: 20px;
 }
 .banner::before {
   content: '';
@@ -45,7 +46,7 @@
   }
 }
 
-svg path {
+.svg-tra path {
   fill: transparent;
   stroke: #fff;
   stroke-width: 0.1;
