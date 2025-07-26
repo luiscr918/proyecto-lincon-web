@@ -46,7 +46,7 @@
   }
 }
 
-svg path {
+.svg-tra path {
   fill: transparent;
   stroke: #fff;
   stroke-width: 0.1;

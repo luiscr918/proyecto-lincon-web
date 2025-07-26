@@ -1,5 +1,4 @@
 import CardComponent from "../components/ExtracurricularesComponent/CardComponent"
-import FondoPrueba from "../components/ExtracurricularesComponent/FondoPrueba";
 import ImagendRotation from "../components/ExtracurricularesComponent/Imagen3dRotate";
 import InfoScrollExtracurri from "../components/ExtracurricularesComponent/InfoScrollExtracurri"
 import InicioExtraComponent from "../components/ExtracurricularesComponent/InicioComponent"
@@ -10,8 +9,7 @@ import { ScrollTransition } from "../components/ScrollAnimacionComponent"
 export const Extracurriculares = () => {
     return (
         <div>
-               <FondoPrueba />
-      <div style={{ position: 'relative', zIndex: 1 }}></div>
+              
             <Navegacion />
 
             <ScrollTransition>
