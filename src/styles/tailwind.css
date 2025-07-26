@@ -6,6 +6,7 @@
 }
 @media (min-width: 1024px) {
   .custom-margin-lg-up {
-    margin-right: 450px; /* o el valor que quieras */
+    margin-right: 580px; /* o el valor que quieras */
+    margin-left: 375px;
   }
 }
