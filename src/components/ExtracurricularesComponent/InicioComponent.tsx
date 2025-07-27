@@ -6,19 +6,49 @@ const InicioExtraComponent = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev % 5) + 1); 
-    }, 3000); 
+      setCurrentSlide((prev) => (prev % 5) + 1);
+    }, 3000);
 
-    return () => clearInterval(interval); 
+    return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="contenedor-inicio">
-      <input type="radio" id="slide1" name="group" checked={currentSlide === 1} readOnly />
-      <input type="radio" id="slide2" name="group" checked={currentSlide === 2} readOnly />
-      <input type="radio" id="slide3" name="group" checked={currentSlide === 3} readOnly />
-      <input type="radio" id="slide4" name="group" checked={currentSlide === 4} readOnly />
-      <input type="radio" id="slide5" name="group" checked={currentSlide === 5} readOnly />
+    <div className="contenedor-inicio mt-32">
+      <input
+        type="radio"
+        id="slide1"
+        name="group"
+        checked={currentSlide === 1}
+        readOnly
+      />
+      <input
+        type="radio"
+        id="slide2"
+        name="group"
+        checked={currentSlide === 2}
+        readOnly
+      />
+      <input
+        type="radio"
+        id="slide3"
+        name="group"
+        checked={currentSlide === 3}
+        readOnly
+      />
+      <input
+        type="radio"
+        id="slide4"
+        name="group"
+        checked={currentSlide === 4}
+        readOnly
+      />
+      <input
+        type="radio"
+        id="slide5"
+        name="group"
+        checked={currentSlide === 5}
+        readOnly
+      />
 
       <div className="dots">
         <label htmlFor="slide1" onClick={() => setCurrentSlide(1)}></label>
@@ -44,9 +74,7 @@ const InicioExtraComponent = () => {
                 "--img": `url("${imgUrl}")`,
               } as React.CSSProperties
             }
-          >
-            
-          </div>
+          ></div>
         ))}
       </div>
     </div>

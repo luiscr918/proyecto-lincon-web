@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const FooterHomeComponent = () => {
   return (
     <footer className="w-full bg-[#223555]">
@@ -43,20 +45,20 @@ const FooterHomeComponent = () => {
             </h4>
             <ul className="text-sm  transition-all duration-500">
               <li className="mb-4">
-                <a
-                  href="javascript:;"
+                <Link
+                  to={"/extracurriculares"}
                   className="text-yellow-400 hover:text-[#c4b264]"
                 >
                   Extracurriculares
-                </a>
+                </Link>
               </li>
               <li className="mb-4">
-                <a
-                  href="javascript:;"
+                <Link
+                  to={"/inscripciones"}
                   className=" text-yellow-400 hover:text-[#c4b264]"
                 >
                   Inicio de clases
-                </a>
+                </Link>
               </li>
               <li className="mb-4 ">
                 <a
@@ -69,7 +71,9 @@ const FooterHomeComponent = () => {
               <li className="mb-4">
                 {" "}
                 <a
-                  href="javascript:;"
+                  href="https://wa.me/593983924043?text=Hola%2C%20quiero%20más%20información%20acerca%20de%20las%20matrículas"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className=" text-yellow-400  hover:text-[#c4b264] "
                 >
                   Costos
