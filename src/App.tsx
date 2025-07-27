@@ -13,6 +13,7 @@ import ParticlesComponent from "./components/OfertaAcaComponents/ParticlesCompon
 //google analitycs
 import { useEffect } from "react";
 import { trackPageView } from "./utils/googleAnalytics";
+import Uniformes from "./pages/Uniformes";
 
 function App() {
   const location = useLocation();
@@ -32,6 +33,7 @@ function App() {
         <Route path="/contactanos" element={<Contactos />} />
         <Route path="/sobre-nosotros" element={<Nosotros />} />
         <Route path="/actualizar-fechas" element={<Login />} />
+        <Route path="/uniformes" element={<Uniformes/>} />
         <Route path="/inscripciones" element={<Inscripciones />} />
         <Route path="/extracurriculares" element={<Extracurriculares />} />
         <Route

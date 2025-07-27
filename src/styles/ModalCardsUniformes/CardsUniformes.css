@@ -1,0 +1,212 @@
+
+:root {
+    --first-color: hsl(82, 60%, 28%);
+    --titulo-color: hsl(0, 0%, 15%);
+    --texto-color: hsl(0, 0%, 35%);
+    --body-color: hsl(0, 0%, 95%);
+    --contenedor-color: hsl(0, 0%, 100%);
+    --body-font: "Poppins", sans-serif;
+    --h2-font-size: 1.25rem;
+    --small-font-size: .813rem;
+}
+
+@media screen and (min-wdth:1120px) {
+    :root {
+        --h2-font-size: 1.5rem;
+        --small-font-size: .875rem;
+
+    }
+}
+
+
+img {
+    display: block;
+    max-width: 100%;
+    height: 100%;
+}
+
+.cont {
+    display: grid;
+    place-items: center;
+    margin-inline: 1.5rem;
+    padding-block: 5rem;
+}
+
+.card-cont {
+    display: grid;
+    row-gap: 3.5rem;
+    align-items: center;
+}
+
+.card-article {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-img {
+    width: 320px;
+    border-radius: 1.5rem;
+}
+
+.card-data {
+    width: 280px;
+    background-color: var(--contenedor-color);
+    padding: 1.5rem 2rem;
+    box-shadow: 0 8px 24px hsl(0, 0%, 0%, 15%);
+    border-radius: 1rem;
+    position: absolute;
+    bottom: -9rem;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    opacity: 0;
+    transition: opacity 1s 1s;
+}
+
+.card-description {
+    display: block;
+    font-size: var(--small-font-size);
+    margin-bottom: .25rem;
+}
+
+.card-title {
+    font-size: var(--h2-font-size);
+    font-weight: 500;
+    color: var(--titulo-color);
+    margin-bottom: .75rem;
+    
+}
+
+.card-button {
+    margin-top: 25px;
+}
+
+
+
+.card-article:hover .card-data {
+    animation: show-data 1s forwards;
+    opacity: 1;
+    transition: opacity .3s;
+}
+
+.card-article:hover {
+    animation: remove-overflow 2s forwards;
+}
+
+.card-article:not(:hover) {
+    animation: show-overflow forwards;
+}
+
+.card-article:not(:hover) .card-data {
+    animation: remove-data 1s forwards;
+}
+
+
+@keyframes show-data {
+    50% {
+        transform: translateY(-10rem);
+    }
+
+    100% {
+        transform: translateY(-7rem);
+    }
+}
+
+@keyframes remove-overflow {
+    to {
+        overflow: initial;
+    }
+}
+
+@keyframes remove-data {
+    0% {
+        transform: translateY(-7rem);
+    }
+
+    50% {
+        transform: translateY(-10rem);
+    }
+
+    100% {
+        transform: translateY(.5rem);
+    }
+}
+
+@keyframes show-overflow {
+    0% {
+        overflow: initial;
+        pointer-events: none;
+    }
+
+    50% {
+        overflow: hidden;
+    }
+}
+
+
+@media screen and(max-width: 340px) {
+    .cont {
+        margin-inline: 1rem;
+    }
+
+    .card-dataw {
+        width: 250px;
+        padding: 1rem;
+    }
+}
+
+@media screen and (min-width: 1120px) {
+    .card-cont {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 1120px) {
+    .cont {
+        height: 100vh;
+    }
+
+    .card-cont {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card-img {
+        width: 348px;
+    }
+
+    .card-data {
+        width: 316px;
+        padding-inline: 2.5rem;
+    }
+}
+
+
+.botonn {
+    padding: 1em 2em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.7);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    align-items: center;
+    display: block;
+    margin: 2rem auto;
+}
+
+.botonn:hover {
+    background-color: #223555;
+    box-shadow: 0px 15px 20px rgba(59, 99, 230, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+.botonn:active {
+    transform: translateY(-1px);
+}
