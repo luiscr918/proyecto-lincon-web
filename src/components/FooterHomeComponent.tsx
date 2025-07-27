@@ -28,12 +28,14 @@ const FooterHomeComponent = () => {
                 </a>
               </li>
               <li>
-                <p className=" text-yellow-400 ">-099185101</p>
+                <p className=" text-yellow-400 ">- 0939545376</p>
               </li>
               <li>
-                <p className=" text-yellow-400 ">-0987147390</p>
+                <p className=" text-yellow-400 ">- 0999688633</p>
               </li>
-
+              <li>
+                <p className=" text-yellow-400 ">- 0987147390</p>
+              </li>
               <li>
                 <p className=" text-yellow-400 mt-7">Quito-Ecuador</p>
               </li>
