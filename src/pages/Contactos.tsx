@@ -1,115 +1,95 @@
-import Portada from "../components/ContactosComponents/PortadaComponents";
-import ContactoInfo from "../components/ContactosComponents/ContactoInfoComponents";
-import PreguntasContactosComponents from "../components/ContactosComponents/PreguntasContactosComponents";
-import Mapa from "../components/ContactosComponents/MapaComponents";
-import { useState } from "react";
-import { FloatingSocialBar } from "../components/FloatingSocialBar";
+import ScrollStack from "../components/Componentes de prueba/ScrollStack";
+import DemoScrollStackItems from "../components/Componentes de prueba/GaleriaCards";
 import FooterHomeComponent from "../components/FooterHomeComponent";
 import Navegacion from "../components/Navegacion";
+import Portada from "../components/ContactosComponents/PortadaComponents";
+import CustomCursor from "../components/Componentes de prueba/CustomCursor";
+import ContactCards from "../components/Componentes de prueba/ContactCards";
+import Mapa from "../components/ContactosComponents/MapaComponents";
 
-//imagen
-import img1 from '../assets/imgs/cientifico.png'
-
+import BlurText from "../components/Componentes de prueba/BlurText"; // IMPORTA AQUÍ
+import BotonFlotante from "../components/BotonFlotanteComponent";
 
 export const Contactos = () => {
-  const [showFAQ, setShowFAQ] = useState(false);
-
-  const toggleFAQVisibility = () => {
-    setShowFAQ(!showFAQ);
-  };
-
   return (
-    <div className="contactos-container">
-      <Navegacion />
-      <Portada />
-      <section className="contacto-info-mapa">
-        <div
+    <div
+      style={{
+        position: "relative",
+        minHeight: "100vh",
+        width: "100%",
+        overflowX: "hidden",
+        overflowY: "auto",
+        backgroundColor: "transparent",
+        color: "white",
+      }}
+    >
+      <div style={{ position: "relative", zIndex: 10 }}>
+        <CustomCursor />
+        <Navegacion />
+        <Portada />
+
+        <section
           style={{
-            background: "#072c56ff",
-            borderRadius: "16px",
-            padding: "2rem",
-            marginTop: "2rem",
-            boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "flex-start",
+            gap: "3rem",
+            padding: "3rem 2rem",
+            flexWrap: "wrap",
+            color: "white",
+            minHeight: "25vh",
           }}
         >
           <div
             style={{
               display: "flex",
-              flexWrap: "wrap",
+              flexDirection: "column",
+              alignItems: "center",
               gap: "2rem",
-              justifyContent: "center",
-              alignItems: "flex-start",
+              maxWidth: "600px",
+              textAlign: "center",
             }}
           >
-            {/* Información de contacto */}
-            <div style={{ flex: "1 1 100%", maxWidth: "500px" }}>
-              <ContactoInfo />
-
-              {/* Científico con título encima */}
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  marginTop: "1.5rem",
-                  marginLeft: "auto",
-                  marginRight: "auto",
-                  width: "fit-content",
-                  transform: "translateX(-15%)",
-                }}
-              >
-                <h3
-                  style={{
-                    color: "#fff",
-                    fontSize: "1.5rem",
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Preguntas Frecuentes
-                </h3>
-                <img
-                  src={img1}
-                  alt="Imagen Científica"
-                  style={{
-                    maxWidth: "100px",
-                    height: "auto",
-                    cursor: "pointer",
-                    borderRadius: "8px",
-                    boxShadow: "0 4px 10px rgba(0,0,0,0.2)",
-                    transition: "transform 0.3s ease",
-                    marginBottom: "0.5rem",
-                  }}
-                  onClick={toggleFAQVisibility}
-                />
-                <div
-                  style={{
-                    color: "#fff",
-                    fontSize: "0.9rem",
-                    textAlign: "center",
-                  }}
-                >
-                  Haz clic en el científico para mostrar/ocultar las preguntas
-                  frecuentes.
-                </div>
-              </div>
-            </div>
-
-            {/* Mapa */}
-            <div style={{ flex: "1 1 100%", maxWidth: "650px" }}>
-              <Mapa />
-            </div>
+            {/* Aquí el título animado con BlurText */}
+            <BlurText
+              text="ACCESO RÁPIDO"
+              delay={150}
+              animateBy="words"
+              direction="top"
+              className="text-4xl font-bold mb-8 text-white"
+            />
+            <ContactCards />
+          </div>
+        </section>
+        <div className="flex justify-center mt-0">
+          <Mapa />
+        </div>
+        <section
+          style={{
+            position: "relative",
+            zIndex: 10,
+            paddingBottom: "4rem",
+            textAlign: "center",
+          }}
+        >
+          {/* Título animado Preguntas Frecuentes */}
+          <div className="w-full flex justify-center items-center">
+            <BlurText
+              text="Preguntas Frecuentes"
+              delay={150}
+              animateBy="words"
+              direction="top"
+              className="text-4xl font-bold mb-8 text-white"
+            />
           </div>
 
-          {/* Preguntas Frecuentes */}
-          {showFAQ && (
-            <>
-              <PreguntasContactosComponents />
-            </>
-          )}
-        </div>
-      </section>
-      <FloatingSocialBar />
-      <FooterHomeComponent />
+          <ScrollStack>
+            <DemoScrollStackItems />
+          </ScrollStack>
+        </section>
+        <BotonFlotante />
+        <FooterHomeComponent />
+      </div>
     </div>
   );
 };
