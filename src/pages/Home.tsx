@@ -34,11 +34,7 @@ export const Home = () => {
       <ScrollTransition>
         <Informacion />
       </ScrollTransition>
-
-      <ScrollTransition>
-        <ImagenesAnimacionHome />
-      </ScrollTransition>
-
+      <ImagenesAnimacionHome />
       <BotonFlotante />
       <div className="hide-below-1416">
         <FloatingSocialBar modalHome={visible} />
