@@ -9,10 +9,13 @@ import { NotFound } from "./pages/NotFound";
 import ScrollToHashElement from "./components/ScrollToHashElement";
 import { Inscripciones } from "./pages/Inscripciones";
 import { Extracurriculares } from "./pages/Extracurriculares";
+import ParticlesComponent from "./components/OfertaAcaComponents/ParticlesComponent";
 
 function App() {
   return (
-    <>
+    <div className="relative min-h-screen overflow-hidden">
+      <ParticlesComponent />
+
       <ScrollToHashElement />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -28,7 +31,7 @@ function App() {
         />
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </>
+    </div>
   );
 }
 

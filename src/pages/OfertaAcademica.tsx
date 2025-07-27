@@ -3,7 +3,6 @@ import AcademicLevelCard from "../components/OfertaAcaComponents/AcademiOfer";
 import BotonFlotante from "../components/BotonFlotanteComponent";
 import { FloatingSocialBar } from "../components/FloatingSocialBar";
 import { Academia_Oferta_DATA } from "../const/academicOffer";
-import ParticlesComponent from "../components/OfertaAcaComponents/ParticlesComponent";
 import Navegacion from "../components/Navegacion";
 import { FooterToUs } from "../components/OfertaAcaComponents/FooterToUs";
 
@@ -46,7 +45,6 @@ const OfertaAcademica = () => {
     <div>
       <Navegacion />
       <div className="relative overflow-hidden  py-24 lg:py-32 text-white">
-        <ParticlesComponent />
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center relative z-10">
           <motion.h1
             variants={titleAnimation}
