@@ -190,12 +190,12 @@
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1231px) {
   .header {
     padding: 1.3rem 5%;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1102px) {
   .icons {
     display: inline-flex;
   }
