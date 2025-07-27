@@ -63,12 +63,12 @@ const FooterHomeComponent = () => {
                 </Link>
               </li>
               <li className="mb-4 ">
-                <a
-                  href="javascript:;"
+                <Link
+                  to={"/uniformes"}
                   className=" text-yellow-400  hover:text-[#c4b264] "
                 >
                   Uniformes
-                </a>
+                </Link>
               </li>
               <li className="mb-4">
                 {" "}
