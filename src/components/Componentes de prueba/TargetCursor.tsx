@@ -1,20 +1,22 @@
 import { useEffect, useRef, useCallback, useMemo } from "react";
 import { gsap } from "gsap";
-import { number } from "framer-motion";
+
+interface TargetCursorLocalProps {
+    targetSelector?: string;
+    spinDuration?: number;
+    containerSelector?: string;
+}
 
 const TargetCursorLocal = ({
     targetSelector = ".cursor-target",
     spinDuration = 2,
     containerSelector = ".contact-container"
-}: {
-    targetSelector?: string;
-    spinDuration?: number;
-    containerSelector?: string;
-}) => {
-    const cursorRef = useRef<any>(null);
-    const cornersRef = useRef<any>(null);
-    const spinTl = useRef<any>(null);
-    const containerRef = useRef<any>(null);
+}: TargetCursorLocalProps) => {
+    // Definir los tipos correctamente
+    const cursorRef = useRef<HTMLDivElement | null>(null);
+    const cornersRef = useRef<NodeListOf<HTMLElement> | null>(null);
+    const spinTl = useRef<GSAPTimeline | null>(null); // GSAPTimeline
+    const containerRef = useRef<HTMLElement | null>(null);
 
     const constants = useMemo(
         () => ({
@@ -47,14 +49,14 @@ const TargetCursorLocal = ({
         const cursor = cursorRef.current;
         cornersRef.current = cursor.querySelectorAll(".target-cursor-corner");
 
-        let activeTarget: any = null;
-        let currentTargetMove: any = null;
-        let currentLeaveHandler: any = null;
+        let activeTarget: HTMLElement | null = null;
+        let currentTargetMove: ((ev: MouseEvent) => void) | null = null;
+        let currentLeaveHandler: (() => void) | null = null;
         let isAnimatingToTarget = false;
-        let resumeTimeout: any = null;
+        let resumeTimeout: NodeJS.Timeout | null = null;
         let isInsideContainer = false;
 
-        const cleanupTarget = (target: any) => {
+        const cleanupTarget = (target: HTMLElement) => {
             if (currentTargetMove) {
                 target.removeEventListener("mousemove", currentTargetMove);
             }
@@ -94,8 +96,12 @@ const TargetCursorLocal = ({
             const rect = container.getBoundingClientRect();
             const { clientX, clientY } = e;
 
-            if (clientX < rect.left || clientX > rect.right ||
-                clientY < rect.top || clientY > rect.bottom) {
+            if (
+                clientX < rect.left ||
+                clientX > rect.right ||
+                clientY < rect.top ||
+                clientY > rect.bottom
+            ) {
                 isInsideContainer = false;
                 gsap.to(cursor, { opacity: 0, duration: 0.2 });
                 spinTl.current?.kill();
@@ -120,12 +126,12 @@ const TargetCursorLocal = ({
         const enterHandler = (e: MouseEvent) => {
             if (!isInsideContainer) return;
 
-            const directTarget = e.target;
+            const directTarget = e.target as HTMLElement;
 
-            if (!container.contains(directTarget as Node)) return;
+            if (!container.contains(directTarget)) return;
 
-            const allTargets: any[] = [];
-            let current: any = directTarget;
+            const allTargets: HTMLElement[] = [];
+            let current: HTMLElement | null = directTarget;
             while (current && current !== document.body) {
                 if (current.matches(targetSelector)) {
                     allTargets.push(current);
@@ -154,28 +160,32 @@ const TargetCursorLocal = ({
             gsap.set(cursorRef.current, { rotation: 0 });
 
             const updateCorners = (mouseX?: number, mouseY?: number) => {
+                if (!cornersRef.current) return;
+
                 const rect = target.getBoundingClientRect();
-                const cursorRect = cursorRef.current.getBoundingClientRect();
+                const cursorRect = cursorRef.current?.getBoundingClientRect();
+
+                if (!cursorRect) return;
 
                 const cursorCenterX = cursorRect.left + cursorRect.width / 2;
                 const cursorCenterY = cursorRect.top + cursorRect.height / 2;
 
-                const [tlc, trc, brc, blc] = Array.from(cornersRef.current);
+                const [tlc, trc, brc, blc] = Array.from(cornersRef.current) as HTMLElement[];
                 const { borderWidth, cornerSize, parallaxStrength } = constants;
 
-                let tlOffset = {
+                const tlOffset: { x: number; y: number } = {
                     x: rect.left - cursorCenterX - borderWidth,
                     y: rect.top - cursorCenterY - borderWidth
                 };
-                let trOffset = {
+                const trOffset: { x: number; y: number } = {
                     x: rect.right - cursorCenterX + borderWidth - cornerSize,
                     y: rect.top - cursorCenterY - borderWidth
                 };
-                let brOffset = {
+                const brOffset: { x: number; y: number } = {
                     x: rect.right - cursorCenterX + borderWidth - cornerSize,
                     y: rect.bottom - cursorCenterY + borderWidth - cornerSize
                 };
-                let blOffset = {
+                const blOffset: { x: number; y: number } = {
                     x: rect.left - cursorCenterX - borderWidth,
                     y: rect.bottom - cursorCenterY + borderWidth - cornerSize
                 };
@@ -200,7 +210,7 @@ const TargetCursorLocal = ({
                 const corners = [tlc, trc, brc, blc];
                 const offsets = [tlOffset, trOffset, brOffset, blOffset];
 
-                corners.forEach((corner: any, index: number) => {
+                corners.forEach((corner, index) => {
                     tl.to(
                         corner,
                         {
@@ -221,12 +231,12 @@ const TargetCursorLocal = ({
                 isAnimatingToTarget = false;
             }, 1);
 
-            let moveThrottle: any = null;
+            let moveThrottle: number | null = null; // Tipo correcto para throttle
             const targetMove = (ev: MouseEvent) => {
                 if (moveThrottle || isAnimatingToTarget) return;
                 moveThrottle = requestAnimationFrame(() => {
                     updateCorners(ev.clientX, ev.clientY);
-                    moveThrottle = null;
+                    moveThrottle = null; // Restablecer después de la animación
                 });
             };
 
@@ -247,7 +257,7 @@ const TargetCursorLocal = ({
                     ];
 
                     const tl = gsap.timeline();
-                    corners.forEach((corner: any, index: number) => {
+                    corners.forEach((corner, index) => {
                         tl.to(
                             corner,
                             {
@@ -264,24 +274,23 @@ const TargetCursorLocal = ({
                 resumeTimeout = setTimeout(() => {
                     if (!activeTarget && cursorRef.current && spinTl.current && isInsideContainer) {
                         const currentRotation = gsap.getProperty(cursorRef.current, "rotation");
-                        const normalizedRotation: any = Number(currentRotation) % 360;  // Aseguramos que sea un número
+                        const normalizedRotation = Number(currentRotation) % 360;
 
                         spinTl.current.kill();
                         spinTl.current = gsap
                             .timeline({ repeat: -1 })
                             .to(cursorRef.current, { rotation: "+=360", duration: spinDuration, ease: "none" });
 
-                        gsap.to(cursorRef.current as any, {
+                        gsap.to(cursorRef.current, {
                             rotation: normalizedRotation,
                             duration: 0
                         });
                     }
-                }, 500);  // O el tiempo que desees
+                }, 500);
             };
 
             target.addEventListener("mousemove", targetMove);
             target.addEventListener("mouseleave", leaveHandler);
-
         };
 
         document.addEventListener("mouseenter", enterHandler);

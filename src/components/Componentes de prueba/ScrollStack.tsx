@@ -5,7 +5,7 @@ import '../../styles/EstilosDaniel/ScrollStack.css';
 
 interface ScrollStackItemProps {
   children: React.ReactNode;
-  itemClassName?: string;
+  itemClassName?: string;  
 }
 
 export const ScrollStackItem: React.FC<ScrollStackItemProps> = ({ children, itemClassName = "" }) => (
@@ -27,6 +27,14 @@ interface ScrollStackProps {
   onStackComplete?: () => void;
 }
 
+// Definimos un tipo para las transformaciones
+interface Transform {
+  translateY: number;
+  scale: number;
+  rotation: number;
+  blur: number;
+}
+
 const ScrollStack: React.FC<ScrollStackProps> = ({
   children,
   className = "",
@@ -46,7 +54,7 @@ const ScrollStack: React.FC<ScrollStackProps> = ({
   const animationFrameRef = useRef<number | null>(null);
   const lenisRef = useRef<Lenis | null>(null);
   const cardsRef = useRef<HTMLDivElement[]>([]);
-  const lastTransformsRef = useRef(new Map<number, any>());
+  const lastTransformsRef = useRef<Map<number, Transform>>(new Map()); // Usamos el tipo Transform
   const isUpdatingRef = useRef(false);
 
   const calculateProgress = useCallback((scrollTop: number, start: number, end: number) => {
@@ -74,7 +82,6 @@ const ScrollStack: React.FC<ScrollStackProps> = ({
     const scaleEndPositionPx = parsePercentage(scaleEndPosition, containerHeight);
     const endElement = scroller.querySelector('.scroll-stack-end');
     const endElementTop = endElement ? (endElement as HTMLElement).offsetTop : 0;
-
 
     cardsRef.current.forEach((card, i) => {
       if (!card) return;
@@ -181,13 +188,10 @@ const ScrollStack: React.FC<ScrollStackProps> = ({
       smoothWheel: true,
       touchMultiplier: 2,
       infinite: false,
-
       wheelMultiplier: 1,
-
       lerp: 0.1,
       syncTouch: true,
       syncTouchLerp: 0.075,
-
     });
 
     lenis.on('scroll', handleScroll);
