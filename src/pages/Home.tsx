@@ -20,13 +20,10 @@ export const Home = () => {
     }
   }, []);
   return (
-    <div className="bg-gradient-to-br from-blue-950 via-blue-900  to-cyan-400">
+    <>
       <Navegacion />
 
       <ModalInformacion visible={visible} setVisible={setvisible} />
-      <div className="hide-below-1416">
-        <FloatingSocialBar modalHome={visible} />
-      </div>
 
       <ScrollTransition>
         <div className="relative overflow-hidden  mt-28 ">
@@ -43,8 +40,10 @@ export const Home = () => {
       </ScrollTransition>
 
       <BotonFlotante />
-
+      <div className="hide-below-1416">
+        <FloatingSocialBar modalHome={visible} />
+      </div>
       <FooterHomeComponent />
-    </div>
+    </>
   );
 };
