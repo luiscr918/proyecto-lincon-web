@@ -9,6 +9,7 @@ import { NotFound } from "./pages/NotFound";
 import ScrollToHashElement from "./components/ScrollToHashElement";
 import { Inscripciones } from "./pages/Inscripciones";
 import { Extracurriculares } from "./pages/Extracurriculares";
+import Uniformes from "./pages/Uniformes";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/contactanos" element={<Contactos />} />
         <Route path="/sobre-nosotros" element={<Nosotros />} />
         <Route path="/actualizar-fechas" element={<Login />} />
+        <Route path="/uniformes" element={<Uniformes/>} />
         <Route path="/inscripciones" element={<Inscripciones />} />
         <Route path="/extracurriculares" element={<Extracurriculares />} />
         <Route

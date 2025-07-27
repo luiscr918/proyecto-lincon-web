@@ -1,0 +1,90 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.uniformes-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 120px;
+  background: linear-gradient(135deg, #f0f4ff 0%, #e0e7ff 100%);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(60, 80, 180, 0.08);
+}
+
+@media (min-width: 640px) {
+  .uniformes-container {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 4.5rem 3rem 3rem 3rem;
+  }
+}
+
+.uniform-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 6px 24px rgba(60, 80, 180, 0.10);
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 2px solid #e0e7ff;
+  min-height: 350px;
+}
+
+.uniform-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 36px rgba(60, 80, 180, 0.18);
+  border-color: #a5b4fc;
+}
+
+.uniform-imgs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.uniform-imgs img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #a5b4fc;
+  background: #f1f5f9;
+  box-shadow: 0 2px 8px rgba(60, 80, 180, 0.10);
+}
+
+@media (min-width: 768px) {
+  .uniform-imgs img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.uniform-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  text-align: center;
+  color: #3730a3;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.5px;
+}
+
+.uniform-card p {
+  font-size: 1.05rem;
+  color: #374151;
+  text-align: center;
+  margin: 0;
+}
+
+.parada {
+  background: linear-gradient(120deg, #ffe4e6 60%, #fff1f2 100%);
+  border-left: 6px solid #fb7185;
+}
+
+.educacion {
+  background: linear-gradient(120deg, #dbeafe 60%, #f0f9ff 100%);
+  border-left: 6px solid #2563eb;
+}
