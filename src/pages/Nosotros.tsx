@@ -4,23 +4,18 @@ import FooterHomeComponent from "../components/FooterHomeComponent";
 import Navegacion from "../components/Navegacion";
 import { Header } from "../components/NosotrosComponents/Header";
 import { MisionVision } from "../components/NosotrosComponents/MisionVision";
-import { ScrollTransition } from "../components/ScrollAnimacionComponent";
 import "../styles/nosotrosStyle.css";
 export const Nosotros = () => {
   return (
     <>
       <Navegacion />
+      <FloatingSocialBar />
+      <BotonFlotante />
       <div className="relative overflow-hidden  mt-28 comenzarNosotros ">
         <Header />
       </div>
-      <ScrollTransition>
-        <MisionVision />
-      </ScrollTransition>
-      <FloatingSocialBar />
-      <BotonFlotante />
-      <ScrollTransition>
-        <FooterHomeComponent />
-      </ScrollTransition>
+      <MisionVision />
+      <FooterHomeComponent />
     </>
   );
 };
