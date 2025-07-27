@@ -1,7 +1,6 @@
 import "../styles/NavBar.css";
 import logo from "../assets/imgs/logo.png";
 import { Link } from "react-router-dom";
-
 const Navegacion = () => {
 
   return (
@@ -22,13 +21,27 @@ const Navegacion = () => {
           <i className="bxr bxs-x bx-bounce " id="close-icon" />
         </label>
         <nav className="navbar">
-  <Link to={"/"}>Inicio</Link>
-  <Link to={"/sobre-nosotros"}>Sobre Nosotros</Link>
-  <Link to={"/extracurriculares"}>Enlaces de Interes</Link>
-  <Link to={"/oferta-academica"}>Oferta Academica</Link>
-  <Link to={"/uniformes"}>Uniformes</Link>
-  <Link to={"/contactanos"}>Contacto</Link>
-</nav>
+          <Link to={"/"} >Inicio</Link>
+          <div className="dropdown">
+            <button
+              className="dropbtn"
+              type="button"
+              
+            >
+              Enlaces de Interes
+            </button>
+            <div
+              className="dropdown-content"
+            >
+              <Link to="/inscripciones">Inicio de Clases</Link>
+              <Link to="/extracurriculares">Extracurriculares</Link>
+              <Link to="/uniformes">Uniformes</Link>
+            </div>
+          </div>
+          <Link to={"/sobre-nosotros"} >Sobre Nosotros</Link>
+          <Link to={"/oferta-academica"} >Oferta Academica</Link>
+          <Link to={"/contactanos"} >Contacto</Link>
+        </nav>
       </header>
     </div>
   );
