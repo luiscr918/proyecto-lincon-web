@@ -1,5 +1,5 @@
 import React from 'react';
-import Galaxy from '../../src/components/Componentes de prueba/Galaxy';
+
 import ScrollStack from '../components/Componentes de prueba/ScrollStack';
 import DemoScrollStackItems from '../components/Componentes de prueba/GaleriaCards';
 import FooterHomeComponent from '../components/FooterHomeComponent';
@@ -9,7 +9,7 @@ import CustomCursor from '../components/Componentes de prueba/CustomCursor';
 import ContactCards from '../components/Componentes de prueba/ContactCards';
 import Mapa from '../components/ContactosComponents/MapaComponents';
 
-import { Canvas } from '@react-three/fiber';
+
 
 
 const Contactos2: React.FC = () => {
@@ -57,7 +57,7 @@ const Contactos2: React.FC = () => {
                             textAlign: 'center',
                         }}
                     >
-                        <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem', color:'black' }}>Contáctanos</h2>
+                        <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem', color: 'black' }}>Contáctanos</h2>
                         <ContactCards />
                         <Mapa />
                     </div>
