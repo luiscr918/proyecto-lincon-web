@@ -8,7 +8,7 @@ export const Informacion = () => {
   return (
     <>
       <div className="m-10">
-        <h2 className="text-center mb-4 text-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl">
+        <h2 className="text-center mb-4 text-2xl font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl">
           ¿Porque Estudiar Con Nosotros?
         </h2>
       </div>
@@ -19,9 +19,12 @@ export const Informacion = () => {
               <img src={img1} alt="" />
             </div>
             <div className="card-back1">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet corrupti voluptas ex labore neque architecto dolores consequatur 
-                maiores culpa aut. Natus delectus doloribus, 
-                et animi sed corrupti minus neque iste.</p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+                corrupti voluptas ex labore neque architecto dolores consequatur
+                maiores culpa aut. Natus delectus doloribus, et animi sed
+                corrupti minus neque iste.
+              </p>
             </div>
           </div>
         </div>
@@ -31,9 +34,12 @@ export const Informacion = () => {
               <img src={img2} alt="" />
             </div>
             <div className="card-back2">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet corrupti voluptas ex labore neque architecto dolores consequatur 
-                maiores culpa aut. Natus delectus doloribus, 
-                et animi sed corrupti minus neque iste.</p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+                corrupti voluptas ex labore neque architecto dolores consequatur
+                maiores culpa aut. Natus delectus doloribus, et animi sed
+                corrupti minus neque iste.
+              </p>
             </div>
           </div>
         </div>
@@ -44,9 +50,12 @@ export const Informacion = () => {
             </div>
 
             <div className="card-back3">
-             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet corrupti voluptas ex labore neque architecto dolores consequatur 
-                maiores culpa aut. Natus delectus doloribus, 
-                et animi sed corrupti minus neque iste.</p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+                corrupti voluptas ex labore neque architecto dolores consequatur
+                maiores culpa aut. Natus delectus doloribus, et animi sed
+                corrupti minus neque iste.
+              </p>
             </div>
           </div>
         </div>
@@ -56,9 +65,12 @@ export const Informacion = () => {
               <img src={img4} alt="" />
             </div>
             <div className="card-back4">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet corrupti voluptas ex labore neque architecto dolores consequatur 
-                maiores culpa aut. Natus delectus doloribus, 
-                et animi sed corrupti minus neque iste.</p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+                corrupti voluptas ex labore neque architecto dolores consequatur
+                maiores culpa aut. Natus delectus doloribus, et animi sed
+                corrupti minus neque iste.
+              </p>
             </div>
           </div>
         </div>

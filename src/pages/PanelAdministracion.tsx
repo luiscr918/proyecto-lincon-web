@@ -176,7 +176,7 @@ const AdminDashboard = () => {
 
       if (inicioIns > finIns) {
         setMessage({
-          text: "La fecha de inicio de inscripciones no puede ser posterior a la de fin.",
+          text: "La fecha de inicio de matrículas no puede ser posterior a la de fin.",
           type: "error",
         });
         setSaving(false);
@@ -185,7 +185,7 @@ const AdminDashboard = () => {
 
       if (finIns > inicioClases) {
         setMessage({
-          text: "La fecha de fin de inscripciones no puede ser posterior a la de inicio de clases.",
+          text: "La fecha de fin de matrículas no puede ser posterior a la de inicio de clases.",
           type: "error",
         });
         setSaving(false);

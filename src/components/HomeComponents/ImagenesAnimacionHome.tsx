@@ -6,7 +6,7 @@ const ImagenesAnimacionHome = () => {
   return (
     <div className="m-10">
       <div className="m-1.5">
-        <h2 className="text-center mb-4 text-2xl font-extrabold leading-none tracking-tight text-blue-950 md:text-5xl lg:text-6xl">
+        <h2 className="text-center mb-4 text-2xl font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl">
           ¿Qué Ofrecemos?
         </h2>
       </div>

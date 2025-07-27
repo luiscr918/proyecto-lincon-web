@@ -43,7 +43,7 @@ const OfertaAcademica = () => {
   const titleText = "Oferta Académica".split(" ");
 
   return (
-    <div className="bg-gradient-to-br from-blue-950 via-blue-900  to-cyan-400">
+    <div>
       <Navegacion />
       <div className="relative overflow-hidden  py-24 lg:py-32 text-white">
         <ParticlesComponent />

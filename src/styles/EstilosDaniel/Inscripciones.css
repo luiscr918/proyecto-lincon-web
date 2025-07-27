@@ -1,16 +1,16 @@
 .inscripciones-container {
-  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   padding-top: 10vh;
-  z-index: 1;
 }
 
 .inscripciones-content {
+  flex: 1;
   margin-top: 4rem;
   text-align: center;
   color: #333;
   animation: fadeIn 1s ease-out;
-  position: relative;
-  z-index: 2;
 }
 
 .inscripcion-header {
@@ -20,7 +20,7 @@
 .insc-title {
   font-size: 3rem;
   font-weight: bold;
-  color: #072c56;
+  color: #fff;
   margin-bottom: 1rem;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -28,23 +28,39 @@
 
 .insc-sub-title {
   font-size: 1.2rem;
-  color: #555;
-  font-weight: 400;
+  color: #76f9d6;
+  font-weight: bold;
 }
 
 .dates-info {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin-top: 2rem;
+  padding: 0 1rem;
+}
+
+@media (max-width: 1024px) {
+  .dates-info {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .dates-info {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
 }
 
 .insc-box {
-  background-color: #fff;
+  background-color: #ffffff;
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  margin: 0;
 }
 
 .insc-box:hover {
@@ -59,7 +75,7 @@
 }
 
 .insc-date {
-  background-color: #f5f7fb;
+  background-color: transparent;
   padding: 0.5rem;
   border-radius: 8px;
   font-size: 1.3rem;
@@ -69,11 +85,18 @@
 
 .countdown-container {
   margin-top: 3rem;
-  background: #072c56;
-  padding: 3rem;
-  border-radius: 8px;
-  color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem 3rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05); /* sutil fondo semi-transparente */
+  color: #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(8px); /* efecto vidrio esmerilado */
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.countdown-container:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .countdown-title h3 {
@@ -113,43 +136,3 @@
   max-width: 800px;
   margin: 0 auto;
 }
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.cta-button {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  background-color: #3e546d;
-  color: white;
-  padding: 1rem 2rem;
-  border-radius: 50px;
-  font-size: 1.1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.cta-button:hover {
-  transform: scale(1.1);
-  background-color: #60c591;
-}
-
-@media (max-width: 768px) {
-  .dates-info {
-    grid-template-columns: 1fr;
-  }
-
-  .cta-button {
-    bottom: 1.5rem;
-    right: 1.5rem;
-    padding: 0.8rem 1.8rem;
-  }
-}
-
