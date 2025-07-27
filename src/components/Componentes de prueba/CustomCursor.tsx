@@ -6,6 +6,11 @@ const CustomCursor: React.FC = () => {
   const cursorRef = useRef<HTMLDivElement | null>(null);
   const cornersRef = useRef<(HTMLDivElement | null)[]>([]);
 
+  // Función para asignar el ref de cada esquina correctamente
+  const setCornerRef = (index: number) => (el: HTMLDivElement | null) => {
+    cornersRef.current[index] = el;
+  };
+
   useEffect(() => {
     if (!cursorRef.current) return;
 
@@ -33,8 +38,8 @@ const CustomCursor: React.FC = () => {
     };
 
     // Función para mostrar cursor en cuadrados
-    const showCursor = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-      const target = e.currentTarget;
+    const showCursor = (e: MouseEvent) => {
+      const target = e.currentTarget as HTMLElement;
       isOverTarget = true;
 
       gsap.to(cursor, { opacity: 1, duration: 0.2 });
@@ -91,8 +96,8 @@ const CustomCursor: React.FC = () => {
       });
     };
 
-    // Agregar eventos a los cuadrados
-    const targets = document.querySelectorAll(".cursor-target");
+    // Agregar eventos a los elementos con clase .cursor-target
+    const targets = document.querySelectorAll<HTMLElement>(".cursor-target");
     targets.forEach((target) => {
       target.addEventListener("mouseenter", showCursor);
       target.addEventListener("mouseleave", hideCursor);
@@ -136,7 +141,7 @@ const CustomCursor: React.FC = () => {
       {["top-left", "top-right", "bottom-right", "bottom-left"].map((corner, index) => (
         <div
           key={corner}
-          ref={(el) => (cornersRef.current[index] = el)}
+          ref={setCornerRef(index)}
           style={{
             width: "12px",
             height: "12px",

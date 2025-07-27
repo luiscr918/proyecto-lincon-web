@@ -1,58 +1,60 @@
 import { useEffect, useRef, useCallback, useMemo } from "react";
 import { gsap } from "gsap";
+import { number } from "framer-motion";
 
 const TargetCursorLocal = ({
     targetSelector = ".cursor-target",
     spinDuration = 2,
-    containerSelector = ".contact-container" // Nuevo: selector del contenedor
+    containerSelector = ".contact-container"
+}: {
+    targetSelector?: string;
+    spinDuration?: number;
+    containerSelector?: string;
 }) => {
-    const cursorRef = useRef(null);
-    const cornersRef = useRef(null);
-    const spinTl = useRef(null);
-    const containerRef = useRef(null);
+    const cursorRef = useRef<any>(null);
+    const cornersRef = useRef<any>(null);
+    const spinTl = useRef<any>(null);
+    const containerRef = useRef<any>(null);
 
     const constants = useMemo(
         () => ({
             borderWidth: 3,
             cornerSize: 12,
-            parallaxStrength: 0.00005,
+            parallaxStrength: 0.00005
         }),
         []
     );
 
-    const moveCursor = useCallback((x, y) => {
+    const moveCursor = useCallback((x: number, y: number) => {
         if (!cursorRef.current) return;
         gsap.to(cursorRef.current, {
             x,
             y,
             duration: 0.1,
-            ease: "power3.out",
+            ease: "power3.out"
         });
     }, []);
 
     useEffect(() => {
         if (!cursorRef.current) return;
 
-        // Encontrar el contenedor específico
-        const container = document.querySelector(containerSelector);
+        const container = document.querySelector(containerSelector) as HTMLElement;
         if (!container) return;
-        
-        containerRef.current = container;
 
-        // Solo ocultar cursor en el contenedor específico
-        container.style.cursor = 'none';
+        containerRef.current = container;
+        container.style.cursor = "none";
 
         const cursor = cursorRef.current;
         cornersRef.current = cursor.querySelectorAll(".target-cursor-corner");
 
-        let activeTarget = null;
-        let currentTargetMove = null;
-        let currentLeaveHandler = null;
+        let activeTarget: any = null;
+        let currentTargetMove: any = null;
+        let currentLeaveHandler: any = null;
         let isAnimatingToTarget = false;
-        let resumeTimeout = null;
+        let resumeTimeout: any = null;
         let isInsideContainer = false;
 
-        const cleanupTarget = (target) => {
+        const cleanupTarget = (target: any) => {
             if (currentTargetMove) {
                 target.removeEventListener("mousemove", currentTargetMove);
             }
@@ -63,7 +65,6 @@ const TargetCursorLocal = ({
             currentLeaveHandler = null;
         };
 
-        // Inicializar cursor fuera de la vista
         gsap.set(cursor, {
             xPercent: -50,
             yPercent: -50,
@@ -81,8 +82,7 @@ const TargetCursorLocal = ({
                 .to(cursor, { rotation: "+=360", duration: spinDuration, ease: "none" });
         };
 
-        // Evento para detectar cuando el mouse entra al contenedor
-        const containerEnterHandler = (e) => {
+        const containerEnterHandler = () => {
             if (!isInsideContainer) {
                 isInsideContainer = true;
                 gsap.to(cursor, { opacity: 1, duration: 0.2 });
@@ -90,18 +90,16 @@ const TargetCursorLocal = ({
             }
         };
 
-        // Evento para detectar cuando el mouse sale del contenedor
-        const containerLeaveHandler = (e) => {
-            // Verificar si realmente salió del contenedor
+        const containerLeaveHandler = (e: MouseEvent) => {
             const rect = container.getBoundingClientRect();
             const { clientX, clientY } = e;
-            
-            if (clientX < rect.left || clientX > rect.right || 
+
+            if (clientX < rect.left || clientX > rect.right ||
                 clientY < rect.top || clientY > rect.bottom) {
                 isInsideContainer = false;
                 gsap.to(cursor, { opacity: 0, duration: 0.2 });
                 spinTl.current?.kill();
-                
+
                 if (activeTarget) {
                     cleanupTarget(activeTarget);
                     activeTarget = null;
@@ -109,8 +107,7 @@ const TargetCursorLocal = ({
             }
         };
 
-        // Solo mover cursor cuando esté dentro del contenedor
-        const moveHandler = (e) => {
+        const moveHandler = (e: MouseEvent) => {
             if (isInsideContainer) {
                 moveCursor(e.clientX, e.clientY);
             }
@@ -120,17 +117,15 @@ const TargetCursorLocal = ({
         container.addEventListener("mouseleave", containerLeaveHandler);
         window.addEventListener("mousemove", moveHandler);
 
-        const enterHandler = (e) => {
-            // Solo procesar si estamos dentro del contenedor
+        const enterHandler = (e: MouseEvent) => {
             if (!isInsideContainer) return;
-            
+
             const directTarget = e.target;
 
-            // Verificar que el target esté dentro del contenedor
-            if (!container.contains(directTarget)) return;
+            if (!container.contains(directTarget as Node)) return;
 
-            const allTargets = [];
-            let current = directTarget;
+            const allTargets: any[] = [];
+            let current: any = directTarget;
             while (current && current !== document.body) {
                 if (current.matches(targetSelector)) {
                     allTargets.push(current);
@@ -156,10 +151,9 @@ const TargetCursorLocal = ({
 
             gsap.killTweensOf(cursorRef.current, "rotation");
             spinTl.current?.pause();
-
             gsap.set(cursorRef.current, { rotation: 0 });
 
-            const updateCorners = (mouseX, mouseY) => {
+            const updateCorners = (mouseX?: number, mouseY?: number) => {
                 const rect = target.getBoundingClientRect();
                 const cursorRect = cursorRef.current.getBoundingClientRect();
 
@@ -167,24 +161,23 @@ const TargetCursorLocal = ({
                 const cursorCenterY = cursorRect.top + cursorRect.height / 2;
 
                 const [tlc, trc, brc, blc] = Array.from(cornersRef.current);
-
                 const { borderWidth, cornerSize, parallaxStrength } = constants;
 
                 let tlOffset = {
                     x: rect.left - cursorCenterX - borderWidth,
-                    y: rect.top - cursorCenterY - borderWidth,
+                    y: rect.top - cursorCenterY - borderWidth
                 };
                 let trOffset = {
                     x: rect.right - cursorCenterX + borderWidth - cornerSize,
-                    y: rect.top - cursorCenterY - borderWidth,
+                    y: rect.top - cursorCenterY - borderWidth
                 };
                 let brOffset = {
                     x: rect.right - cursorCenterX + borderWidth - cornerSize,
-                    y: rect.bottom - cursorCenterY + borderWidth - cornerSize,
+                    y: rect.bottom - cursorCenterY + borderWidth - cornerSize
                 };
                 let blOffset = {
                     x: rect.left - cursorCenterX - borderWidth,
-                    y: rect.bottom - cursorCenterY + borderWidth - cornerSize,
+                    y: rect.bottom - cursorCenterY + borderWidth - cornerSize
                 };
 
                 if (mouseX !== undefined && mouseY !== undefined) {
@@ -207,14 +200,14 @@ const TargetCursorLocal = ({
                 const corners = [tlc, trc, brc, blc];
                 const offsets = [tlOffset, trOffset, brOffset, blOffset];
 
-                corners.forEach((corner, index) => {
+                corners.forEach((corner: any, index: number) => {
                     tl.to(
                         corner,
                         {
                             x: offsets[index].x,
                             y: offsets[index].y,
                             duration: 0.2,
-                            ease: "power2.out",
+                            ease: "power2.out"
                         },
                         0
                     );
@@ -228,12 +221,11 @@ const TargetCursorLocal = ({
                 isAnimatingToTarget = false;
             }, 1);
 
-            let moveThrottle = null;
-            const targetMove = (ev) => {
+            let moveThrottle: any = null;
+            const targetMove = (ev: MouseEvent) => {
                 if (moveThrottle || isAnimatingToTarget) return;
                 moveThrottle = requestAnimationFrame(() => {
-                    const mouseEvent = ev;
-                    updateCorners(mouseEvent.clientX, mouseEvent.clientY);
+                    updateCorners(ev.clientX, ev.clientY);
                     moveThrottle = null;
                 });
             };
@@ -251,18 +243,18 @@ const TargetCursorLocal = ({
                         { x: -cornerSize * 1.5, y: -cornerSize * 1.5 },
                         { x: cornerSize * 0.5, y: -cornerSize * 1.5 },
                         { x: cornerSize * 0.5, y: cornerSize * 0.5 },
-                        { x: -cornerSize * 1.5, y: cornerSize * 0.5 },
+                        { x: -cornerSize * 1.5, y: cornerSize * 0.5 }
                     ];
 
                     const tl = gsap.timeline();
-                    corners.forEach((corner, index) => {
+                    corners.forEach((corner: any, index: number) => {
                         tl.to(
                             corner,
                             {
                                 x: positions[index].x,
                                 y: positions[index].y,
                                 duration: 0.3,
-                                ease: "power3.out",
+                                ease: "power3.out"
                             },
                             0
                         );
@@ -271,117 +263,38 @@ const TargetCursorLocal = ({
 
                 resumeTimeout = setTimeout(() => {
                     if (!activeTarget && cursorRef.current && spinTl.current && isInsideContainer) {
-                        const currentRotation = gsap.getProperty(
-                            cursorRef.current,
-                            "rotation"
-                        );
-                        const normalizedRotation = currentRotation % 360;
+                        const currentRotation = gsap.getProperty(cursorRef.current, "rotation");
+                        const normalizedRotation: any = Number(currentRotation) % 360;  // Aseguramos que sea un número
 
                         spinTl.current.kill();
                         spinTl.current = gsap
                             .timeline({ repeat: -1 })
                             .to(cursorRef.current, { rotation: "+=360", duration: spinDuration, ease: "none" });
 
-                        gsap.to(cursorRef.current, {
-                            rotation: normalizedRotation + 360,
-                            duration: spinDuration * (1 - normalizedRotation / 360),
-                            ease: "none",
-                            onComplete: () => {
-                                spinTl.current?.restart();
-                            },
+                        gsap.to(cursorRef.current as any, {
+                            rotation: normalizedRotation,
+                            duration: 0
                         });
                     }
-                    resumeTimeout = null;
-                }, 50);
-
-                cleanupTarget(target);
+                }, 500);  // O el tiempo que desees
             };
-
-            currentTargetMove = targetMove;
-            currentLeaveHandler = leaveHandler;
 
             target.addEventListener("mousemove", targetMove);
             target.addEventListener("mouseleave", leaveHandler);
+
         };
 
-        container.addEventListener("mouseover", enterHandler, { passive: true });
+        document.addEventListener("mouseenter", enterHandler);
 
         return () => {
             window.removeEventListener("mousemove", moveHandler);
             container.removeEventListener("mouseenter", containerEnterHandler);
             container.removeEventListener("mouseleave", containerLeaveHandler);
-            container.removeEventListener("mouseover", enterHandler);
-
-            if (activeTarget) {
-                cleanupTarget(activeTarget);
-            }
-
-            spinTl.current?.kill();
-            if (containerRef.current) {
-                containerRef.current.style.cursor = 'auto';
-            }
+            document.removeEventListener("mouseenter", enterHandler);
         };
-    }, [targetSelector, spinDuration, moveCursor, constants, containerSelector]);
+    }, [spinDuration, targetSelector, containerSelector]);
 
-    return (
-        <div ref={cursorRef} className="target-cursor-wrapper" style={{
-            position: 'fixed',
-            pointerEvents: 'none',
-            zIndex: 9999,
-            opacity: 0
-        }}>
-            <div className="target-cursor-dot" style={{
-                width: '8px',
-                height: '8px',
-                backgroundColor: '#000',
-                borderRadius: '50%',
-                position: 'absolute',
-                top: '50%',
-                left: '50%',
-                transform: 'translate(-50%, -50%)'
-            }} />
-            <div className="target-cursor-corner corner-tl" style={{
-                width: '12px',
-                height: '12px',
-                border: '3px solid #000',
-                borderRight: 'none',
-                borderBottom: 'none',
-                position: 'absolute',
-                top: '-18px',
-                left: '-18px'
-            }} />
-            <div className="target-cursor-corner corner-tr" style={{
-                width: '12px',
-                height: '12px',
-                border: '3px solid #000',
-                borderLeft: 'none',
-                borderBottom: 'none',
-                position: 'absolute',
-                top: '-18px',
-                right: '-18px'
-            }} />
-            <div className="target-cursor-corner corner-br" style={{
-                width: '12px',
-                height: '12px',
-                border: '3px solid #000',
-                borderLeft: 'none',
-                borderTop: 'none',
-                position: 'absolute',
-                bottom: '-18px',
-                right: '-18px'
-            }} />
-            <div className="target-cursor-corner corner-bl" style={{
-                width: '12px',
-                height: '12px',
-                border: '3px solid #000',
-                borderRight: 'none',
-                borderTop: 'none',
-                position: 'absolute',
-                bottom: '-18px',
-                left: '-18px'
-            }} />
-        </div>
-    );
+    return <div ref={cursorRef} className="cursor" />;
 };
 
 export default TargetCursorLocal;

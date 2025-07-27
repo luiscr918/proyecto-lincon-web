@@ -1,8 +1,14 @@
 import { useLayoutEffect, useRef, useCallback } from 'react';
 import Lenis from 'lenis';
+import React from 'react'; // Asegúrate de importar React
 import '../../styles/EstilosDaniel/ScrollStack.css';
 
-export const ScrollStackItem = ({ children, itemClassName = "" }) => (
+interface ScrollStackItemProps {
+  children: React.ReactNode;
+  itemClassName?: string;
+}
+
+export const ScrollStackItem: React.FC<ScrollStackItemProps> = ({ children, itemClassName = "" }) => (
   <div className={`scroll-stack-card ${itemClassName}`.trim()}>{children}</div>
 );
 
@@ -18,7 +24,7 @@ interface ScrollStackProps {
   scaleDuration?: number;
   rotationAmount?: number;
   blurAmount?: number;
-  onStackComplete?: () => void; // Hacemos onStackComplete opcional
+  onStackComplete?: () => void;
 }
 
 const ScrollStack: React.FC<ScrollStackProps> = ({
@@ -67,7 +73,8 @@ const ScrollStack: React.FC<ScrollStackProps> = ({
     const stackPositionPx = parsePercentage(stackPosition, containerHeight);
     const scaleEndPositionPx = parsePercentage(scaleEndPosition, containerHeight);
     const endElement = scroller.querySelector('.scroll-stack-end');
-    const endElementTop = endElement ? endElement.offsetTop : 0;
+    const endElementTop = endElement ? (endElement as HTMLElement).offsetTop : 0;
+
 
     cardsRef.current.forEach((card, i) => {
       if (!card) return;
@@ -93,7 +100,7 @@ const ScrollStack: React.FC<ScrollStackProps> = ({
             topCardIndex = j;
           }
         }
-        
+
         if (i < topCardIndex) {
           const depthInStack = topCardIndex - i;
           blur = Math.max(0, depthInStack * blurAmount);
@@ -102,7 +109,7 @@ const ScrollStack: React.FC<ScrollStackProps> = ({
 
       let translateY = 0;
       const isPinned = scrollTop >= pinStart && scrollTop <= pinEnd;
-      
+
       if (isPinned) {
         translateY = scrollTop - cardTop + stackPositionPx + (itemStackDistance * i);
       } else if (scrollTop > pinEnd) {
@@ -117,7 +124,7 @@ const ScrollStack: React.FC<ScrollStackProps> = ({
       };
 
       const lastTransform = lastTransformsRef.current.get(i);
-      const hasChanged = !lastTransform || 
+      const hasChanged = !lastTransform ||
         Math.abs(lastTransform.translateY - newTransform.translateY) > 0.1 ||
         Math.abs(lastTransform.scale - newTransform.scale) > 0.001 ||
         Math.abs(lastTransform.rotation - newTransform.rotation) > 0.1 ||
@@ -129,7 +136,7 @@ const ScrollStack: React.FC<ScrollStackProps> = ({
 
         card.style.transform = transform;
         card.style.filter = filter;
-        
+
         lastTransformsRef.current.set(i, newTransform);
       }
 
@@ -168,20 +175,19 @@ const ScrollStack: React.FC<ScrollStackProps> = ({
 
     const lenis = new Lenis({
       wrapper: scroller,
-      content: scroller.querySelector('.scroll-stack-inner'),
+      content: scroller.querySelector('.scroll-stack-inner') as HTMLElement,
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
       touchMultiplier: 2,
       infinite: false,
-      gestureOrientationHandler: true,
-      normalizeWheel: true,
+
       wheelMultiplier: 1,
-      touchInertiaMultiplier: 35,
+
       lerp: 0.1,
       syncTouch: true,
       syncTouchLerp: 0.075,
-      touchInertia: 0.6,
+
     });
 
     lenis.on('scroll', handleScroll);
@@ -200,7 +206,7 @@ const ScrollStack: React.FC<ScrollStackProps> = ({
     const scroller = scrollerRef.current;
     if (!scroller) return;
 
-    const cards = Array.from(scroller.querySelectorAll(".scroll-stack-card"));
+    const cards = Array.from(scroller.querySelectorAll(".scroll-stack-card")) as HTMLDivElement[];
     cardsRef.current = cards;
 
     setupLenis();

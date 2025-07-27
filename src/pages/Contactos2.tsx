@@ -25,17 +25,6 @@ const Contactos2: React.FC = () => {
             }}
         >
             {/* Fondo animado galáctico */}
-            <div className="galaxy-container">
-                <Galaxy
-                    mouseRepulsion
-                    mouseInteraction
-                    density={1.5}
-                    glowIntensity={0.5}
-                    saturation={0.8}
-                    hueShift={240}
-                />
-            </div>
-
             {/* Capa principal */}
             <div style={{ position: 'relative', zIndex: 10 }}>
                 <CustomCursor />
@@ -43,7 +32,7 @@ const Contactos2: React.FC = () => {
                 <Portada />
 
                 {/* Canvas con modelo 3D */}
-              
+
 
                 {/* Sección de contacto */}
                 <section
@@ -68,7 +57,7 @@ const Contactos2: React.FC = () => {
                             textAlign: 'center',
                         }}
                     >
-                        <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>Contáctanos</h2>
+                        <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem', color:'black' }}>Contáctanos</h2>
                         <ContactCards />
                         <Mapa />
                     </div>
@@ -80,7 +69,7 @@ const Contactos2: React.FC = () => {
                         style={{
                             fontSize: '2.5rem',
                             marginBottom: '1rem',
-                            color: 'white',
+                            color: 'black',
                             textAlign: 'center',
                         }}
                     >

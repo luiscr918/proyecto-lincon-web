@@ -188,21 +188,21 @@ export default function Galaxy({
   autoCenterRepulsion = 0,
   transparent = true,
   ...rest
-}) {
-  const ctnDom = useRef(null);
-  const targetMousePos = useRef({ x: 0.5, y: 0.5 });
-  const smoothMousePos = useRef({ x: 0.5, y: 0.5 });
-  const targetMouseActive = useRef(0.0);
-  const smoothMouseActive = useRef(0.0);
+}: any) {
+  const ctnDom = useRef<any>(null);
+  const targetMousePos = useRef<any>({ x: 0.5, y: 0.5 });
+  const smoothMousePos = useRef<any>({ x: 0.5, y: 0.5 });
+  const targetMouseActive = useRef<any>(0.0);
+  const smoothMouseActive = useRef<any>(0.0);
 
   useEffect(() => {
     if (!ctnDom.current) return;
-    const ctn = ctnDom.current;
-    const renderer = new Renderer({
+    const ctn: any = ctnDom.current;
+    const renderer: any = new Renderer({
       alpha: transparent,
       premultipliedAlpha: false,
     });
-    const gl = renderer.gl;
+    const gl: any = renderer.gl;
 
     if (transparent) {
       gl.enable(gl.BLEND);
@@ -212,7 +212,7 @@ export default function Galaxy({
       gl.clearColor(0, 0, 0, 1);
     }
 
-    let program;
+    let program: any;
 
     function resize() {
       const scale = 1;
@@ -228,7 +228,7 @@ export default function Galaxy({
     window.addEventListener("resize", resize, false);
     resize();
 
-    const geometry = new Triangle(gl);
+    const geometry: any = new Triangle(gl);
     program = new Program(gl, {
       vertex: vertexShader,
       fragment: fragmentShader,
@@ -265,10 +265,10 @@ export default function Galaxy({
       },
     });
 
-    const mesh = new Mesh(gl, { geometry, program });
-    let animateId;
+    const mesh: any = new Mesh(gl, { geometry, program });
+    let animateId: any;
 
-    function update(t) {
+    function update(t: any) {
       animateId = requestAnimationFrame(update);
       if (!disableAnimation) {
         program.uniforms.uTime.value = t * 0.001;
@@ -293,7 +293,7 @@ export default function Galaxy({
     animateId = requestAnimationFrame(update);
     ctn.appendChild(gl.canvas);
 
-    function handleMouseMove(e) {
+    function handleMouseMove(e: any) {
       const rect = ctn.getBoundingClientRect();
       const x = (e.clientX - rect.left) / rect.width;
       const y = 1.0 - (e.clientY - rect.top) / rect.height;
