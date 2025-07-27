@@ -7,8 +7,8 @@ const FooterHomeComponent = () => {
         <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-3 gap-3 gap-y-8 md:gap-8 py-10 max-w-sm mx-auto sm:max-w-3xl lg:max-w-full">
           <div className="lg:mx-auto text-left ">
             <h4 className="text-lg text-white font-medium mb-7">Contáctanos</h4>
-            <ul className="text-sm  transition-all duration-500">
-              <li className="mb-6">
+            <ul className="text-sm  transition-all duration-500 relative">
+              <li className="mb-6 ">
                 <a
                   href="https://maps.app.goo.gl/tMu2xzJPR6797zRa9"
                   target="_blank"
@@ -43,7 +43,7 @@ const FooterHomeComponent = () => {
             <h4 className="text-lg text-white font-medium mb-7">
               Enlaces de Interes
             </h4>
-            <ul className="text-sm  transition-all duration-500">
+            <ul className="text-sm  transition-all duration-500 relative">
               <li className="mb-4">
                 <Link
                   to={"/extracurriculares"}
