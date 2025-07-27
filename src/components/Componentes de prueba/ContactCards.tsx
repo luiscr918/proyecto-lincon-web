@@ -31,9 +31,24 @@ const ContactCards: React.FC = () => {
       >
         <div style={{ fontSize: '1.5rem', marginBottom: '0.5rem' }}>📧</div>
         <div style={{ fontSize: '14px', fontWeight: 'bold' }}>Email</div>
-        <div style={{ fontSize: '11px', opacity: 0.8, textAlign: 'center', padding: '0 5px' }}>
-          contacto@empresa.com
-        </div>
+<a
+  href="mailto:uelinconlarrea@gmail.com"
+  style={{
+    display: 'inline-block',
+    fontSize: '11px',
+    opacity: 0.8,
+    textAlign: 'center',
+    padding: '0.5rem 1rem',
+    color: 'white',
+    borderRadius: '8px',
+    textDecoration: 'none',
+    cursor: 'pointer',
+    marginTop: '0.5rem',
+  }}
+>
+  uelinconlarrea@gmail.com
+</a>
+
       </div>
 
       {/* Tarjeta WhatsApp */}
@@ -53,7 +68,7 @@ const ContactCards: React.FC = () => {
           boxShadow: '0 4px 15px rgba(37,211,102,0.3)',
           border: '2px solid #1da851',
         }}
-        onClick={() => window.open('https://wa.me/593987654321?text=Hola, me interesa obtener más información', '_blank')}
+        onClick={() => window.open('https://wa.me/593983924043?text=Hola%2C%20quiero%20más%20información%20acerca%20de%20las%20matrículas', '_blank')}
       >
         <div style={{ fontSize: '1.5rem', marginBottom: '0.5rem' }}>📱</div>
         <div style={{ fontSize: '14px', fontWeight: 'bold' }}>WhatsApp</div>
@@ -80,9 +95,25 @@ const ContactCards: React.FC = () => {
       >
         <div style={{ fontSize: '1.5rem', marginBottom: '0.5rem' }}>📞</div>
         <div style={{ fontSize: '14px', fontWeight: 'bold' }}>Teléfono</div>
-        <div style={{ fontSize: '11px', opacity: 0.8, textAlign: 'center' }}>
-          +1 (555) 123-4567
-        </div>
+<a
+  href="tel:0987147390"
+  style={{
+    display: 'inline-block',
+    fontSize: '11px',
+    opacity: 0.8,
+    textAlign: 'center',
+    padding: '0.5rem 1rem',
+    
+    color: 'white',
+    borderRadius: '8px',
+    textDecoration: 'none',
+    cursor: 'pointer',
+    marginTop: '1rem',
+  }}
+>
+   Llamar al 0987147390
+</a>
+
       </div>
     </div>
   );
