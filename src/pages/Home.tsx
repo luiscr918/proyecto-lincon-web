@@ -20,8 +20,7 @@ export const Home = () => {
     }
   }, []);
   return (
-    <div>
-      
+    <div className="bg-gradient-to-br from-blue-950 via-blue-900  to-cyan-400">
       <Navegacion />
 
       <ModalInformacion visible={visible} setVisible={setvisible} />
@@ -30,22 +29,22 @@ export const Home = () => {
       </div>
 
       <ScrollTransition>
-      <IntroduccionComponent />
+        <div className="relative overflow-hidden  mt-28 ">
+          <IntroduccionComponent />
+        </div>
       </ScrollTransition>
 
-       <ScrollTransition>
-      <Informacion />
-      </ScrollTransition>
-      
-       <ScrollTransition>
-      <ImagenesAnimacionHome />
+      <ScrollTransition>
+        <Informacion />
       </ScrollTransition>
 
-       
+      <ScrollTransition>
+        <ImagenesAnimacionHome />
+      </ScrollTransition>
+
       <BotonFlotante />
 
       <FooterHomeComponent />
-
     </div>
   );
 };

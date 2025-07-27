@@ -7,34 +7,28 @@ const IntroduccionComponent = () => {
   const [nextIndex, setNextIndex] = useState<number | null>(null);
   const [fade, setFade] = useState(false);
 
-  const siguiente = () => {
-    const newIndex = (index + 1) % Informacion.length;
-    setNextIndex(newIndex);
-
-    setTimeout(() => {
-      setIndex(newIndex);
-      setNextIndex(null);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const newIndex = (index + 1) % Informacion.length;
+      setNextIndex(newIndex);
 
       setTimeout(() => {
         setIndex(newIndex);
         setNextIndex(null);
-        setFade(false);
-      }, 500);
 
-      setFade(true);
-      setTimeout(() => setFade(false), 500);
-    }, 500);
-  };
+        setTimeout(() => {
+          setIndex(newIndex);
+          setNextIndex(null);
+          setFade(false);
+        }, 500);
 
-  
-  useEffect(() => {
-    const interval = setInterval(() => {
-      siguiente();
-    }, 3000); 
+        setFade(true);
+        setTimeout(() => setFade(false), 500);
+      }, 450);
+    }, 1500);
 
-    
     return () => clearInterval(interval);
-  }, [index]); 
+  }, [index]);
 
   const info = Informacion[index];
 
@@ -51,17 +45,19 @@ const IntroduccionComponent = () => {
         />
       )}
 
-      <div className="content">
+      <div className="content ">
         <div className="carousel-right">
-  {Informacion.map((item, i) => (
-    <div
-      key={i}
-      className={`thumbnail thumbnail-${i} ${i === index ? "active" : ""}`}
-    >
-      <img src={item.Imagen} alt={`img-${i}`} />
-    </div>
-  ))}
-</div>
+          {Informacion.map((item, i) => (
+            <div
+              key={i}
+              className={`thumbnail thumbnail-${i} ${
+                i === index ? "active" : ""
+              }`}
+            >
+              <img src={item.Imagen} alt={`img-${i}`} />
+            </div>
+          ))}
+        </div>
 
         <div className={`info-box ${fade ? "fade-in" : ""}`}>
           <h5 className="titulo">{info.TituloDeIntroduccion}</h5>

@@ -2,10 +2,10 @@ import { motion, type Variants } from "framer-motion";
 import AcademicLevelCard from "../components/OfertaAcaComponents/AcademiOfer";
 import BotonFlotante from "../components/BotonFlotanteComponent";
 import { FloatingSocialBar } from "../components/FloatingSocialBar";
-import FooterHomeComponent from "../components/FooterHomeComponent";
 import { Academia_Oferta_DATA } from "../const/academicOffer";
 import ParticlesComponent from "../components/OfertaAcaComponents/ParticlesComponent";
 import Navegacion from "../components/Navegacion";
+import { FooterToUs } from "../components/OfertaAcaComponents/FooterToUs";
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -43,8 +43,9 @@ const OfertaAcademica = () => {
   const titleText = "Oferta Académica".split(" ");
 
   return (
-    <div className="bg-slate-900">
-      <div className="relative overflow-hidden bg-gradient-to-br from-blue-950 to-blue-700 py-24 lg:py-32 text-white">
+    <div className="bg-gradient-to-br from-blue-950 via-blue-900  to-cyan-400">
+      <Navegacion />
+      <div className="relative overflow-hidden  py-24 lg:py-32 text-white">
         <ParticlesComponent />
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center relative z-10">
           <motion.h1
@@ -85,7 +86,7 @@ const OfertaAcademica = () => {
           {Academia_Oferta_DATA.map((level) => (
             <AcademicLevelCard
               key={level.id}
-              id={level.id} 
+              id={level.id}
               title={level.title}
               ageOrCourseInfo={level.ageOrCourseInfo}
               description={level.description}
@@ -98,11 +99,9 @@ const OfertaAcademica = () => {
           ))}
         </div>
       </motion.div>
-
       <FloatingSocialBar />
       <BotonFlotante />
-      <FooterHomeComponent />
-      <Navegacion />
+      <FooterToUs />
     </div>
   );
 };
