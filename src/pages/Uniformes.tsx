@@ -1,5 +1,6 @@
 import FooterHomeComponent from "../components/FooterHomeComponent";
 import Navegacion from "../components/Navegacion"
+import ModalUniforme from "../components/UniformesComponents/ModalUniforme";
 import PaginaPrincipal from "../components/UniformesComponents/PaginaPrincipal";
 
 const Uniformes = () => {
@@ -7,6 +8,7 @@ const Uniformes = () => {
     <>
     <Navegacion />
     <PaginaPrincipal />
+    <ModalUniforme />
     <FooterHomeComponent />
     </>
   )

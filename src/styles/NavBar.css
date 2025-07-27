@@ -122,23 +122,28 @@
   display: block;
 }
 
-
 .navbar a::after,
 .dropbtn::after,
 .dropdown-content a::after {
   content: "";
-  position: absolute;
   left: 0;
   bottom: -5px;
   width: 0%;
   height: 2px;
-  background-color: #002fff;
+  background-color: #2ba8f0;
   transition: width 0.3s ease-in-out;
 }
 .navbar a:hover::after,
 .dropbtn:hover::after,
 .dropdown-content a:hover::after {
   width: 100%;
+}
+
+
+.navbar a:hover,
+.dropbtn:hover,
+.dropdown-content a:hover {
+  color: #2ba8f0;
 }
 
 @media (max-width: 1000px) {

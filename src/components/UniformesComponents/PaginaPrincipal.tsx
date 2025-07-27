@@ -1,25 +1,8 @@
 import "../../styles/inicioExtracurri.css";
 import { useEffect, useState } from "react";
 import "../../styles/Uniformes.css";
-import paradaImg from "../../assets/imgs/Parada.png";
-import educacionImg from "../../assets/imgs/Educaion.png";
 
-const uniformes = [
-  {
-    titulo: "Uniforme de Parada",
-    descripcion:
-      "Utilizado en eventos formales y ceremonias, representa el respeto y la identidad de nuestra comunidad educativa.",
-    imagen: paradaImg,
-    clase: "parada",
-  },
-  {
-    titulo: "Uniforme de Educación Física",
-    descripcion:
-      "Diseñado para brindar comodidad y libertad de movimiento durante las actividades deportivas.",
-    imagen: educacionImg,
-    clase: "educacion",
-  },
-];
+
 
 const PaginaPrincipal = () => {
   const [currentSlide, setCurrentSlide] = useState(1);
@@ -46,51 +29,48 @@ const PaginaPrincipal = () => {
         <label htmlFor="slide2" onClick={() => setCurrentSlide(2)}></label>
         <label htmlFor="slide3" onClick={() => setCurrentSlide(3)}></label>
         <label htmlFor="slide4" onClick={() => setCurrentSlide(4)}></label>
-        <label htmlFor="slide5" onClick={() => setCurrentSlide(5)}></label>
       </div>
 
       <div className="slider">
-        {[
-          "https://i.postimg.cc/ncNmhGsf/imagen-2025-07-27-114608039.png",
-          "https://i.postimg.cc/k4ZJvfPn/imagen-2025-07-27-114715112.png",
-          "https://i.postimg.cc/Y9XGK6cV/imagen-2025-07-27-114639264.png",
-          "https://i.postimg.cc/SNLXmbpC/imagen-2025-07-27-114822538.png",
-        ].map((imgUrl, index) => (
-          <div
-            key={index}
-            className="slide"
-            style={
-              {
-                "--img": `url("${imgUrl}")`,
-              } as React.CSSProperties
-            }
-          >
-            
-          </div>
-        ))}
+  {[
+    {
+      url: "https://i.postimg.cc/4dXdY1H8/imagen-2025-07-27-140603156.png",
+      text: "Educación Inicial",
+    },
+    {
+      url: "https://i.postimg.cc/ncNmhGsf/imagen-2025-07-27-114608039.png",
+      text: "Educación Básica",
+    },
+    {
+      url: "https://i.postimg.cc/Y9XGK6cV/imagen-2025-07-27-114639264.png",
+      text: "Educación Básica Superior",
+    },
+    {
+      url: "https://i.postimg.cc/9QFHwNLw/imagen-2025-07-27-140913085.png",
+      text: "Bachillerato Técnico",
+    },
+  ].map((item, index) => (
+    <div
+      key={index}
+      className="slide relative rounded-lg overflow-hidden"
+      style={
+        {
+          "--img": `url("${item.url}")`,
+        } as React.CSSProperties
+      }
+    >
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: `url(${item.url})` }}
+      ></div>
+      <div className="absolute inset-0 bg-black/40"></div>
+      <div className="absolute bottom-4 left-4 text-white text-6xl font-semibold bg-black/60 px-4 py-2 rounded-md shadow-md">
+        {item.text}
       </div>
     </div>
-      <section className="bg-white py-12 px-4 md:px-12">
-  <h2 className="text-3xl font-bold text-center mb-4 text-cyan-700">
-    Galería de Uniformes
-  </h2>
-  <p className="text-center text-gray-600 mb-10 max-w-2xl mx-auto">
-    Observa con detalle los uniformes que representan nuestra identidad educativa. Cada uno está diseñado para reflejar nuestros valores y funcionalidad.
-  </p>
-        <div className="uniformes-container">
-          {uniformes.map((u) => (
-            <div className={`uniform-card ${u.clase}`} key={u.titulo}>
-              <div className="uniform-imgs">
-                <img src={u.imagen} alt={u.titulo} />
-              </div>
-              <div className="uniform-title">{u.titulo}</div>
-              <p>{u.descripcion}</p>
-            </div>
-          ))}
-        </div>
-</section>
-
-
+  ))}
+</div>
+    </div>
     </div>
   );
 };
