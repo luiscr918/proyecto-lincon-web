@@ -9,7 +9,9 @@ export const Nosotros = () => {
   return (
     <>
       <Navegacion />
-      <FloatingSocialBar />
+      <div className="hide-below-1416">
+        <FloatingSocialBar />
+      </div>
       <BotonFlotante />
       <div className="relative overflow-hidden  mt-28 comenzarNosotros ">
         <Header />
