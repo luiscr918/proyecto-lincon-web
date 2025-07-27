@@ -7,7 +7,7 @@
     width: 70px;
     height: 70px;
 }
-.header{
+.header {
     position: fixed;
     top: 0;
     left: 0;
@@ -16,9 +16,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index:100;
+    z-index: 100;
 }
-.header::before{
+.header::before {
     content: '';
     position: absolute;
     top: 0;
@@ -29,8 +29,7 @@
     backdrop-filter: blur(10px);
     z-index: -1;
 }
-
-.header::after{
+.header::after {
     content: '';
     position: absolute;
     top: 0;
@@ -40,37 +39,33 @@
     background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .4), transparent);
     transition: .5s;
 }
-
-.header:hover::after{
+.header:hover::after {
     left: 100%;
 }
-
-.logo{
+.logo {
     font-style: 2rem;
     color: white;
     text-decoration: none;
     font-weight: 700;
 }
-.navbar a{
+.navbar a {
     font-style: 1.15rem;
     color: white;
     text-decoration: none;
     font-weight: 500;
     margin-left: 2.5rem;
+    position: relative;
 }
-
-#check{
+#check {
     display: none;
 }
-
-.icons{
+.icons {
     font-size: 2.8rem;
     right: 5%;
     color: white;
     cursor: pointer;
     display: none;
 }
-
 
 .dropdown {
   position: relative;
@@ -86,6 +81,7 @@
   margin-left: 2.5rem;
   cursor: pointer;
   outline: none;
+  position: relative;
 }
 
 .dropdown-content {
@@ -93,7 +89,6 @@
   position: absolute;
   background: rgba(34, 34, 34, 0.55); 
   min-width: 180px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
   z-index: 10;
   border-radius: 0 0 16px 16px;
   overflow: hidden;
@@ -116,10 +111,10 @@
   font-weight: 500;           
   margin-left: 2.5rem;        
   background: none;
+  position: relative;
 }
 
 .dropdown-content a:hover {
-  background-color: #444;
   color: white;
 }
 
@@ -127,12 +122,33 @@
   display: block;
 }
 
+
+.navbar a::after,
+.dropbtn::after,
+.dropdown-content a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background-color: #002fff;
+  transition: width 0.3s ease-in-out;
+}
+.navbar a:hover::after,
+.dropbtn:hover::after,
+.dropdown-content a:hover::after {
+  width: 100%;
+}
+
 @media (max-width: 1000px) {
   .dropdown {
     width: 100%;
     text-align: center;
+    position: static; 
   }
   .dropbtn {
+    width: 100%;
     margin-left: 0;
     text-align: center;
     background: none;
@@ -140,19 +156,21 @@
     padding: 1.5rem 0;
   }
   .dropdown-content {
-    position: absolute;
+    position: static;
     min-width: 100%;
     box-shadow: none;
     border-radius: 0;
     background: transparent;
     max-height: 200px;    
     overflow-y: auto;    
+    display: none;
   }
   .dropdown-content a {
     background: none;
     color: white;
     padding: 1rem 0;
     text-align: center;
+    margin-left: 0;
   }
   .dropdown-content a:hover {
     background: #444;
@@ -163,30 +181,25 @@
   }
 }
 
- @media(max-width: 1000px){
-    .header{
+@media(max-width: 1000px) {
+    .header {
         padding: 1.3rem 5%;
     }
- }
-
- @media(max-width: 768px){
-    .icons{
+}
+@media(max-width: 768px) {
+    .icons {
         display: inline-flex;
     }
-
-    #check:checked ~ .icons #menu-icon{
+    #check:checked ~ .icons #menu-icon {
         display: none;
     }
-
-    .icons #close-icon{
+    .icons #close-icon {
         display: none;
     }
-
-    #check:checked ~ .icons #close-icon{
+    #check:checked ~ .icons #close-icon {
         display: block;
     }
-
-    .navbar{
+    .navbar {
         position: absolute;
         top: 100%;
         left: 0;
@@ -198,12 +211,10 @@
         overflow: hidden;
         transition: .3s ease;
     }
-
-    #check:checked ~ .navbar{
+    #check:checked ~ .navbar {
         height: 17.7rem;
     }
-
-    .navbar a{
+    .navbar a {
         display: block;
         font-style: 1.1rem;
         margin: 1.5rem 0;
@@ -212,8 +223,7 @@
         opacity: 0;
         transition: .3s ease;
     }
-
-    #check:checked ~ .navbar a{
+    #check:checked ~ .navbar a {
         transform: translateY(0);
         opacity: 1;
         transition: calc(.15s * var(--i)) ease;

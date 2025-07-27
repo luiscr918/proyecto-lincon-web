@@ -1,18 +1,39 @@
 import "../../styles/inicioExtracurri.css";
 import { useEffect, useState } from "react";
+import "../../styles/Uniformes.css";
+import paradaImg from "../../assets/imgs/Parada.png";
+import educacionImg from "../../assets/imgs/Educaion.png";
+
+const uniformes = [
+  {
+    titulo: "Uniforme de Parada",
+    descripcion:
+      "Utilizado en eventos formales y ceremonias, representa el respeto y la identidad de nuestra comunidad educativa.",
+    imagen: paradaImg,
+    clase: "parada",
+  },
+  {
+    titulo: "Uniforme de Educación Física",
+    descripcion:
+      "Diseñado para brindar comodidad y libertad de movimiento durante las actividades deportivas.",
+    imagen: educacionImg,
+    clase: "educacion",
+  },
+];
 
 const PaginaPrincipal = () => {
   const [currentSlide, setCurrentSlide] = useState(1);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev % 5) + 1); 
-    }, 3000); 
+      setCurrentSlide((prev) => (prev % 5) + 1);
+    }, 3000);
 
-    return () => clearInterval(interval); 
+    return () => clearInterval(interval);
   }, []);
 
   return (
+    <div>
     <div className="contenedor-inicio">
       <input type="radio" id="slide1" name="group" checked={currentSlide === 1} readOnly />
       <input type="radio" id="slide2" name="group" checked={currentSlide === 2} readOnly />
@@ -30,11 +51,10 @@ const PaginaPrincipal = () => {
 
       <div className="slider">
         {[
-          "https://images.pexels.com/photos/7396522/pexels-photo-7396522.jpeg?_gl=1*12wfsdi*_ga*MTc2OTIxNzQuMTc1MzQxMDMxMA..*_ga_8JE65Q40S6*czE3NTM0MTAzMDkkbzEkZzEkdDE3NTM0MTAzNjYkajMkbDAkaDA.",
-          "https://images.pexels.com/photos/10643693/pexels-photo-10643693.jpeg?_gl=1*58n8m3*_ga*MTc2OTIxNzQuMTc1MzQxMDMxMA..*_ga_8JE65Q40S6*czE3NTM0MTAzMDkkbzEkZzEkdDE3NTM0MTA0MjEkajU2JGwwJGgw",
-          "https://images.pexels.com/photos/8466017/pexels-photo-8466017.jpeg?_gl=1*531us9*_ga*MTc2OTIxNzQuMTc1MzQxMDMxMA..*_ga_8JE65Q40S6*czE3NTM0MTAzMDkkbzEkZzEkdDE3NTM0MTA0NjAkajE3JGwwJGgw",
-          "https://images.pexels.com/photos/2968077/pexels-photo-2968077.jpeg?_gl=1*1ti0b1x*_ga*MTc2OTIxNzQuMTc1MzQxMDMxMA..*_ga_8JE65Q40S6*czE3NTM0MTAzMDkkbzEkZzEkdDE3NTM0MTA0OTIkajU4JGwwJGgw",
-          "https://images.pexels.com/photos/8034586/pexels-photo-8034586.jpeg?_gl=1*1psy18n*_ga*MTc2OTIxNzQuMTc1MzQxMDMxMA..*_ga_8JE65Q40S6*czE3NTM0MTAzMDkkbzEkZzEkdDE3NTM0MTA1MTUkajM1JGwwJGgw",
+          "https://i.postimg.cc/ncNmhGsf/imagen-2025-07-27-114608039.png",
+          "https://i.postimg.cc/k4ZJvfPn/imagen-2025-07-27-114715112.png",
+          "https://i.postimg.cc/Y9XGK6cV/imagen-2025-07-27-114639264.png",
+          "https://i.postimg.cc/SNLXmbpC/imagen-2025-07-27-114822538.png",
         ].map((imgUrl, index) => (
           <div
             key={index}
@@ -49,6 +69,28 @@ const PaginaPrincipal = () => {
           </div>
         ))}
       </div>
+    </div>
+      <section className="bg-white py-12 px-4 md:px-12">
+  <h2 className="text-3xl font-bold text-center mb-4 text-cyan-700">
+    Galería de Uniformes
+  </h2>
+  <p className="text-center text-gray-600 mb-10 max-w-2xl mx-auto">
+    Observa con detalle los uniformes que representan nuestra identidad educativa. Cada uno está diseñado para reflejar nuestros valores y funcionalidad.
+  </p>
+        <div className="uniformes-container">
+          {uniformes.map((u) => (
+            <div className={`uniform-card ${u.clase}`} key={u.titulo}>
+              <div className="uniform-imgs">
+                <img src={u.imagen} alt={u.titulo} />
+              </div>
+              <div className="uniform-title">{u.titulo}</div>
+              <p>{u.descripcion}</p>
+            </div>
+          ))}
+        </div>
+</section>
+
+
     </div>
   );
 };

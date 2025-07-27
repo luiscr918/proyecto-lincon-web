@@ -2,81 +2,107 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Estilos modernos y llamativos para la sección de uniformes */
+
+.uniformes-section {
+  padding: 6rem 1rem 3rem 1rem;
+  background: linear-gradient(135deg, #f0f4ff 0%, #e0e7ff 100%);
+  min-height: 100vh;
+}
+
+.uniformes-heading {
+  text-align: center;
+  font-size: 2.3rem;
+  color: #3730a3;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px #e0e7ff;
+}
+
+.uniformes-desc {
+  text-align: center;
+  color: #4b5563;
+  font-size: 1.15rem;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .uniformes-container {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
-  padding: 120px;
-  background: linear-gradient(135deg, #f0f4ff 0%, #e0e7ff 100%);
-  border-radius: 18px;
-  box-shadow: 0 8px 32px rgba(60, 80, 180, 0.08);
+  gap: 2.5rem;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 700px) {
   .uniformes-container {
     grid-template-columns: repeat(2, 1fr);
-    padding: 4.5rem 3rem 3rem 3rem;
+    gap: 2.5rem;
   }
 }
 
 .uniform-card {
   background: #fff;
-  border-radius: 16px;
-  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  border-radius: 18px;
+  padding: 2.2rem 1.5rem 1.7rem 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 6px 24px rgba(60, 80, 180, 0.10);
-  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 8px 32px rgba(60, 80, 180, 0.10);
   border: 2px solid #e0e7ff;
-  min-height: 350px;
+  min-height: 370px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  overflow: hidden;
 }
 
 .uniform-card:hover {
   transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 12px 36px rgba(60, 80, 180, 0.18);
+  box-shadow: 0 16px 40px rgba(60, 80, 180, 0.18);
   border-color: #a5b4fc;
 }
 
 .uniform-imgs {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 1.5rem;
+  align-items: center;
   margin-bottom: 1.5rem;
 }
 
 .uniform-imgs img {
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
   object-fit: cover;
   border-radius: 50%;
-  border: 3px solid #a5b4fc;
+  border: 4px solid #a5b4fc;
   background: #f1f5f9;
-  box-shadow: 0 2px 8px rgba(60, 80, 180, 0.10);
+  box-shadow: 0 2px 12px rgba(60, 80, 180, 0.10);
+  transition: transform 0.3s;
 }
 
-@media (min-width: 768px) {
-  .uniform-imgs img {
-    width: 150px;
-    height: 150px;
-  }
+.uniform-card:hover .uniform-imgs img {
+  transform: scale(1.07) rotate(-2deg);
 }
 
 .uniform-title {
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   font-weight: 700;
   text-align: center;
   color: #3730a3;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.7rem;
   letter-spacing: 0.5px;
 }
 
 .uniform-card p {
-  font-size: 1.05rem;
+  font-size: 1.08rem;
   color: #374151;
   text-align: center;
   margin: 0;
+  line-height: 1.6;
 }
 
 .parada {
@@ -87,4 +113,20 @@ html {
 .educacion {
   background: linear-gradient(120deg, #dbeafe 60%, #f0f9ff 100%);
   border-left: 6px solid #2563eb;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeInUp 0.8s forwards;
 }
