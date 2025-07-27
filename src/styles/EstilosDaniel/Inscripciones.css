@@ -18,12 +18,26 @@
 }
 
 .insc-title {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: bold;
   color: #fff;
   margin-bottom: 1rem;
   text-transform: uppercase;
   letter-spacing: 2px;
+}
+
+/* Pantallas medianas (tablets) */
+@media (min-width: 640px) {
+  .insc-title {
+    font-size: 2.5rem;
+  }
+}
+
+/* Pantallas grandes (laptops y más) */
+@media (min-width: 1024px) {
+  .insc-title {
+    font-size: 3rem;
+  }
 }
 
 .insc-sub-title {
