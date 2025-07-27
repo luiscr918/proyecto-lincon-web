@@ -13,7 +13,7 @@ export default function Portada() {
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                         borderRadius: '20px',
-                        padding: '10rem',
+                        padding: '20rem',
                         color: '#fff',
                         position: 'relative',
                         animation: 'fadeIn 1.5s ease-out'
@@ -29,26 +29,8 @@ export default function Portada() {
                         }}
                     />
                     <div style={{ position: 'relative', zIndex: 2 }}>
-                        <h1 className="titulo" style={{ animation: 'slideUp 1s ease-out' }}>
-                            ¿Contactanos?
-                        </h1>
-                        <p>¿Tienes preguntas? Estamos listos para ayudarte.</p>
-                        <a
-                            href="https://wa.me/593987654321"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="boton-wsp"
-                            style={{
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                gap: '8px',
-                                animation: 'pulse 2s infinite'
-                            }}
-                        >
-                            <img src={img1} alt="WhatsApp" width={32} height={32} />
-                            Haz una pregunta
-                        </a>
+
+
                     </div>
                 </div>
             </div>

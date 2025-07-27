@@ -1,0 +1,71 @@
+/* Contenedor principal del stack que permite el scroll */
+.scroll-stack-scroller {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: scroll-position;
+
+  background-color: transparent; /* fondo totalmente transparente */
+}
+
+/* Contenedor interno donde están las tarjetas */
+.scroll-stack-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+/* Contenedor de cada tarjeta */
+.scroll-stack-card-wrapper {
+  position: relative;
+}
+
+/* Estilos para las tarjetas individuales */
+.scroll-stack-card {
+  transform-origin: top center;
+  will-change: transform, filter;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+
+  /* Nuevo estilo visual para galaxia */
+  background: linear-gradient(135deg, rgba(0, 89, 179, 0.9), rgba(0, 13, 61, 0.9));
+  color: #f0f0f0;
+  box-shadow: 0 8px 24px rgba(0, 255, 255, 0.1);
+
+  height: 10rem;
+  width: 100%;
+  margin: 100px 0;
+  padding: 2rem;
+  border-radius: 15px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover en la tarjeta */
+.scroll-stack-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.4),
+              0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+/* Elemento invisible al final del contenedor para controlar el final del scroll */
+.scroll-stack-end {
+  width: 100%;
+  height: 10px;
+  background-color: transparent;
+}
+.scroll-stack-scroller {
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* IE 10+ */
+}
+
+.scroll-stack-scroller::-webkit-scrollbar {
+  display: none;                /* Chrome, Safari */
+}

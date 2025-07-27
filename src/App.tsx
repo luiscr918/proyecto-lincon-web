@@ -9,6 +9,7 @@ import { NotFound } from "./pages/NotFound";
 import ScrollToHashElement from "./components/ScrollToHashElement";
 import { Inscripciones } from "./pages/Inscripciones";
 import { Extracurriculares } from "./pages/Extracurriculares";
+import Contactos2 from "../src/pages/Contactos2";
 
 function App() {
   return (
@@ -22,6 +23,8 @@ function App() {
         <Route path="/actualizar-fechas" element={<Login />} />
         <Route path="/inscripciones" element={<Inscripciones />} />
         <Route path="/extracurriculares" element={<Extracurriculares />} />
+        <Route path="/contactos2" element={<Contactos2 />} />
+        
         <Route
           path="/form-actualizar/:verificado"
           element={<AdminDashboard />}
