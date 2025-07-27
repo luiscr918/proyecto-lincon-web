@@ -52,7 +52,7 @@ const Contactos2: React.FC = () => {
                     >
                         {/* Aquí el título animado con BlurText */}
                         <BlurText
-                            text="Contáctanos"
+                            text="ACCESO RÁPIDO"
                             delay={150}
                             animateBy="words"
                             direction="top"
