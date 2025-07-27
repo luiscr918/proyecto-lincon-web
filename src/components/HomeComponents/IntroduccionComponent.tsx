@@ -24,8 +24,8 @@ const IntroduccionComponent = () => {
 
         setFade(true);
         setTimeout(() => setFade(false), 500);
-      }, 450);
-    }, 1500);
+      }, 500);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, [index]);
