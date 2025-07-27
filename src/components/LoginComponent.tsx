@@ -20,7 +20,7 @@ export const LoginComponent = () => {
             text: "Se logueó correctamente",
             icon: "success",
           });
-          navigate("/form-actualizar/true"); 
+          navigate("/form-actualizar/true");
         }
         setEmail("");
         setConstrasenia("");
@@ -51,7 +51,7 @@ export const LoginComponent = () => {
       </div>
 
       {/* Formulario */}
-      <div className="p-8 sm:p-12 md:p-20 lg:p-36 w-full lg:w-1/2">
+      <div className="p-8 sm:p-12 md:p-20 lg:p-36 w-full lg:w-1/2 relative">
         <h1 className="text-2xl font-semibold mb-4 text-yellow-300">
           Inicie Sesión Para Continuar
         </h1>
@@ -66,7 +66,7 @@ export const LoginComponent = () => {
             type="text"
             id="username"
             name="username"
-            className="w-full border text-white border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500"
+            className=" w-full border text-white border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500"
             autoComplete="off"
           />
         </div>
