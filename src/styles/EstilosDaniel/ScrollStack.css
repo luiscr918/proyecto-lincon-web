@@ -1,71 +1,60 @@
-/* Contenedor principal del stack que permite el scroll */
+/* Contenedor principal centrado */
 .scroll-stack-scroller {
-  position: relative;
   width: 100%;
-  height: 80vh;
-  overflow-y: auto;
-  overscroll-behavior: contain;
-  -webkit-overflow-scrolling: touch;
-  scroll-behavior: smooth;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  will-change: scroll-position;
-
-  background-color: transparent; /* fondo totalmente transparente */
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
 }
 
-/* Contenedor interno donde están las tarjetas */
+/* Contenedor con scroll vertical y efecto scroll-snap */
 .scroll-stack-inner {
+  height: 14rem;
+  width: 700px;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  padding: 2rem;
-}
-
-/* Contenedor de cada tarjeta */
-.scroll-stack-card-wrapper {
+  scrollbar-width: none;
+  padding: 10px;
+  gap: 1rem;
+  scroll-behavior: smooth;
   position: relative;
 }
 
-/* Estilos para las tarjetas individuales */
+.scroll-stack-inner::-webkit-scrollbar {
+  display: none;
+}
+
+/* Cada tarjeta se comporta como un slide que encaja */
 .scroll-stack-card {
-  transform-origin: top center;
-  will-change: transform, filter;
-  backface-visibility: hidden;
-  transform-style: preserve-3d;
-
-  /* Nuevo estilo visual para galaxia */
-  background: linear-gradient(135deg, rgba(0, 89, 179, 0.9), rgba(0, 13, 61, 0.9));
+  scroll-snap-align: start;
+  background: linear-gradient(135deg, rgba(0, 89, 179, 0.9), rgba(0, 13, 61, 0.9)); /* Restaurado */
   color: #f0f0f0;
-  box-shadow: 0 8px 24px rgba(0, 255, 255, 0.1);
-
-  height: 10rem;
+  height: 8rem; /* Reducido */
   width: 100%;
-  margin: 100px 0;
+  max-width: 850px;
   padding: 2rem;
-  border-radius: 15px;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 255, 255, 0.1);
+  transition: all 0.4s ease;
   box-sizing: border-box;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 0;
+  opacity: 0.6;
+  transform: scale(0.95);
 }
 
-/* Efecto hover en la tarjeta */
+/* Tarjeta activa (centrada en el scroll) */
+.scroll-stack-card.active {
+  opacity: 1;
+  transform: scale(1);
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3),
+              0 0 20px rgba(0, 255, 255, 0.15);
+}
+
+/* Hover opcional */
 .scroll-stack-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.4),
-              0 0 10px rgba(0, 255, 255, 0.3);
-}
-
-/* Elemento invisible al final del contenedor para controlar el final del scroll */
-.scroll-stack-end {
-  width: 100%;
-  height: 10px;
-  background-color: transparent;
-}
-.scroll-stack-scroller {
-  scrollbar-width: none;        /* Firefox */
-  -ms-overflow-style: none;     /* IE 10+ */
-}
-
-.scroll-stack-scroller::-webkit-scrollbar {
-  display: none;                /* Chrome, Safari */
+  transform: scale(1.02);
+  box-shadow: 0 12px 36px rgba(0, 255, 255, 0.5),
+              0 0 15px rgba(0, 255, 255, 0.3);
 }

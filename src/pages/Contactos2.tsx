@@ -76,9 +76,9 @@ const Contactos2: React.FC = () => {
                     >
                         Preguntas Frecuentes
                     </h2>
-                    <ScrollStack>
-                        <DemoScrollStackItems />
-                    </ScrollStack>
+    <ScrollStack>
+      <DemoScrollStackItems />
+    </ScrollStack>
                 </section>
 
                 {/* Footer */}
