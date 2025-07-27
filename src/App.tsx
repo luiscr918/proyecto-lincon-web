@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import { Home } from "./pages/Home";
 import OfertaAcademica from "./pages/OfertaAcademica";
 import { Contactos } from "./pages/Contactos";
@@ -10,8 +10,17 @@ import ScrollToHashElement from "./components/ScrollToHashElement";
 import { Inscripciones } from "./pages/Inscripciones";
 import { Extracurriculares } from "./pages/Extracurriculares";
 import ParticlesComponent from "./components/OfertaAcaComponents/ParticlesComponent";
+//google analitycs
+import { useEffect } from "react";
+import { trackPageView } from "./utils/googleAnalytics";
 
 function App() {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Esto enviará un pageview a GA cuando la ruta cambie
+    trackPageView(location.pathname + location.search);
+  }, [location]);
   return (
     <div className="relative min-h-screen overflow-hidden">
       <ParticlesComponent />
