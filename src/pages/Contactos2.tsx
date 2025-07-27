@@ -9,9 +9,7 @@ import CustomCursor from '../components/Componentes de prueba/CustomCursor';
 import ContactCards from '../components/Componentes de prueba/ContactCards';
 import Mapa from '../components/ContactosComponents/MapaComponents';
 
-
-
-
+import BlurText from '../components/Componentes de prueba/BlurText'; // IMPORTA AQUÍ
 
 const Contactos2: React.FC = () => {
     return (
@@ -25,17 +23,11 @@ const Contactos2: React.FC = () => {
                 color: 'white',
             }}
         >
-            {/* Fondo animado galáctico */}
-            {/* Capa principal */}
             <div style={{ position: 'relative', zIndex: 10 }}>
                 <CustomCursor />
                 <Navegacion />
                 <Portada />
 
-                {/* Canvas con modelo 3D */}
-
-
-                {/* Sección de contacto */}
                 <section
                     style={{
                         display: 'flex',
@@ -58,30 +50,37 @@ const Contactos2: React.FC = () => {
                             textAlign: 'center',
                         }}
                     >
-                        <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem', color: 'black' }}>Contáctanos</h2>
+                        {/* Aquí el título animado con BlurText */}
+                        <BlurText
+                            text="Contáctanos"
+                            delay={150}
+                            animateBy="words"
+                            direction="top"
+                            className="text-4xl font-bold mb-8 text-black"
+                        />
                         <ContactCards />
                         <Mapa />
                     </div>
                 </section>
 
-                {/* Galería scroll-stack */}
-                <section style={{ position: 'relative', zIndex: 10, paddingBottom: '4rem' }}>
-                    <h2
-                        style={{
-                            fontSize: '2.5rem',
-                            marginBottom: '1rem',
-                            color: 'black',
-                            textAlign: 'center',
-                        }}
-                    >
-                        Preguntas Frecuentes
-                    </h2>
-    <ScrollStack>
-      <DemoScrollStackItems />
-    </ScrollStack>
+                <section style={{ position: 'relative', zIndex: 10, paddingBottom: '4rem', textAlign: 'center' }}>
+                    {/* Título animado Preguntas Frecuentes */}
+                    <div className="w-full flex justify-center items-center">
+                        <BlurText
+                            text="Preguntas Frecuentes"
+                            delay={150}
+                            animateBy="words"
+                            direction="top"
+                            className="text-4xl font-bold mb-8 text-black"
+                        />
+                    </div>
+
+
+                    <ScrollStack>
+                        <DemoScrollStackItems />
+                    </ScrollStack>
                 </section>
 
-                {/* Footer */}
                 <FooterHomeComponent />
             </div>
         </div>
