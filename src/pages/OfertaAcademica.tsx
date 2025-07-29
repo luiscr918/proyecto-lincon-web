@@ -4,7 +4,7 @@ import BotonFlotante from "../components/BotonFlotanteComponent";
 import { FloatingSocialBar } from "../components/FloatingSocialBar";
 import { Academia_Oferta_DATA } from "../const/academicOffer";
 import Navegacion from "../components/Navegacion";
-import { FooterToUs } from "../components/OfertaAcaComponents/FooterToUs";
+import FooterHomeComponent from "../components/FooterHomeComponent";
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -99,7 +99,7 @@ const OfertaAcademica = () => {
       </motion.div>
       <FloatingSocialBar />
       <BotonFlotante />
-      <FooterToUs />
+      <FooterHomeComponent />
     </div>
   );
 };

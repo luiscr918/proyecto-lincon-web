@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const FooterHomeComponent = () => {
   return (
-    <footer className="w-full bg-[#223555]">
+    <footer className="w-full">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 ">
         <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-3 gap-3 gap-y-8 md:gap-8 py-10 max-w-sm mx-auto sm:max-w-3xl lg:max-w-full">
           <div className="lg:mx-auto text-left ">
@@ -144,7 +144,7 @@ const FooterHomeComponent = () => {
 
         <div className="py-7 border-t border-gray-200">
           <div className="flex items-center justify-center flex-col lg:justify-between lg:flex-row">
-            <span className="text-sm text-gray-500 ">
+            <span className="text-sm text-gray-200 ">
               ©U.E.P Todos los derechos reservados 2025 unidad Educativa Lincoln
               Larrea Benalcazar
             </span>
