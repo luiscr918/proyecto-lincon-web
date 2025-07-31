@@ -9,7 +9,7 @@ export const Informacion = () => {
     <>
       <div className="m-10">
         <h2 className="text-center mb-4 text-2xl font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl">
-          ¿Porque Estudiar Con Nosotros?
+          ¿Por qué Estudiar Con Nosotros?
         </h2>
       </div>
       <div className="contene-card">

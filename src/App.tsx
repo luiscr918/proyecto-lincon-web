@@ -14,6 +14,7 @@ import ParticlesComponent from "./components/OfertaAcaComponents/ParticlesCompon
 import { useEffect } from "react";
 import { trackPageView } from "./utils/googleAnalytics";
 import Uniformes from "./pages/Uniformes";
+import ScrollToTop from "./components/ScrollTop";
 
 function App() {
   const location = useLocation();
@@ -25,7 +26,7 @@ function App() {
   return (
     <div className="relative min-h-screen overflow-hidden">
       <ParticlesComponent />
-
+      <ScrollToTop />
       <ScrollToHashElement />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -33,7 +34,7 @@ function App() {
         <Route path="/contactanos" element={<Contactos />} />
         <Route path="/sobre-nosotros" element={<Nosotros />} />
         <Route path="/actualizar-fechas" element={<Login />} />
-        <Route path="/uniformes" element={<Uniformes/>} />
+        <Route path="/uniformes" element={<Uniformes />} />
         <Route path="/inscripciones" element={<Inscripciones />} />
         <Route path="/extracurriculares" element={<Extracurriculares />} />
         <Route

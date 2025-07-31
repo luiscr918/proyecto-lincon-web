@@ -10,13 +10,13 @@ const Navegacion = () => {
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-  if (
-    dropdownRef.current &&
-    !dropdownRef.current.contains(event.target as Node)
-  ) {
-    setDropdownOpen(false);
-  }
-};
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setDropdownOpen(false);
+      }
+    };
 
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
@@ -25,14 +25,16 @@ const Navegacion = () => {
   return (
     <div>
       <header className="header">
-        <img src={logo} alt="Logo" className="logo-img" />
+        <Link to={"/"}>
+          <img src={logo} alt="Logo" className="logo-img" />
+        </Link>
         <div className="logo-block">
-          <a href="#" className="logo">
+          <Link to={"/"} className="logo">
             U.E.P
-          </a>
-          <strong>
-            <p style={{ color: "white" }}>Lincoln Larrea Benalcazar</p>
-          </strong>
+            <strong>
+              <p style={{ color: "white" }}>Lincoln Larrea Benalcazar</p>
+            </strong>
+          </Link>
         </div>
         <input type="checkbox" id="check" />
         <label htmlFor="check" className="icons">

@@ -45,7 +45,7 @@ const ImagenesAnimacionHome = () => {
             <span>
               <h2>Educación Básica Superior</h2>
               <p>
-                <Link to="/oferta-academica#superior">
+                <Link to="/oferta-academica#basica-superior">
                   <i className="material-icons">arrow_forward</i>
                 </Link>
               </p>
