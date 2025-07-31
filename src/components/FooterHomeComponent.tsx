@@ -22,7 +22,7 @@ const FooterHomeComponent = () => {
                 <a
                   href="mailto:uelinconlarrea@gmail.com"
                   target="_blank"
-                  className=" text-yellow-400 "
+                  className=" text-yellow-400  break-words overflow-hidden text-ellipsis"
                 >
                   uelinconlarrea@gmail.com
                 </a>
