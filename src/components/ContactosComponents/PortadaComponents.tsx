@@ -1,4 +1,4 @@
-import portada from "../../assets/imgs/contactos.jpg";
+
 import BlurText from "../Componentes de prueba/BlurText"; // ajusta la ruta si es necesario
 
 export default function Portada() {
@@ -8,7 +8,7 @@ export default function Portada() {
         <div
           className="overlay"
           style={{
-            backgroundImage: `url(${portada})`,
+            backgroundImage: `url("https://i.postimg.cc/XY4WVvNB/Contactos.jpg")`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             borderRadius: "20px",

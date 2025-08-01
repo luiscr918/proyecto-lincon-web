@@ -1,10 +1,5 @@
 // src/const/academicOffer.ts
-
-import InicialImage from "../assets/imgs/EducacionInicial.png";
-import BasicaImage from "../assets/imgs/EducacionBasica.png";
 import BachilleratoImage from "../assets/imgs/BachilleratoTecnicoInformatica.png";
-import BasicaSuperiorImage from "../assets/imgs/EducacionBasicaSUperior.png";
-
 interface AcademicLevel {
   id: string;
   title: string;
@@ -29,7 +24,7 @@ export const Academia_Oferta_DATA: AcademicLevel[] = [
       "Estimulación del lenguaje y la creatividad.",
       "Fomento de la socialización y autonomía.",
     ],
-    imageUrl: InicialImage,
+    imageUrl: "https://i.postimg.cc/15PqVrfX/uniformes3.jpg",
     altText: "Niños jugando en educación inicial",
     cardBgClass: "bg-white",
     buttonColorClass: "text-blue-900 hover:bg-blue-50",
@@ -45,7 +40,7 @@ export const Academia_Oferta_DATA: AcademicLevel[] = [
       "Desarrollo de competencias académicas clave.",
       "Proyectos innovadores e interdisciplinarios.",
     ],
-    imageUrl: BasicaImage,
+    imageUrl: "https://i.postimg.cc/LX11LytY/uniformes2.jpg",
     altText: "Estudiantes en un aula de educación básica",
     cardBgClass: "bg-white",
     buttonColorClass: "text-blue-900 hover:bg-blue-50",
@@ -61,7 +56,7 @@ export const Academia_Oferta_DATA: AcademicLevel[] = [
       "Desarrollo de pensamiento lógico y analítico.",
       "Orientación vocacional temprana.",
     ],
-    imageUrl: BasicaSuperiorImage,
+    imageUrl: "https://i.postimg.cc/BQdBzK6G/uniformes1.jpg",
     altText: "Jóvenes estudiantes en educación básica superior",
     cardBgClass: "bg-white",
     buttonColorClass: "text-blue-900 hover:bg-blue-50",

@@ -46,12 +46,12 @@ const cards: CardInfo[] = [
     id: 2,
     title: "Nuestro Alumnado",
     description: "Aqui encontraras una foto general",
-    image: "https://i.postimg.cc/Z5L1Lkfx/imagen-2025-07-27-150924192.png",
+    image: "https://i.postimg.cc/cCmtk7qm/educacionbasica.jpg",
     modalContent: (
       <div>
         <div className="tar">
           <div className="tar-img">
-            <img src="https://i.postimg.cc/1tWm7nJM/imagen-2025-07-27-151042368.png" />
+            <img src="https://i.postimg.cc/cCmtk7qm/educacionbasica.jpg" />
           </div>
         </div>
       </div>
@@ -62,7 +62,7 @@ const cards: CardInfo[] = [
     title: "Nuestro Uniforme de Educacion Fisica",
     description:
       "Aqui encontraras la informacion de nuestro uniforme de Educación Fisica",
-    image: "https://i.postimg.cc/65KfcsJq/Educaion.png",
+    image: "https://i.postimg.cc/Y9NxkWK4/Educaion.png",
     modalContent: (
       <div className="contenedor-tar">
         <div className="tar">
