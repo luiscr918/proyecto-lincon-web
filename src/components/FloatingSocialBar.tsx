@@ -24,7 +24,7 @@ export const FloatingSocialBar = ({modalHome=false}:Props) => {
       style={{backgroundColor:'#223555'}}
       >
         <a
-          href="https://api.whatsapp.com/send?phone=337776655"
+          href="https://www.facebook.com/profile.php?id=61579113354202"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center w-12 h-12 xs:w-10 xs:h-10   rounded-full shadow-lg transition-transform hover:scale-110"
@@ -33,14 +33,15 @@ export const FloatingSocialBar = ({modalHome=false}:Props) => {
         </a>
 
         <a
-          href="mailto:contat@exaple.com"
+          href="https://www.tiktok.com/@ue.lincoln.larrea?_t=ZM-8yV64yVcboM&_r=1"
+          target="_blank"
           className="flex items-center justify-center w-12 h-12 xs:w-10 xs:h-10   rounded-full shadow-lg transition-transform hover:scale-110"
         >
           <Player icon={tiktokIconAnimated} ref={tiktokPlayerRef} />
         </a>
 
         <a
-          href="https://www.instagram.com"
+          href="https://www.instagram.com/lincoln_larrea?igsh=Z29hdXhubHNrODV0"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center w-12 h-12 xs:w-10 xs:h-10 bg-gradient-to-r   rounded-full shadow-lg transition-transform hover:scale-110"

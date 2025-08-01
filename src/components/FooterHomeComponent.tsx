@@ -92,7 +92,8 @@ const FooterHomeComponent = () => {
 
             <div className="flex mt-4 space-x-4  lg:mt-0 ">
               <a
-                href="#"
+                href="https://www.instagram.com/lincoln_larrea?igsh=Z29hdXhubHNrODV0"
+                target="_blank"
                 className="relative w-8 h-8 rounded-full transition-all duration-500 flex justify-center items-center bg-[linear-gradient(45deg,#FEE411_6.9%,#FEDB16_10.98%,#FEC125_17.77%,#FE983D_26.42%,#FE5F5E_36.5%,#FE2181_46.24%,#9000DC_85.57%)]  hover:bg-gradient-to-b from-gray-900 to-gray-900  "
               >
                 <svg
@@ -109,7 +110,8 @@ const FooterHomeComponent = () => {
               </a>
 
               <a
-                href="#"
+                href="https://www.tiktok.com/@ue.lincoln.larrea?_t=ZM-8yV64yVcboM&_r=1"
+                target="_blank"
                 className="relative w-8 h-8 rounded-full transition-all duration-500 flex justify-center items-center bg-black hover:bg-gray-900"
               >
                 <svg
@@ -123,7 +125,8 @@ const FooterHomeComponent = () => {
               </a>
 
               <a
-                href="#"
+                href="https://www.facebook.com/profile.php?id=61579113354202"
+                target="_blank"
                 className="relative w-8 h-8 rounded-full transition-all duration-500 flex justify-center items-center bg-[#337FFF]  hover:bg-gray-900 "
               >
                 <svg

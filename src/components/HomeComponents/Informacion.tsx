@@ -1,8 +1,4 @@
 import "../../styles/informacion.css";
-import img1 from "../../assets/imgs/PECN.png";
-import img2 from "../../assets/imgs/PECN2.png";
-import img3 from "../../assets/imgs/PECN3.png";
-import img4 from "../../assets/imgs/PECN4.png";
 
 export const Informacion = () => {
   return (
@@ -16,7 +12,7 @@ export const Informacion = () => {
         <div className="card">
           <div className="card-inner">
             <div className="card-front">
-              <img src={img1} alt="" />
+              <img src="https://i.postimg.cc/y8sm7d6t/corazonestudiante.jpg" alt="" />
             </div>
             <div className="card-back1 flex-col">
               <h1 className="mb-4 text-xl font-extrabold tracking-tight  text-white mt-5 text-center">
@@ -35,7 +31,7 @@ export const Informacion = () => {
         <div className="card">
           <div className="card-inner">
             <div className="card-front">
-              <img src={img2} alt="" />
+              <img src="https://i.postimg.cc/pLcHPmYL/paseoescuela.jpg" alt="" />
             </div>
             <div className="card-back2 flex-col">
               <h1 className="mb-4 text-xl font-extrabold tracking-tight  text-white mt-5 text-center">
@@ -54,7 +50,7 @@ export const Informacion = () => {
         <div className="card">
           <div className="card-inner">
             <div className="card-front">
-              <img src={img3} alt="" />
+              <img src="https://i.postimg.cc/XvZKZ5w1/profesora.jpg" alt="" />
             </div>
 
             <div className="card-back3 flex-col">
@@ -74,7 +70,7 @@ export const Informacion = () => {
         <div className="card">
           <div className="card-inner">
             <div className="card-front">
-              <img src={img4} alt="" />
+              <img src="https://i.postimg.cc/FzS6XRF1/paseoestudiante.jpg" alt="" />
             </div>
             <div className="card-back4 flex-col">
               <h1 className="mb-4 text-xl font-extrabold tracking-tight  text-white mt-5 text-center">

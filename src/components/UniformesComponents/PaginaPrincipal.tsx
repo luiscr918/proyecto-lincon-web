@@ -62,15 +62,15 @@ const PaginaPrincipal = () => {
         <div className="slider">
           {[
             {
-              url: "https://i.postimg.cc/4dXdY1H8/imagen-2025-07-27-140603156.png",
+              url: "https://i.postimg.cc/15PqVrfX/uniformes3.jpg",
               text: "Educación Inicial",
             },
             {
-              url: "https://i.postimg.cc/ncNmhGsf/imagen-2025-07-27-114608039.png",
+              url: "https://i.postimg.cc/LX11LytY/uniformes2.jpg",
               text: "Educación Básica",
             },
             {
-              url: "https://i.postimg.cc/Y9XGK6cV/imagen-2025-07-27-114639264.png",
+              url: "https://i.postimg.cc/BQdBzK6G/uniformes1.jpg",
               text: "Educación Básica Superior",
             },
             {
@@ -91,9 +91,9 @@ const PaginaPrincipal = () => {
                 className="absolute inset-0 bg-cover bg-center"
                 style={{ backgroundImage: `url(${item.url})` }}
               ></div>
-              <div className="absolute inset-0 bg-black/40"></div>
+              <div className="absolute inset-0 "></div>
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-white text-3xl md:text-5xl lg:text-6xl font-semibold bg-black/60 px-4 py-2 rounded-md shadow-md text-center">
+                <div className="text-white text-3xl md:text-5xl lg:text-6xl font-semibold bg-transparent px-4 py-2 rounded-md shadow-md text-center">
                   {item.text}
                 </div>
               </div>

@@ -37,7 +37,7 @@ const AcademicLevelCard = ({
   buttonColorClass,
 }: AcademicLevelCardProps) => {
   const handleDownloadPDF = () => {
-    alert(`Descargando el PDF de Oferta Académica para ${title}...`);
+    window.open('https://drive.google.com/file/d/1UEFR0MZJsVRsyIZUAf6-TBaXTzsfeKtO/view?usp=drivesdk', '_blank');
   };
 
   return (
