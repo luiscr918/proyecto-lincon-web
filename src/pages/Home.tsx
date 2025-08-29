@@ -5,7 +5,7 @@ import ImagenesAnimacionHome from "../components/HomeComponents/ImagenesAnimacio
 import BotonFlotante from "../components/BotonFlotanteComponent";
 import FooterHomeComponent from "../components/FooterHomeComponent";
 import Navegacion from "../components/Navegacion";
-import { ModalInformacion } from "../components/ModalInformacion";
+/* import { ModalInformacion } from "../components/ModalInformacion"; */
 import { Informacion } from "../components/HomeComponents/Informacion";
 import { ScrollTransition } from "../components/ScrollAnimacionComponent";
 export const Home = () => {
@@ -23,7 +23,7 @@ export const Home = () => {
     <>
       <Navegacion />
 
-      <ModalInformacion visible={visible} setVisible={setvisible} />
+      {/* <ModalInformacion visible={visible} setVisible={setvisible} /> */}
 
       <ScrollTransition>
         <div className="relative overflow-hidden  mt-28 ">
