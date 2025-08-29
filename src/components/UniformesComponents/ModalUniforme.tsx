@@ -44,8 +44,9 @@ const cards: CardInfo[] = [
   },
   {
     id: 2,
-    title: "Nuestro Alumnado",
-    description: "Aqui encontraras una foto general",
+    title: "Indumentaria de Egreso",
+    description:
+      "Uniforme usado en la ceremonia de graduación, símbolo de logro y orgullo institucional.",
     image: "https://i.postimg.cc/cCmtk7qm/educacionbasica.jpg",
     modalContent: (
       <div>

@@ -18,7 +18,7 @@ export const Academia_Oferta_DATA: AcademicLevel[] = [
     title: "Educación Inicial",
     ageOrCourseInfo: "Desde 3 años",
     description:
-      "En el centro educativo Lincold Larrea Benalcazar, brindamos una educación inicial sólida y divertida para los más pequeños, sentando las bases de su futuro académico.",
+      "En el centro educativo Lincoln Larrea Benalcazar, brindamos una educación inicial sólida y divertida para los más pequeños, sentando las bases de su futuro académico.",
     features: [
       "Desarrollo de habilidades motoras y cognitivas.",
       "Estimulación del lenguaje y la creatividad.",
